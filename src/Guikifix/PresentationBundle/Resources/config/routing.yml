@@ -1,0 +1,3 @@
+guikifix_presentation_homepage:
+    path:     /
+    defaults: { _controller: GuikifixPresentationBundle:Default:index }

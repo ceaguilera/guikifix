@@ -1,0 +1,4 @@
+services:
+#    guikifix_presentation.example:
+#        class: Guikifix\PresentationBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

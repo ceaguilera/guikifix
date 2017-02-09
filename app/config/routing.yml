@@ -1,3 +1,9 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+# Rutas de las Api
+guikifix_api:
+    resource: "@GuikifixApiBundle/Resources/config/routing.yml"
+    prefix:   /
+# Rutas de la presentación
+guikifix_presentation:
+    resource: "@GuikifixPresentationBundle/Resources/config/routing.yml"
+    prefix:   /
+

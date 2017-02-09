@@ -1,0 +1,3 @@
+guikifix_api_homepage:
+    path:     /
+    defaults: { _controller: GuikifixApiBundle:Default:index }

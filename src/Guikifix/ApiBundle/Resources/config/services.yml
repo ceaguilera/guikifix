@@ -1,0 +1,17 @@
+services:
+    # Servicio de traducciones
+    CoreTranslation:
+        class: Guikifix\InfrastructureBundle\Services\CoreTranslation
+        arguments: ["@service_container"]
+    # Servicio de validaciones
+    CoreValidator:
+        class: Guikifix\InfrastructureBundle\Services\CoreValidator
+        arguments: ["@service_container"]
+    # Factory de los repostirios
+    RepositoryFactory:
+        class: Guikifix\InfrastructureBundle\Resources\Services\RepositoryFactory
+        arguments: ["@doctrine.orm.entity_manager"]
+    # Servicio que ejecuta el Caso de uso
+    CommandBus:
+        class: Guikifix\Core\Services\CommandBus
+        arguments: ["@RepositoryFactory","@CoreValidator"]        
