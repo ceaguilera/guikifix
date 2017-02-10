@@ -1,0 +1,24 @@
+Guikifix\ApiBundle\Entity\User:
+    type: entity
+    table: fos_user
+    repositoryClass: Guikifix\ApiBundle\Repository\UserRepository
+
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+
+      #Tipo de usuario en el sistema
+      # 1: usuario 
+      # 2: profesional
+      type_user:
+        type: integer
+        options:
+          default: 1
+
+    manyToOne:
+        user_profile:
+            targetEntity: Guikifix\Core\Domain\UserProfile
+            inversedBy: user

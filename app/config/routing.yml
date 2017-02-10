@@ -7,3 +7,7 @@ guikifix_presentation:
     resource: "@GuikifixPresentationBundle/Resources/config/routing.yml"
     prefix:   /
 
+###### RUTAS DE LOS BUNDLE ###########    
+# Rutas de fos_user
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

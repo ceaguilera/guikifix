@@ -1,0 +1,26 @@
+Guikifix\Core\Domain\UserProfile:
+    type: entity
+    table: user_profile
+    repositoryClass: Guikifix\ApiBundle\Repository\UserProfileRepository
+
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+      # Nombre del usuario
+      first_name:
+        type: string
+      # Apellido
+      last_name:
+        type: string 
+
+    oneToOne:
+        user:
+            targetEntity: Guikifix\ApiBundle\Entity\User
+            inversedBy: user_profile
+            joinColumn:
+                user_id:
+                    referencedColumnName: id
+            cascade: ["persist"]

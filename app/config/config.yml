@@ -9,7 +9,7 @@ parameters:
 
 framework:
     #esi:             ~
-    #translator:      { fallbacks: ["%locale%"] }
+    translator:      { fallbacks: ["%locale%"] }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -41,7 +41,7 @@ twig:
 # Doctrine Configuration
 doctrine:
     dbal:
-        driver:   pdo_mysql
+        driver:   pdo_pgsql
         host:     "%database_host%"
         port:     "%database_port%"
         dbname:   "%database_name%"
@@ -58,8 +58,19 @@ doctrine:
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         naming_strategy: doctrine.orm.naming_strategy.underscore
-        auto_mapping: true
-
+        auto_mapping: false
+        mappings:
+            GuikifixDomain:
+                type: yml
+                prefix: Guikifix\Core\Domain
+                dir: %kernel.root_dir%/../src/Guikifix/ApiBundle/Resources/config/doctrine/domain
+                is_bundle: false
+            GuikifixInfrastructure:
+                type: yml
+                prefix: Guikifix\ApiBundle\Entity
+                dir: %kernel.root_dir%/../src/Guikifix/ApiBundle/Resources/config/doctrine/infrastructure
+                is_bundle: false
+            
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"
@@ -67,3 +78,12 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+# Fos_userBundle
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: main
+    user_class: Guikifix\ApiBundle\Entity\User
+    from_email:
+        address:        webmaster@navicu.com
+        sender_name:    navicu_webmaster
