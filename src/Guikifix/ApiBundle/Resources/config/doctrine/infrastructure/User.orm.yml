@@ -21,4 +21,4 @@ Guikifix\ApiBundle\Entity\User:
     manyToOne:
         user_profile:
             targetEntity: Guikifix\Core\Domain\UserProfile
-            inversedBy: user
+            mappedBy: user
