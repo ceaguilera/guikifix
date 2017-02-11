@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="guikifixApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="guikifixApp">
+  <title ng-bind="pageTitle"></title>
+  <!-- bower:css -->
+  <link rel="stylesheet" href="../../../../bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  
+  <!-- bower:js -->
+  <script src="../../../../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../../../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../../../../bower_components/angular/angular.js"></script>
+  <script src="../../../../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <!-- endbower -->
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <div ng-include="'layout/menu.html'"></div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div ui-view></div>
+  </div>
+
+  <!-- Footer -->
+  <div ng-include="'layout/footer.html'"></div>
+</body>
+
+</html>
