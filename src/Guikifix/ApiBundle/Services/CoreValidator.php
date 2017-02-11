@@ -1,7 +1,7 @@
 <?php
 namespace Guikifix\ApiBundle\Services;
 
-use Guikifix\Core\Contract\Validator;
+use Guikifix\Core\Contract\CoreValidatorInterface;
 use Guikifix\Core\Contract\CoreTranslator;
 
 /**
@@ -12,25 +12,8 @@ use Guikifix\Core\Contract\CoreTranslator;
  *
  * @author Freddy Contreras <freddycontreras3@gmail.com>
  */
-class CoreValidator implements Validator
+class CoreValidator implements CoreValidatorInterface
 {
-    /**
-     * Contenedor de Symfony
-     * 
-     * @var ContainerInterface
-     */
-    private $container;
-
-    /**
-     * Constructor de la clase
-     * 
-     * @param  ContainerInterface $container contenedor de servicios de symfony
-     */
-    public function __construct($container)
-    {
-        $this->container = $container;
-    }
-
     /**
      * Método que permite validar un objeto
      * 
@@ -40,7 +23,8 @@ class CoreValidator implements Validator
      */
     public static function getValidator($obj, $critery = null)
     {
-        $this->container->get('validator')->validate($obj, $critery);
+        global $kernel;
+        $error = $kernel->getContainer()->get('validator')->validate($obj, $critery);
 
         if (count($error) > 0) {
             $response = array(); 

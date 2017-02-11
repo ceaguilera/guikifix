@@ -1,9 +1,9 @@
 <?php 
 
-namespace Guikifix\Core\Application\Services;
+namespace Guikifix\Core\Services;
 
-use Guikifix\Core\Application\Contract\Command;
-use Guikifix\Core\Application\Contract\ResponseCommandBus;
+use Guikifix\Core\Contract\CommandInterface;
+use Guikifix\Core\Services\ResponseCommandBus;
 use Guikifix\Core\Contract\CoreValidatorInterface;
 
 /**
@@ -24,11 +24,18 @@ class CommandBus
     private $rf;
 
     /**
+     * CoreValidator
+     * @var CoreValidator
+     */
+    private $cv;
+
+    /**
      * Constructor de la clase
      */
-    public function __construct($rf)
+    public function __construct($rf,$cv)
     {
         $this->rf = $rf;
+        $this->cv = $cv;
     }
 
     /**
@@ -46,13 +53,13 @@ class CommandBus
      * @param  CoreValidatorInterface $coreValidator Objeto validador de Command
      * @return array                                 arreglo de repuesta del Caso de Uso
      */
-    public function execute(Command $command, CoreValidatorInterface $coreValidator)
+    public function execute(CommandInterface $command)
     {
         $handler = $this->handler($command);
         if($handler!=null)
         {
             //Se valida automaticamente el commando antes de ser ejecutado
-            $validation = $coreValidator::getValidator($command);
+            $validation = $this->cv::getValidator($command);
             if (is_null($validation)) {
 
                 try {
@@ -83,7 +90,7 @@ class CommandBus
      *
      * @return mixed
      */
-    private function handler(Command $command)
+    private function handler(CommandInterface $command)
     {
         $class = $this->inflect($command);
         if(\class_exists($class)){
@@ -99,7 +106,7 @@ class CommandBus
      * @param Command $command
      * @return string
      */
-    private function inflect(Command $command)
+    private function inflect(CommandInterface $command)
     {
         $commandclass = \get_class($command);
         $handlerclass =str_replace('Command', 'Handler', $commandclass);

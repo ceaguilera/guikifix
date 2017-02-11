@@ -9,7 +9,7 @@ namespace Guikifix\Core\Contract;
  *
  * @author Freddy Contreras <freddycontreras3@gmail.com>
  */
-interface CoreValidator
+interface CoreValidatorInterface
 {
     /**
      * Método que permite validar un objeto

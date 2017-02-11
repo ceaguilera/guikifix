@@ -1,6 +1,5 @@
 <?php
-
-namespace Navicu\InfrastructureBundle\Resources\Services;
+namespace Guikifix\ApiBundle\Services;
 
 use Guikifix\Core\Contract\RepositoryFactoryInterface;
 use Doctrine\ORM\EntityManager;
@@ -26,7 +25,12 @@ class RepositoryFactory implements RepositoryFactoryInterface
 	 * Arreglo que contiene el conjunto de repositorios 
 	 * @var array
 	 */
-	private $map = [];
+	private $map = [
+		'User' => [
+            'repository'=>'Guikifix\ApiBundle\Repository\UserRepository',
+            'entity'=>'Guikifix\ApiBundle\Entity\User'
+        ]
+	];
 
 	/**
 	 * Constructor de la clase

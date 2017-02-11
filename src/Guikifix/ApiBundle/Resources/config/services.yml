@@ -5,8 +5,7 @@ services:
         arguments: ["@service_container"]
     # Servicio de validaciones
     CoreValidator:
-        class: Guikifix\ApiBundle\Services\CoreValidator
-        arguments: ["@service_container"]
+        class: Guikifix\ApiBundle\Services\CoreValidator        
     # Factory de los repostirios
     RepositoryFactory:
         class: Guikifix\ApiBundle\Services\RepositoryFactory
