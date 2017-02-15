@@ -1,0 +1,60 @@
+Guikifix\Core\Domain\ProfesionalProfile:
+    type: entity
+    table: profesional_profile
+    repositoryClass: Guikifix\ApiBundle\Repository\ProfesionalProfileRepository
+
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+      # Nombre del usuario
+      first_name:
+        type: string
+      # Apellido
+      last_name:
+        type: string
+      # Celular 
+      cell_phone:
+        type: string
+      # Teléfono fijo
+      phone:
+        type: string
+      # Teléfono alternativo
+      alternative_phone:
+        type: string
+      # Fax
+      fax:
+        type: string
+      # Fecha de nacimiento
+      birthdate:
+        type: date
+      # Género
+      gender:
+        type: integer
+      # Ultima actualización
+      last_update:
+        type: datetime
+      # Fecha de creación
+      created:
+        type: datetime
+
+    oneToOne:
+        user:
+            targetEntity: Guikifix\ApiBundle\Entity\User
+            inversedBy: user_profile
+            joinColumn:
+                user_id:
+                    referencedColumnName: id
+            cascade: ["persist"]
+
+    oneToMany:
+      budgets:
+            targetEntity: Guikifix\Core\Domain\Budget
+            mappedBy: profesional_profile
+            cascade: ["persist"]
+      profesional_plans:
+            targetEntity: Guikifix\Core\Domain\ProfesionalPlan
+            mappedBy: profesional_profile
+            cascade: ["persist"]

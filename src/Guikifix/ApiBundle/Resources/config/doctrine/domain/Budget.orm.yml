@@ -1,0 +1,62 @@
+Guikifix\Core\Domain\Budget:
+    type: entity
+    table: budget
+    repositoryClass: Guikifix\ApiBundle\Repository\BudgetRepository
+
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+      # Título del trabajo
+      title:
+        type: string
+      # Descripción
+      description:
+        type: string
+      # estado del presupuesto
+      status:
+        type: integer
+      # Notificaciones de presupuestos
+      notifications:
+        type: boolean
+      # Precio del presupuesto
+      price:
+        type: float
+      # Ultima actualización
+      last_update:
+        type: datetime
+      # Fecha de creación
+      created:
+        type: datetime
+
+    oneToOne:
+      qualification:        
+        targetEntity: Guikifix\Core\Domain\Qualification
+        inversedBy: budget
+        joinColumn:
+          qualification_id:
+            referencedColumnName: id
+        cascade: ["persist"]
+    oneToMany:
+      messages:
+        targetEntity: Message
+        mappedBy: budget
+    manyToOne:
+      # trabajo donde se realizó la postulación
+      job:
+          targetEntity: Guikifix\Core\Domain\Job
+          inversedBy: budgets
+          joinColumn:
+              user_id:
+                  referencedColumnName: id
+          cascade: ["persist"]
+      # Profesional asociado al presupuesto
+      profesional_profile:
+          targetEntity: Guikifix\Core\Domain\ProfesionalProfile
+          inversedBy: budgets
+          joinColumn:
+              budget_id:
+                  referencedColumnName: id
+          cascade: ["persist"]

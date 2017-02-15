@@ -1,0 +1,41 @@
+Guikifix\Core\Domain\Qualification:
+    type: entity
+    table: qualification
+    repositoryClass: Guikifix\ApiBundle\Repository\QualificationRepository
+
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+      # Comentario
+      comment:
+        type: string
+      # Calidad
+      quality:
+        type: integer
+      # Responsabilidad
+      responsability:
+        type: integer
+      # Tiempo de entrega
+      delivery_time:
+        type: integer
+      # Teléfono alternativo
+      amiability:
+        type: integer
+      # Fax
+      cleaning:
+        type: integer
+      # Precio
+      price:
+        type: integer
+
+    oneToOne:
+        budget:
+            targetEntity: Guikifix\Core\Domain\Budget
+            inversedBy: qualification
+            joinColumn:
+                budget_id:
+                    referencedColumnName: id
+            cascade: ["persist"]

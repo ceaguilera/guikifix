@@ -1,0 +1,59 @@
+Guikifix\Core\Domain\Job:
+    type: entity
+    table: job
+    repositoryClass: Guikifix\ApiBundle\Repository\JobRepository
+
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+      # Título del trabajo
+      title:
+        type: string
+      # Descripción
+      description:
+        type: string
+      # estado del presupuesto
+      # 0: temporal
+      # 1: publicado
+      # 2: asignado
+      # 3: finalizado
+      status:
+        type: integer
+      # telefono de contacto alternativo
+      phone_contact:
+        type: string
+      # Notificaciones de presupuestos
+      notifications:
+        type: boolean
+      # Ultima actualización
+      last_update:
+        type: datetime
+      # Fecha de creación
+      created:
+        type: datetime
+
+    oneToOne:
+        # Usuario quien creo el trabajo
+        user:
+            targetEntity: Guikifix\ApiBundle\Entity\User
+            inversedBy: user_profile
+            joinColumn:
+              user_id:
+                referencedColumnName: id
+            cascade: ["persist"]
+        # presupuesto asignado al trabajo
+        assigned_budget:
+            targetEntity: Guikifix\Core\Domain\Budget
+            joinColumn:
+              assigned_budget_id:
+                referencedColumnName: id
+            cascade: ["persist"]
+    oneToMany:
+        # Trabajos relacionado al perfil
+        budgets:
+            targetEntity: Budget
+            mappedBy: job
+            cascade: ["persist"]

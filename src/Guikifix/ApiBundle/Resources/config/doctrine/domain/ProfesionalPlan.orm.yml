@@ -1,0 +1,45 @@
+Guikifix\Core\Domain\ProfesionalPlan:
+    type: entity
+    table: profesional_plan
+    repositoryClass: Guikifix\ApiBundle\Repository\ProfesionalPlanRepository
+
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+      # Nombre del plan
+      renovation_date:
+        type: datetime
+      # Estado del plan
+      status:
+        type: integer
+      # Credito actual
+      credit:
+        type: integer
+      # Ultima modificación
+      last_update:
+        type: datetime
+      # Fecha de creación
+      created:
+        type: datetime
+
+    oneToOne:
+      # plan anterior
+      parent:
+        targetEntity: Guikifix\Core\Domain\ProfesionalPlan
+        joinColumn:
+            user_id:
+                referencedColumnName: id
+        cascade: ["persist"]
+    ManyToOne:
+      profesional_profile:
+            targetEntity: Guikifix\Core\Domain\ProfesionalProfile
+            mappedBy: null
+            inversedBy: profesional_plans
+            joinColumns:
+                profesional_profile_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+            nullable: false

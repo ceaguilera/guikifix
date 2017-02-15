@@ -1,0 +1,38 @@
+Guikifix\Core\Domain\JobCategory:
+    type: entity
+    table: job_category
+    repositoryClass: Guikifix\ApiBundle\Repository\JobCategoryRepository
+
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+      # Título del trabajo
+      title:
+        type: string
+      # Descripción
+      description:
+        type: string
+      # estado del presupuesto
+      status:
+        type: integer
+      # Notificaciones de presupuestos
+      notifications:
+        type: boolean
+      # Ultima actualización
+      last_update:
+        type: datetime
+      # Fecha de creación
+      created:
+        type: datetime
+
+    oneToOne:
+        user:
+            targetEntity: Guikifix\ApiBundle\Entity\User
+            inversedBy: user_profile
+            joinColumn:
+                user_id:
+                    referencedColumnName: id
+            cascade: ["persist"]

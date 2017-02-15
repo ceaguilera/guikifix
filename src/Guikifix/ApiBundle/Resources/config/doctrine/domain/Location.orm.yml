@@ -1,0 +1,46 @@
+Guikifix\Core\Domain\Location:
+    type: entity
+    table: location
+    repositoryClass: Guikifix\ApiBundle\Repository\LocationRepository
+
+    id:
+        id:
+          type: integer
+          generator:
+            strategy: AUTO
+    fields:
+        # Título o nombre de la localidad
+        title:
+            type: string
+            nullable: false
+            length: 255
+        # Nivel de la localidad
+        lvl:
+            type: integer
+            nullable: true
+        # slug / nombre sin caracteres especiales 
+        # ni espacios
+        slug:
+            type: string
+            nullable: true
+
+    oneToMany:
+        # Localidad hijas
+        children:
+            targetEntity: Location
+            mappedBy: parent
+            orderBy:
+                title: ASC
+        # usuario relacionados a una localidad
+        users_profile:
+            targetEntity: UserProfile
+            mappedBy: jobs            
+    manyToOne:
+        # Localidad de nivel superior
+        parent:
+            targetEntity: Location
+            inversedBy: children
+            joinColumns:
+                parent_id:
+                    referencedColumnName: id
+            orphanRemoval: false       
