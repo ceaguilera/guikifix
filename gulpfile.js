@@ -1,53 +1,55 @@
 'use strict';
 
 var gulp        = require('gulp');
-var wiredep     = require('wiredep').stream;
 var sass        = require('gulp-sass');
-var inject      = require('gulp-inject');
 var concatCss   = require('gulp-concat-css');
 var minifyCss   = require('gulp-minify-css');
+var concatJs    = require('gulp-concat');
+var uglify      = require('gulp-uglify');
 
-gulp.task('bower-copy', function () {
+/* Se copian los archivos de bower_components a la carpeta assets en web */
+gulp.task('assets-copy',  () => {
     console.log("ejecuro el copy")
     gulp.src('bower_components/**/**')
-    .pipe(gulp.dest('web/bower_components'));
+    .pipe(gulp.dest('web/assets'));
 });
 
-gulp.task('wiredep', ['bower-copy'], () => {
-    console.log("wiredep");
-    gulp.src('./src/Guikifix/PresentationBundle/app/index.html')
-    .pipe(wiredep({
-        directory: './web/bower_components/',
-        onError: function(err){
-            console.log(err.code);
-        }
-    }))
-    .pipe(gulp.dest('./src/Guikifix/PresentationBundle/app/'))
-});
-
-gulp.task('sass',['wiredep'], () => {
+/* Se compilan todos los archivos de scss de la carpeta app */
+gulp.task('sass', () => {
     console.log("ejecuto sass");
     gulp.src('./src/Guikifix/PresentationBundle/app/**/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('./src/Guikifix/PresentationBundle/app/'))
 })
 
-gulp.task('myCSS', ['sass'], function () {
-    gulp.src('./src/Guikifix/PresentationBundle/app/**/*.css')
-        .pipe(concatCss('all.css'))
-        //Utilizamos la función minifyCSS
+/* Se concatenan y minifican todos los archivos .css del proyecto y de los assets */
+gulp.task('styles', ['assets-copy' ,'sass' ], () => {
+    gulp.src(
+        [
+        './web/assets/bootstrap/dist/css/bootstrap.css',
+        './src/Guikifix/PresentationBundle/app/**/*.css'
+        ]
+    )
+        .pipe(concatCss('styles.css'))
         .pipe(minifyCss())
         .pipe(gulp.dest('web/css'));
 });
 
-gulp.task('inject', ['myCSS'], () => {
-  console.log("ejecuto inject");
-  var target = gulp.src('./src/Guikifix/PresentationBundle/app/index.html');
-  // It's not necessary to read the files (will speed up things), we're only after their paths: 
-  var sources = gulp.src(['./src/Guikifix/PresentationBundle/app/**/*.js', 'web/css/all.css'], {read: false});
- 
-  return target.pipe(inject(sources))
-    .pipe(gulp.dest('./src/Guikifix/PresentationBundle/app/'));
+/* Se concatenan y minifican todos los archivos .js del proyecto y de los assets */
+gulp.task('scripts', ['assets-copy'], () => {
+  gulp.src(
+          [
+          './web/assets/jquery/dist/jquery.js',
+          './web/assets/bootstrap/dist/js/bootstrap.js',
+          './web/assets/angular/angular.js',
+          './web/assets/angular-ui-router/release/angular-ui-router.js',
+          './src/Guikifix/PresentationBundle/app/**/*.js',
+          ]
+      )
+  	.pipe(concatJs('scripts.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('web/js'))
 });
 
-gulp.task('default', ['bower-copy','wiredep',  'myCSS', 'sass', 'inject']);
+
+gulp.task('default', ['assets-copy','sass', 'styles', 'sass', 'scripts']);
