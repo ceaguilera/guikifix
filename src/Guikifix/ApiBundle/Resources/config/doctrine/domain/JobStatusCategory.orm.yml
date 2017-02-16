@@ -1,0 +1,53 @@
+Guikifix\Core\Domain\JobStatusCategory:
+    type: entity
+    table: job_status_category
+    repositoryClass: Guikifix\ApiBundle\Repository\JobStatusCategoryRepository
+
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+      # Título del trabajo
+      title:
+        type: string
+      # Descripción
+      description:
+        type: string
+      # estado del presupuesto
+      status:
+        type: integer
+      # Notificaciones de presupuestos
+      notifications:
+        type: boolean
+      # Ultima actualización
+      last_update:
+        type: datetime
+      # Fecha de creación
+      created:
+        type: datetime
+
+    oneToMany:
+      # Categorias hijas
+      children:
+          targetEntity: Guikifix\Core\Domain\JobStatusCategory
+          mappedBy: parent
+          orderBy:
+              title: ASC        
+    manyToOne:
+      # Category padre
+      parent:
+          targetEntity: Guikifix\Core\Domain\JobStatusCategory
+          inversedBy: children
+          joinColumns:
+              job_status_category_id:
+                  referencedColumnName: id
+          orphanRemoval: false
+
+    manyToMany:
+      # Estado posible del trabajo
+      jobs_status:
+          targetEntity: Job
+          cascade: {  }
+          mappedBy: jobs_status_category

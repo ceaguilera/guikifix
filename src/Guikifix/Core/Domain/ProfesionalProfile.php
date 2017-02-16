@@ -2,13 +2,13 @@
 namespace Guikifix\Core\Domain;
 
 /**
- * UserProfile
+ * ProfesionalProfile
  *
- * La entidad representa el perfil del usuario
+ * La clase representa el perfil del profesional
  * 
  * @author  Freddy Contreras
  */
-class UserProfile
+class ProfesionalProfile
 {
 
     /**
@@ -35,6 +35,16 @@ class UserProfile
      * @var string
      */
     private $phone;
+
+    /**
+     * @var string
+     */
+    private $alternative_phone;
+
+    /**
+     * @var string
+     */
+    private $fax;
 
     /**
      * @var \DateTime
@@ -64,25 +74,20 @@ class UserProfile
     /**
      * @var \Doctrine\Common\Collections\Collection
      */
-    private $jobs;
+    private $budgets;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
      */
-    private $qualifications;
-
-    /**
-     * @var \Guikifix\Core\Domain\Location
-     */
-    private $location;
+    private $profesional_plans;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->jobs = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->qualifications = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->budgets = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->profesional_plans = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -100,7 +105,7 @@ class UserProfile
      *
      * @param string $firstName
      *
-     * @return UserProfile
+     * @return ProfesionalProfile
      */
     public function setFirstName($firstName)
     {
@@ -124,7 +129,7 @@ class UserProfile
      *
      * @param string $lastName
      *
-     * @return UserProfile
+     * @return ProfesionalProfile
      */
     public function setLastName($lastName)
     {
@@ -148,7 +153,7 @@ class UserProfile
      *
      * @param string $cellPhone
      *
-     * @return UserProfile
+     * @return ProfesionalProfile
      */
     public function setCellPhone($cellPhone)
     {
@@ -172,7 +177,7 @@ class UserProfile
      *
      * @param string $phone
      *
-     * @return UserProfile
+     * @return ProfesionalProfile
      */
     public function setPhone($phone)
     {
@@ -192,11 +197,59 @@ class UserProfile
     }
 
     /**
+     * Set alternativePhone
+     *
+     * @param string $alternativePhone
+     *
+     * @return ProfesionalProfile
+     */
+    public function setAlternativePhone($alternativePhone)
+    {
+        $this->alternative_phone = $alternativePhone;
+
+        return $this;
+    }
+
+    /**
+     * Get alternativePhone
+     *
+     * @return string
+     */
+    public function getAlternativePhone()
+    {
+        return $this->alternative_phone;
+    }
+
+    /**
+     * Set fax
+     *
+     * @param string $fax
+     *
+     * @return ProfesionalProfile
+     */
+    public function setFax($fax)
+    {
+        $this->fax = $fax;
+
+        return $this;
+    }
+
+    /**
+     * Get fax
+     *
+     * @return string
+     */
+    public function getFax()
+    {
+        return $this->fax;
+    }
+
+    /**
      * Set birthdate
      *
      * @param \DateTime $birthdate
      *
-     * @return UserProfile
+     * @return ProfesionalProfile
      */
     public function setBirthdate($birthdate)
     {
@@ -220,7 +273,7 @@ class UserProfile
      *
      * @param integer $gender
      *
-     * @return UserProfile
+     * @return ProfesionalProfile
      */
     public function setGender($gender)
     {
@@ -244,7 +297,7 @@ class UserProfile
      *
      * @param \DateTime $lastUpdate
      *
-     * @return UserProfile
+     * @return ProfesionalProfile
      */
     public function setLastUpdate($lastUpdate)
     {
@@ -268,7 +321,7 @@ class UserProfile
      *
      * @param \DateTime $created
      *
-     * @return UserProfile
+     * @return ProfesionalProfile
      */
     public function setCreated($created)
     {
@@ -292,7 +345,7 @@ class UserProfile
      *
      * @param \Guikifix\ApiBundle\Entity\User $user
      *
-     * @return UserProfile
+     * @return ProfesionalProfile
      */
     public function setUser(\Guikifix\ApiBundle\Entity\User $user = null)
     {
@@ -312,94 +365,70 @@ class UserProfile
     }
 
     /**
-     * Add job
+     * Add budget
      *
-     * @param \Guikifix\Core\Domain\Job $job
+     * @param \Guikifix\Core\Domain\Budget $budget
      *
-     * @return UserProfile
+     * @return ProfesionalProfile
      */
-    public function addJob(\Guikifix\Core\Domain\Job $job)
+    public function addBudget(\Guikifix\Core\Domain\Budget $budget)
     {
-        $this->jobs[] = $job;
+        $this->budgets[] = $budget;
 
         return $this;
     }
 
     /**
-     * Remove job
+     * Remove budget
      *
-     * @param \Guikifix\Core\Domain\Job $job
+     * @param \Guikifix\Core\Domain\Budget $budget
      */
-    public function removeJob(\Guikifix\Core\Domain\Job $job)
+    public function removeBudget(\Guikifix\Core\Domain\Budget $budget)
     {
-        $this->jobs->removeElement($job);
+        $this->budgets->removeElement($budget);
     }
 
     /**
-     * Get jobs
+     * Get budgets
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getJobs()
+    public function getBudgets()
     {
-        return $this->jobs;
+        return $this->budgets;
     }
 
     /**
-     * Add qualification
+     * Add profesionalPlan
      *
-     * @param \Guikifix\Core\Domain\Qualification $qualification
+     * @param \Guikifix\Core\Domain\ProfesionalPlan $profesionalPlan
      *
-     * @return UserProfile
+     * @return ProfesionalProfile
      */
-    public function addQualification(\Guikifix\Core\Domain\Qualification $qualification)
+    public function addProfesionalPlan(\Guikifix\Core\Domain\ProfesionalPlan $profesionalPlan)
     {
-        $this->qualifications[] = $qualification;
+        $this->profesional_plans[] = $profesionalPlan;
 
         return $this;
     }
 
     /**
-     * Remove qualification
+     * Remove profesionalPlan
      *
-     * @param \Guikifix\Core\Domain\Qualification $qualification
+     * @param \Guikifix\Core\Domain\ProfesionalPlan $profesionalPlan
      */
-    public function removeQualification(\Guikifix\Core\Domain\Qualification $qualification)
+    public function removeProfesionalPlan(\Guikifix\Core\Domain\ProfesionalPlan $profesionalPlan)
     {
-        $this->qualifications->removeElement($qualification);
+        $this->profesional_plans->removeElement($profesionalPlan);
     }
 
     /**
-     * Get qualifications
+     * Get profesionalPlans
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getQualifications()
+    public function getProfesionalPlans()
     {
-        return $this->qualifications;
-    }
-
-    /**
-     * Set location
-     *
-     * @param \Guikifix\Core\Domain\Location $location
-     *
-     * @return UserProfile
-     */
-    public function setLocation(\Guikifix\Core\Domain\Location $location = null)
-    {
-        $this->location = $location;
-
-        return $this;
-    }
-
-    /**
-     * Get location
-     *
-     * @return \Guikifix\Core\Domain\Location
-     */
-    public function getLocation()
-    {
-        return $this->location;
+        return $this->profesional_plans;
     }
 }

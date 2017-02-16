@@ -1,0 +1,48 @@
+Guikifix\Core\Domain\Plan:
+    type: entity
+    table: plan
+    repositoryClass: Guikifix\ApiBundle\Repository\PlanRepository
+
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+      # Nombre del plan
+      name:
+        type: string
+      # Comentario
+      credit:
+        type: integer
+      # Precio del plan
+      price:
+        type: float
+      ##### Se debe definir bien #####
+      access_contact:
+        type: boolean
+      
+      rating:
+        type: boolean
+
+      publish_contact:
+        type: boolean
+
+      web:
+        type: boolean
+
+      publicidad:
+        type: boolean 
+      ##### Se debe definir bien #####
+      
+      # Ultima modificación
+      last_update:
+        type: datetime
+      # Fecha de creación
+      created:
+        type: datetime
+    oneToMany:
+      profesional_plans:
+        targetEntity: Guikifix\Core\Domain\Plan
+        mappedBy: profesional_profile
+        cascade: ["persist"]

@@ -14,13 +14,53 @@ Guikifix\Core\Domain\UserProfile:
         type: string
       # Apellido
       last_name:
-        type: string 
+        type: string
+      # Celular 
+      cell_phone:
+        type: string
+      # Teléfono fijo
+      phone:
+        type: string
+      # Fecha de nacimiento
+      birthdate:
+        type: date
+      # Género
+      gender:
+        type: integer
+      # Ultima actualización
+      last_update:
+        type: datetime
+      # Fecha de creación
+      created:
+        type: datetime
 
     oneToOne:
-        user:
-            targetEntity: Guikifix\ApiBundle\Entity\User
-            inversedBy: user_profile
-            joinColumn:
-                user_id:
-                    referencedColumnName: id
+      # Usuario relacionado al perfil  
+      user:
+          targetEntity: Guikifix\ApiBundle\Entity\User
+          inversedBy: user_profile
+          joinColumn:
+              user_id:
+                  referencedColumnName: id
+          cascade: ["persist"]
+    oneToMany:
+        # Trabajos relacionado al perdil
+        jobs:
+            targetEntity: Guikifix\Core\Domain\Job
+            mappedBy: user_profile
             cascade: ["persist"]
+        # Calificaciones emitidas por el usuario
+        qualifications:
+            targetEntity: Guikifix\Core\Domain\Qualification
+            mappedBy: user_profile
+            cascade: ["persist"]
+
+    manyToOne:
+      # ubicación del usuario
+      location:
+            targetEntity: Guikifix\Core\Domain\Location
+            mappedBy: null
+            joinColumns:
+                location_id:
+                    referencedColumnName: id
+            orphanRemoval: false

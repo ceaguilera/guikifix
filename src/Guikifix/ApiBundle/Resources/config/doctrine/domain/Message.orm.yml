@@ -1,0 +1,38 @@
+Guikifix\Core\Domain\Message:
+    type: entity
+    table: message
+    repositoryClass: Guikifix\ApiBundle\Repository\MessageRepository
+
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+      # Comentario o mensaje enviado
+      comment:
+        type: datetime
+      # Ultima actualización
+      last_update:
+        type: datetime
+      # Fecha de creación
+      created:
+        type: datetime
+    
+    manyToOne:
+        # Usuario que crea un mensaje
+        user:
+          targetEntity: Guikifix\ApiBundle\Entity\User
+          inversedBy: user
+          joinColumn:
+            user_id:
+              referencedColumnName: id
+          cascade: ["persist"]
+        # Presupuesto 
+        budget:
+          targetEntity: Guikifix\Core\Domain\Budget
+          inversedBy: messages
+          joinColumn:
+            budget_id:
+              referencedColumnName: id
+          cascade: ["persist"]

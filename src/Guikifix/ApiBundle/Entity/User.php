@@ -24,11 +24,15 @@ class User extends BaseUser
      *     2: profesional
      */
     private $type_user = 1;
-
     /**
      * @var \Guikifix\Core\Domain\UserProfile
      */
     private $user_profile;
+
+    /**
+     * @var \Guikifix\Core\Domain\ProfesionalProfile
+     */
+    private $profesional_profile;
 
 
     /**
@@ -77,5 +81,29 @@ class User extends BaseUser
     public function getUserProfile()
     {
         return $this->user_profile;
+    }
+
+    /**
+     * Set profesionalProfile
+     *
+     * @param \Guikifix\Core\Domain\ProfesionalProfile $profesionalProfile
+     *
+     * @return User
+     */
+    public function setProfesionalProfile(\Guikifix\Core\Domain\ProfesionalProfile $profesionalProfile = null)
+    {
+        $this->profesional_profile = $profesionalProfile;
+
+        return $this;
+    }
+
+    /**
+     * Get profesionalProfile
+     *
+     * @return \Guikifix\Core\Domain\ProfesionalProfile
+     */
+    public function getProfesionalProfile()
+    {
+        return $this->profesional_profile;
     }
 }

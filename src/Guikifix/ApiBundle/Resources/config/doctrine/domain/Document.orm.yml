@@ -1,0 +1,17 @@
+Guikifix\Core\Domain\Document:
+    type: entity
+    table: document
+    repositoryClass: Guikifix\ApiBundle\Repository\DocumentRepository
+
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+      # path del archivo
+      filaname:
+        type: string
+      # Nombre adicional del archivo
+      name:
+        type: string
