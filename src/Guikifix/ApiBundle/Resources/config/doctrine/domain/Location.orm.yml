@@ -27,13 +27,13 @@ Guikifix\Core\Domain\Location:
     oneToMany:
         # Localidad hijas
         children:
-            targetEntity: Location
+            targetEntity: Guikifix\Core\Domain\Location
             mappedBy: parent
             orderBy:
                 title: ASC
         # usuario relacionados a una localidad
         users_profile:
-            targetEntity: UserProfile
+            targetEntity: Guikifix\Core\Domain\UserProfile
             mappedBy: jobs            
     manyToOne:
         # Localidad de nivel superior

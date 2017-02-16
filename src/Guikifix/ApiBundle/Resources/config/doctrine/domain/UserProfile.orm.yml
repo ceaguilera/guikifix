@@ -46,16 +46,21 @@ Guikifix\Core\Domain\UserProfile:
     oneToMany:
         # Trabajos relacionado al perdil
         jobs:
-            targetEntity: Job
+            targetEntity: Guikifix\Core\Domain\Job
             mappedBy: user_profile
-            cascade: ["persist"]            
+            cascade: ["persist"]
+        # Calificaciones emitidas por el usuario
+        qualifications:
+            targetEntity: Guikifix\Core\Domain\Qualification
+            mappedBy: user_profile
+            cascade: ["persist"]
 
     manyToOne:
       # ubicación del usuario
       location:
-            targetEntity: Location
+            targetEntity: Guikifix\Core\Domain\Location
             mappedBy: null
             joinColumns:
-                location:
+                location_id:
                     referencedColumnName: id
             orphanRemoval: false

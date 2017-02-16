@@ -9,9 +9,9 @@ Guikifix\Core\Domain\Document:
             generator:
                 strategy: AUTO
     fields:
-      # Comentario
+      # path del archivo
       filaname:
         type: string
-      # Calidad
+      # Nombre adicional del archivo
       name:
         type: string

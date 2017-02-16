@@ -54,6 +54,41 @@ Guikifix\Core\Domain\Job:
     oneToMany:
         # Trabajos relacionado al perfil
         budgets:
-            targetEntity: Budget
+            targetEntity: Guikifix\Core\Domain\Budget
             mappedBy: job
             cascade: ["persist"]
+    manyToMany:
+      # Estados posible del trabajo
+        jobs_status_category:
+            targetEntity: Guikifix\Core\Domain\JobStatusCategory
+            cascade: {  }
+            mappedBy: null
+            inversedBy: jobs_status
+            orderBy: null
+            joinTable:
+                name: jobs_status_category
+                joinColumns:
+                    -
+                        name: job_status_id
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    -
+                        name: job_status_category_id
+                        referencedColumnName: id
+      # Tipos de trabajo asociado
+        jobs_types_category:
+            targetEntity: Guikifix\Core\Domain\JobTypeCategory
+            cascade: {  }
+            mappedBy: null
+            inversedBy: jobs_types
+            orderBy: null
+            joinTable:
+                name: jobs_types_category
+                joinColumns:
+                    -
+                        name: job_types_id
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    -
+                        name: job_types_category_id
+                        referencedColumnName: id

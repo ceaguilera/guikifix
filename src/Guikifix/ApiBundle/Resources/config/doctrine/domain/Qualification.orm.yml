@@ -39,3 +39,12 @@ Guikifix\Core\Domain\Qualification:
                 budget_id:
                     referencedColumnName: id
             cascade: ["persist"]
+    manyToOne:
+        # Usuario que realizó la calificación
+        user_profile:
+            targetEntity: Guikifix\Core\Domain\UserProfile
+            inversedBy: qualifications
+            joinColumns:
+                user_profile_id:
+                    referencedColumnName: id
+            orphanRemoval: false

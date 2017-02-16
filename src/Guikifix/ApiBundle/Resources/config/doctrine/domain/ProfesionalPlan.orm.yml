@@ -33,10 +33,10 @@ Guikifix\Core\Domain\ProfesionalPlan:
             user_id:
                 referencedColumnName: id
         cascade: ["persist"]
-    ManyToOne:
+    manyToOne:
       profesional_profile:
             targetEntity: Guikifix\Core\Domain\ProfesionalProfile
-            mappedBy: null
+            mappedBy: profesional_plans
             inversedBy: profesional_plans
             joinColumns:
                 profesional_profile_id:

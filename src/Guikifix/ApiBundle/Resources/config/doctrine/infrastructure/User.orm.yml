@@ -22,3 +22,6 @@ Guikifix\ApiBundle\Entity\User:
         user_profile:
             targetEntity: Guikifix\Core\Domain\UserProfile
             mappedBy: user
+        profesional_profile:
+            targetEntity: Guikifix\Core\Domain\ProfesionalProfile
+            mappedBy: user

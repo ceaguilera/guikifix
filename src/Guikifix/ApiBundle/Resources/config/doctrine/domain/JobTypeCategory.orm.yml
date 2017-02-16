@@ -1,0 +1,53 @@
+Guikifix\Core\Domain\JobTypeCategory:
+    type: entity
+    table: job_type_category
+    repositoryClass: Guikifix\ApiBundle\Repository\JobTypeCategoryRepository
+
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+      # Título del trabajo
+      title:
+        type: string
+      # Descripción
+      description:
+        type: string
+      # estado del presupuesto
+      status:
+        type: integer
+      # Notificaciones de presupuestos
+      notifications:
+        type: boolean
+      # Ultima actualización
+      last_update:
+        type: datetime
+      # Fecha de creación
+      created:
+        type: datetime
+
+    oneToMany:
+      # Categorias hijas
+      children:
+          targetEntity: Guikifix\Core\Domain\JobTypeCategory
+          mappedBy: parent
+          orderBy:
+              title: ASC        
+    manyToOne:
+      # Category padre
+      parent:
+          targetEntity: Guikifix\Core\Domain\JobTypeCategory
+          inversedBy: children
+          joinColumns:
+              parent_id:
+                  referencedColumnName: id
+          orphanRemoval: false
+    
+    manyToMany:
+      # Tipo de trabajo
+      jobs_types:
+          targetEntity: Job
+          cascade: {  }
+          mappedBy: jobs_type_category  
