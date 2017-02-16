@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('GuikifixPresentationBundle:Default:index.html.twig');
+        return $this->render('@Guikifix/index.html');
     }
 }
