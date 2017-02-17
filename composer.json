@@ -50,6 +50,9 @@
         ],
         "post-update-cmd": [
             "@symfony-scripts"
+        ],
+        "compile": [
+            "app/console doctrine:migrations:migrate"
         ]
     },
     "extra": {
