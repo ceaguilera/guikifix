@@ -17,3 +17,5 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    env(DATABASE_URL): postgres://pxkmxvqrrfbwur:P1mlA2F7h7DDZq3F_YcnAGd_Zy@ec2-50-19-252-72.compute-1.amazonaws.com:5432/d9st2ra0okcv2q
