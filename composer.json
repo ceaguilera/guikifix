@@ -52,7 +52,7 @@
             "@symfony-scripts"
         ],
         "compile": [
-            "app/console doctrine:migrations:migrate"
+            "bin/console doctrine:migrations:migrate"
         ]
     },
     "extra": {
