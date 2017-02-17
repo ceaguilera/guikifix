@@ -18,8 +18,19 @@ class Version20170217132807 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'postgresql', 'Migration can only be executed safely on \'postgresql\'.');
 
-        $this->addSql('DROP SEQUENCE budget_category_id_seq CASCADE');
-        $this->addSql('DROP SEQUENCE job_category_id_seq CASCADE');
+        $this->addSql('CREATE SEQUENCE job_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
+        $this->addSql('CREATE SEQUENCE budget_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
+        $this->addSql('CREATE SEQUENCE document_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
+        $this->addSql('CREATE SEQUENCE profesional_plan_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
+        $this->addSql('CREATE SEQUENCE qualification_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
+        $this->addSql('CREATE SEQUENCE message_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
+        $this->addSql('CREATE SEQUENCE plan_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
+        $this->addSql('CREATE SEQUENCE profesional_profile_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
+        $this->addSql('CREATE SEQUENCE job_type_category_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
+        $this->addSql('CREATE SEQUENCE location_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
+        $this->addSql('CREATE SEQUENCE job_status_category_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
+        $this->addSql('CREATE SEQUENCE user_profile_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
+        $this->addSql('CREATE SEQUENCE fos_user_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
         $this->addSql('CREATE TABLE job (id INT NOT NULL, user_id INT DEFAULT NULL, assigned_budget_id INT DEFAULT NULL, title VARCHAR(255) NOT NULL, description VARCHAR(255) NOT NULL, status INT NOT NULL, phone_contact VARCHAR(255) NOT NULL, notifications BOOLEAN NOT NULL, last_update TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL, created TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL, PRIMARY KEY(id))');
         $this->addSql('CREATE UNIQUE INDEX UNIQ_FBD8E0F8A76ED395 ON job (user_id)');
         $this->addSql('CREATE UNIQUE INDEX UNIQ_FBD8E0F84F0A131A ON job (assigned_budget_id)');
@@ -119,8 +130,19 @@ class Version20170217132807 extends AbstractMigration
         $this->addSql('ALTER TABLE message DROP CONSTRAINT FK_B6BD307FA76ED395');
         $this->addSql('ALTER TABLE profesional_profile DROP CONSTRAINT FK_93376DC8A76ED395');
         $this->addSql('ALTER TABLE user_profile DROP CONSTRAINT FK_D95AB405A76ED395');
-        $this->addSql('CREATE SEQUENCE budget_category_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
-        $this->addSql('CREATE SEQUENCE job_category_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
+        $this->addSql('DROP SEQUENCE job_id_seq CASCADE');
+        $this->addSql('DROP SEQUENCE budget_id_seq CASCADE');
+        $this->addSql('DROP SEQUENCE document_id_seq CASCADE');
+        $this->addSql('DROP SEQUENCE profesional_plan_id_seq CASCADE');
+        $this->addSql('DROP SEQUENCE qualification_id_seq CASCADE');
+        $this->addSql('DROP SEQUENCE message_id_seq CASCADE');
+        $this->addSql('DROP SEQUENCE plan_id_seq CASCADE');
+        $this->addSql('DROP SEQUENCE profesional_profile_id_seq CASCADE');
+        $this->addSql('DROP SEQUENCE job_type_category_id_seq CASCADE');
+        $this->addSql('DROP SEQUENCE location_id_seq CASCADE');
+        $this->addSql('DROP SEQUENCE job_status_category_id_seq CASCADE');
+        $this->addSql('DROP SEQUENCE user_profile_id_seq CASCADE');
+        $this->addSql('DROP SEQUENCE fos_user_id_seq CASCADE');
         $this->addSql('DROP TABLE job');
         $this->addSql('DROP TABLE jobs_status_category');
         $this->addSql('DROP TABLE jobs_types_category');
