@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="guikifixApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="guikifixApp">
+  <title ng-bind="pageTitle"></title>
+
+  <!-- inject:css -->
+  <link rel="stylesheet" href="frontend/app/app.css">
+  <link rel="stylesheet" href="frontend/app/about/about.css">
+  <link rel="stylesheet" href="frontend/app/home/home.css">
+  <link rel="stylesheet" href="frontend/app/layout/layout.css">
+  <!-- endinject -->
+
+  <!-- bower:css -->
+  <link rel="stylesheet" href="../../assets/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+
+  
+  <!-- bower:js -->
+  <script src="../../assets/jquery/dist/jquery.js"></script>
+  <script src="../../assets/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../../assets/angular/angular.js"></script>
+  <script src="../../assets/angular-ui-router/release/angular-ui-router.js"></script>
+  <!-- endbower -->
+
+  <!-- inject:js -->
+  <script src="frontend/app/app.module.js"></script>
+  <script src="frontend/app/about/about.module.js"></script>
+  <script src="frontend/app/about/about.router.js"></script>
+  <script src="frontend/app/about/about.controller.js"></script>
+  <script src="frontend/app/home/home.module.js"></script>
+  <script src="frontend/app/home/home.router.js"></script>
+  <script src="frontend/app/home/home.controller.js"></script>
+  <!-- endinject -->
+
+  <!-- Archivos de produccion
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="js/scripts.js"></script>#}
+  -->
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <div class="container">
+    <div ng-include="'frontend/app/layout/menu.html'"></div>
+  </div>
+  <!-- Main Content -->
+  <div class="container">
+    <div ui-view></div>
+  </div>
+
+  <!-- Footer -->
+  <div ng-include="'frontend/app/layout/footer.html'"></div>
+</body>
+
+</html>

@@ -38,7 +38,7 @@ twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
     paths:
-        '%kernel.root_dir%/../src/Guikifix/PresentationBundle/app': Guikifix
+        '%kernel.root_dir%/../web/frontend/app': Guikifix
 
 # Doctrine Configuration
 doctrine:
