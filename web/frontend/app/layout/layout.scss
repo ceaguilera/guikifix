@@ -1,0 +1,90 @@
+@import '../varibles';
+@import '../fonts';
+.top {
+    header {
+        width: 100%;
+        height: 72px;
+        background: #FFF;
+        img {
+            width: 250px;
+            margin-top: 15px;
+            margin-left: 88px;
+        }
+        button {
+            color: #FFF;
+            font-family: Roboto;
+            font-weight: bold;
+            border-radius: 8px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .left {
+            padding-left: 25%;
+            margin-top: 24px;
+        }
+        .typeOne {
+            background-color: $primary-color !important;
+        }
+        .typeTwo {
+            background-color: $third-color !important;
+        }
+    }
+}
+.menuGuikifix {
+    background: $secundary-color !important;
+    border-color: $secundary-color !important;
+    border-radius: 0px !important;
+    a {
+        color: #FFF !important;
+        font-family: Roboto !important;
+        font-weight: bold !important;
+    }
+    ul {
+        li {
+            a{
+                &.hover {
+                    background: $primary-color !important;
+                }
+            }
+        }
+    }
+    .title {
+        margin-top: 5px;
+        font-size: 26px;
+        border-right-style: solid;
+        border-width: 3px;
+        border-color: #FFF;
+        color: #FFF !important;
+        font-family: Roboto !important;
+        font-weight: bold !important;
+        padding-right: 5px;
+    }
+}
+footer {
+    height: 110px;
+    background: $primary-color;
+    color: #FFF;
+    ul {
+        list-style:none;
+
+    }
+    img {
+        width: 127px;
+        height: 65px;
+    }
+}
+.subFooter {
+    height: 28px;
+    background: #4C4D4F;
+    color: #FFF !important;
+    font-family: Roboto !important;
+    font-weight: bold !important;
+    text-align: center;
+    a {
+        color: #FFF !important;
+        font-family: Roboto !important;
+        font-weight: bold !important;
+        position: relative;
+        top: 6px;
+    }
+}

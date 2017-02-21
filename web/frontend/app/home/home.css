@@ -1,5 +1,7 @@
-.home h1 {
-  color: red; }
-
-.home header {
-  background: #fff; }
+.home {
+  background: url("/../images/fondo.jpg") no-repeat;
+  height: 500px; }
+  .home h1 {
+    color: #FF6600; }
+  .home header {
+    background: #fff; }

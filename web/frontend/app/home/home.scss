@@ -1,6 +1,10 @@
+@import '../varibles';
+
 .home {
+    background: url('/../images/fondo.jpg') no-repeat;
+    height: 500px;
     h1 {
-        color: red;
+        color: $primary-color;
     }
     header {
         background: #fff;

@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-style: normal;
+  src: url("http://fonts.gstatic.com/s/roboto/v15/5YB-ifwqHP20Yn46l_BDhA.eot");
+  src: url("http://fonts.gstatic.com/s/roboto/v15/5YB-ifwqHP20Yn46l_BDhA.eot?#iefix") format("embedded-opentype"), local("Roboto"), local("Roboto-regular"), url("http://fonts.gstatic.com/s/roboto/v15/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2") format("woff2"), url("http://fonts.gstatic.com/s/roboto/v15/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff") format("woff"), url("http://fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf") format("truetype"), url("http://fonts.gstatic.com/l/font?kit=_YZOZaQ9UBZzaxiLBLcgZg&skey=a0a0114a1dcab3ac&v=v15#Roboto") format("svg"); }
+
+.top header {
+  width: 100%;
+  height: 72px;
+  background: #FFF; }
+  .top header img {
+    width: 250px;
+    margin-top: 15px;
+    margin-left: 88px; }
+  .top header button {
+    color: #FFF;
+    font-family: Roboto;
+    font-weight: bold;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px; }
+  .top header .left {
+    padding-left: 25%;
+    margin-top: 24px; }
+  .top header .typeOne {
+    background-color: #FF6600 !important; }
+  .top header .typeTwo {
+    background-color: #76BE53 !important; }
+
+.menuGuikifix {
+  background: #094AB1 !important;
+  border-color: #094AB1 !important;
+  border-radius: 0px !important; }
+  .menuGuikifix a {
+    color: #FFF !important;
+    font-family: Roboto !important;
+    font-weight: bold !important; }
+  .menuGuikifix ul li a.hover {
+    background: #FF6600 !important; }
+  .menuGuikifix .title {
+    margin-top: 5px;
+    font-size: 26px;
+    border-right-style: solid;
+    border-width: 3px;
+    border-color: #FFF;
+    color: #FFF !important;
+    font-family: Roboto !important;
+    font-weight: bold !important;
+    padding-right: 5px; }
+
+footer {
+  height: 110px;
+  background: #FF6600;
+  color: #FFF; }
+  footer ul {
+    list-style: none; }
+  footer img {
+    width: 127px;
+    height: 65px; }
+
+.subFooter {
+  height: 28px;
+  background: #4C4D4F;
+  color: #FFF !important;
+  font-family: Roboto !important;
+  font-weight: bold !important;
+  text-align: center; }
+  .subFooter a {
+    color: #FFF !important;
+    font-family: Roboto !important;
+    font-weight: bold !important;
+    position: relative;
+    top: 6px; }

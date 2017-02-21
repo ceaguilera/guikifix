@@ -20,7 +20,7 @@ gulp.task('assets-copy',  () => {
 /* Se compilan todos los archivos de scss de la carpeta app */
 gulp.task('sass', () => {
     console.log("ejecuto sass");
-    gulp.src('./web/frontend/app/**/*.scss')
+    gulp.src('./web/frontend/app/**/*/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('./web/frontend/app/'))
 })
@@ -76,5 +76,8 @@ gulp.task('scripts', ['assets-copy'], () => {
     .pipe(gulp.dest('web/js'))
 });
 
+gulp.task('watch', () => {
+    gulp.watch('./web/frontend/app/**/*.scss', ['sass']);
+})
 
 gulp.task('default', ['assets-copy','sass', 'inject', 'wiredep', 'styles', 'sass', 'scripts']);

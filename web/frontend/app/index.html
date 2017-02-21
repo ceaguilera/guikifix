@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="frontend/app/app.css">
   <link rel="stylesheet" href="frontend/app/about/about.css">
   <link rel="stylesheet" href="frontend/app/home/home.css">
+  <link rel="stylesheet" href="frontend/app/home/downList/downList.css">
   <link rel="stylesheet" href="frontend/app/layout/layout.css">
   <!-- endinject -->
 
@@ -45,13 +46,9 @@
 
 <body>
   <!-- Navigation Bar -->
-  <div class="container">
-    <div ng-include="'frontend/app/layout/menu.html'"></div>
-  </div>
+    <div ng-include="'frontend/app/layout/header.html'"></div>
   <!-- Main Content -->
-  <div class="container">
     <div ui-view></div>
-  </div>
 
   <!-- Footer -->
   <div ng-include="'frontend/app/layout/footer.html'"></div>
