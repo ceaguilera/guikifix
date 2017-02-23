@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Guikifix\ApiBundle\GuikifixApiBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+            new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
 
         ];
 
