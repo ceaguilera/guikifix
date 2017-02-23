@@ -1,0 +1,3 @@
+guikifix_api_job_type:
+    path:     /
+    defaults: { _controller: GuikifixApiBundle:User\JobType:index }

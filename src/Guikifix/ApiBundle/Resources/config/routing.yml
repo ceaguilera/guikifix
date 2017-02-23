@@ -1,3 +1,7 @@
 guikifix_api_homepage:
     path:     /
     defaults: { _controller: GuikifixApiBundle:Default:index }
+
+guikifix_api:
+    resource: "@GuikifixApiBundle/Resources/config/routing/job_type_routing.yml"
+    prefix:   /jobtype

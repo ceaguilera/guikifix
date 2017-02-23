@@ -8,4 +8,11 @@ namespace Guikifix\Core\Repository;
  *
  * @author Freddy Contreras
  */
-interface JobTypeCategoryRepositoryInterface {}
+interface JobTypeCategoryRepositoryInterface
+{
+	/**
+	 * La función retorna el listado tipo de trabajos del sistema
+	 * @return array listado de las categorias 
+	 */
+	public function findAllJob();
+}

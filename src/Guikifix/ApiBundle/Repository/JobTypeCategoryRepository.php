@@ -13,4 +13,23 @@ use Guikifix\Core\Repository\JobTypeCategoryRepositoryInterface;
  *
  * @author Freddy Contreras
  */
-class JobTypeCategoryRepository extends BaseRepository implements JobTypeCategoryRepositoryInterface {}
+class JobTypeCategoryRepository extends BaseRepository implements JobTypeCategoryRepositoryInterface
+{
+
+	/**
+	 * La función retorna el listado tipo de trabajos del sistema
+	 * @return array listado de las categorias 
+	 */
+	public function findAllJob()
+	{
+		return $this->createQueryBuilder('job')
+			->select('
+				job.id,
+				job.title,
+				job.lvl')
+	        ->where("
+	            job.lvl = 0
+	            ")
+	        ->getQuery()->getArrayResult();
+	}
+}
