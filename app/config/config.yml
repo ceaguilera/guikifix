@@ -98,6 +98,8 @@ doctrine_migrations:
 
 nelmio_api_doc:
     name: Api Guikifix
+    motd:
+        template: 'GuikifixApiBundle:ApiNelmioDoc:Components/motd.html.twig'
     sandbox:
         accept_type:        "application/json"
         body_format:
