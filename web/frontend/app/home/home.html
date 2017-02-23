@@ -1,5 +1,26 @@
 <div class="home" ng-app="guikifixApp.home" ng-controller="home">
-    <h1>Entrada al home de guikifix</h1>
-    {{saludo}}
+    <div class="container">
+        <div class="col-xs-4 search-box">
+               <div class="row">
+                   <h1>¡PIDE TU PRESUPUESTO GRATIS!</h1>
+                </div>
+               <div class="row box">
+                   <img src="images/logo_guikifix.png" alt="">
+                   <h2>CONTRATA LOS</h2>
+                   <h2>MEJORES PORFESIONALES</h2>
+                   <div class="form-group">
+                        <select class="form-control" id="sel1">
+                            <option value="">SELECCIONA ESPECIALIDAD</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                    <h3>¡RECIBE HASTA 3 PRESUPUESTOS GRATIS</h3>
+                </div>
+        </div>
+    </div>
+    <img src="/../images/fondo2.jpg" alt="" class="img-responsive">
 </div>
 <div ng-include="'frontend/app/home/downList/downList.html'"></div>

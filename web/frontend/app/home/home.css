@@ -1,7 +1,55 @@
-.home {
-  background: url("/../images/fondo.jpg") no-repeat;
-  height: 500px; }
-  .home h1 {
-    color: #FF6600; }
-  .home header {
-    background: #fff; }
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-style: normal;
+  src: url("http://fonts.gstatic.com/s/roboto/v15/5YB-ifwqHP20Yn46l_BDhA.eot");
+  src: url("http://fonts.gstatic.com/s/roboto/v15/5YB-ifwqHP20Yn46l_BDhA.eot?#iefix") format("embedded-opentype"), local("Roboto"), local("Roboto-regular"), url("http://fonts.gstatic.com/s/roboto/v15/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2") format("woff2"), url("http://fonts.gstatic.com/s/roboto/v15/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff") format("woff"), url("http://fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf") format("truetype"), url("http://fonts.gstatic.com/l/font?kit=_YZOZaQ9UBZzaxiLBLcgZg&skey=a0a0114a1dcab3ac&v=v15#Roboto") format("svg"); }
+
+.home img {
+  height: 500px;
+  width: 100%;
+  margin-top: -20px; }
+
+.home h1 {
+  color: #FF6600; }
+
+.home header {
+  background: #fff; }
+
+.home .search-box {
+  position: absolute;
+  margin-top: 2%; }
+  .home .search-box h1 {
+    color: #FFF !important;
+    font-family: Roboto !important;
+    font-weight: bold !important;
+    text-align: center;
+    font-size: 22px; }
+  .home .search-box .box {
+    background: rgba(212, 212, 212, 0.6);
+    height: 260px;
+    text-align: center;
+    padding: 3%; }
+    .home .search-box .box img {
+      width: 224px;
+      height: 38px;
+      margin-top: 0px; }
+    .home .search-box .box h2 {
+      color: #FF6600;
+      font-family: Roboto !important;
+      font-weight: bold !important;
+      text-align: center;
+      font-size: 18px; }
+    .home .search-box .box h3 {
+      color: #094AB1;
+      font-family: Roboto !important;
+      font-weight: bold !important;
+      text-align: center;
+      font-size: 18px; }
+    .home .search-box .box select {
+      font-family: Roboto !important;
+      font-weight: bold !important;
+      color: #000;
+      border-radius: 28px;
+      text-align: center;
+      padding: 0 0 0 25%; }

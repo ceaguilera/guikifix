@@ -3,7 +3,24 @@
 .downList {
     height: 110px;
     background: $secundary-color;
-    color: #FFF;
-    font-family: Roboto;
-    font-weight: bold;
+    text-align: center;
+    h1 {
+        color: #FFF;
+        font-family: Roboto;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .top-one {
+        margin-top: 12%;
+    }
+    .top-two {
+        margin-top: 30%;
+    }
+    .top-tre {
+        margin-top: 48%;
+    }
+    .top-four {
+        margin-top: 8%;
+    }
+
 }

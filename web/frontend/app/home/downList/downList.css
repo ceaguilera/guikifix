@@ -8,6 +8,17 @@
 .downList {
   height: 110px;
   background: #094AB1;
-  color: #FFF;
-  font-family: Roboto;
-  font-weight: bold; }
+  text-align: center; }
+  .downList h1 {
+    color: #FFF;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 16px; }
+  .downList .top-one {
+    margin-top: 12%; }
+  .downList .top-two {
+    margin-top: 30%; }
+  .downList .top-tre {
+    margin-top: 48%; }
+  .downList .top-four {
+    margin-top: 8%; }

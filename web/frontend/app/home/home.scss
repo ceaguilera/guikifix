@@ -1,12 +1,61 @@
 @import '../varibles';
+@import '../fonts';
 
 .home {
-    background: url('/../images/fondo.jpg') no-repeat;
-    height: 500px;
+    //background: url('/../images/fondo2.jpg') no-repeat;
+    img {
+        height: 500px;
+        width: 100%;
+        margin-top: -20px;
+    }
     h1 {
         color: $primary-color;
     }
     header {
         background: #fff;
+    }
+    .search-box {
+        position: absolute;
+        margin-top: 2%;
+        h1 {
+            color: #FFF !important;
+            font-family: Roboto !important;
+            font-weight: bold !important;
+            text-align: center;
+            font-size: 22px;
+        }
+        .box {
+            background: rgba(212, 212, 212, 0.6);
+            height: 260px;
+            text-align: center;
+            padding: 3%;
+            img {
+                width: 224px;
+                height: 38px;
+                margin-top: 0px;
+            }
+            h2 {
+                color: $primary-color;
+                font-family: Roboto !important;
+                font-weight: bold !important;
+                text-align: center;
+                font-size: 18px;
+            }
+            h3 {
+                color: $secundary-color;
+                font-family: Roboto !important;
+                font-weight: bold !important;
+                text-align: center;
+                font-size: 18px;
+            }
+            select {
+                font-family: Roboto !important;
+                font-weight: bold !important;
+                color: #000;
+                border-radius: 28px;
+                text-align: center;
+                padding: 0 0 0 25%;
+            }
+        }
     }
 }
