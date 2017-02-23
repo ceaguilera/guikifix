@@ -24,19 +24,14 @@ class JobTypeCategory
     private $title;
 
     /**
-     * @var string
-     */
-    private $description;
-
-    /**
      * @var integer
      */
     private $status;
 
     /**
-     * @var boolean
+     * @var integer
      */
-    private $notifications;
+    private $lvl;
 
     /**
      * @var \DateTime
@@ -70,6 +65,8 @@ class JobTypeCategory
     {
         $this->children = new \Doctrine\Common\Collections\ArrayCollection();
         $this->jobs_types = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->created = new \DateTime();
+        $this->last_update = new \DateTime();
     }
 
     /**
@@ -107,30 +104,6 @@ class JobTypeCategory
     }
 
     /**
-     * Set description
-     *
-     * @param string $description
-     *
-     * @return JobTypeCategory
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
      * Set status
      *
      * @param integer $status
@@ -155,27 +128,27 @@ class JobTypeCategory
     }
 
     /**
-     * Set notifications
+     * Set lvl
      *
-     * @param boolean $notifications
+     * @param integer $lvl
      *
      * @return JobTypeCategory
      */
-    public function setNotifications($notifications)
+    public function setLvl($lvl)
     {
-        $this->notifications = $notifications;
+        $this->lvl = $lvl;
 
         return $this;
     }
 
     /**
-     * Get notifications
+     * Get lvl
      *
-     * @return boolean
+     * @return integer
      */
-    public function getNotifications()
+    public function getLvl()
     {
-        return $this->notifications;
+        return $this->lvl;
     }
 
     /**

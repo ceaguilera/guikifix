@@ -62,26 +62,15 @@ class CommandBus
             $validation = $this->cv::getValidator($command);
             if (is_null($validation)) {
 
-                try {
+                
                     return $handler->handle($command, $this->rf);
-                } catch (\Exception $e) {
-                    return new ResponseCommandBus(
-                        500,
-                        'Bad Request',
-                        [
-                            'code' => $e->getCode(),
-                            'message' => $e->getMessage(),
-                            'file' => $e->getFile(),
-                            'line' => $e->getLine()
-                        ]
-                    );
-                }
+                
                 
             } else {
                 return new ResponseCommandBus(400, $validation);
             }
         }else{
-            return new ResponseCommandBus(404);
+            return new ResponseCommandBus(404,'asda');
         }
     }
  
