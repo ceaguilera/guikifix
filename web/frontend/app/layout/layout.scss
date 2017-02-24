@@ -44,13 +44,18 @@
         font-family: Roboto !important;
         font-weight: bold !important;
     }
-    ul {
-        li {
-            a{
-                &:hover,&:active, .active {
-                    background: $primary-color !important;
+
+    .container {
+        .collapse {
+            ul {
+                li {
+                        &:hover,&:active, &:focus, &.active{
+                           a {
+                               background: $primary-color !important;
+                           }
+                        }  
+                        
                 }
-                
             }
         }
     }
@@ -86,8 +91,11 @@ footer {
 
     }
     img {
-        width: 127px;
-        height: 65px;
+        width: 179px;
+        height: 159px;
+        margin-top: -47px;
+        margin-bottom: -28px;
+        margin-left: -5%;
     }
     .top-section {
         text-align: center;

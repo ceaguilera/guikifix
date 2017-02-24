@@ -9,13 +9,9 @@
                    <h2>CONTRATA LOS</h2>
                    <h2>MEJORES PORFESIONALES</h2>
                    <div class="form-group">
-                        <select class="form-control" id="sel1">
-                            <option value="">SELECCIONA ESPECIALIDAD</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                        </select>
+                        <select class="form-control" ng-model="selected" ng-options="item.id as item.name for item in specialtiesList">
+                           <option value="">SELECCIONA ESPECIALIDAD</option>
+                       </select>
                     </div>
                     <h3>¡RECIBE HASTA 3 PRESUPUESTOS GRATIS</h3>
                 </div>

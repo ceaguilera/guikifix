@@ -40,7 +40,7 @@
     color: #FFF !important;
     font-family: Roboto !important;
     font-weight: bold !important; }
-  .menuGuikifix ul li a:hover, .menuGuikifix ul li a:active, .menuGuikifix ul li a .active {
+  .menuGuikifix .container .collapse ul li:hover a, .menuGuikifix .container .collapse ul li:active a, .menuGuikifix .container .collapse ul li:focus a, .menuGuikifix .container .collapse ul li.active a {
     background: #FF6600 !important; }
   .menuGuikifix .title {
     margin-top: 5px;
@@ -68,8 +68,11 @@ footer {
         text-decoration: none;
         color: #FFF; }
   footer img {
-    width: 127px;
-    height: 65px; }
+    width: 179px;
+    height: 159px;
+    margin-top: -47px;
+    margin-bottom: -28px;
+    margin-left: -5%; }
   footer .top-section {
     text-align: center;
     margin-top: 10%;
