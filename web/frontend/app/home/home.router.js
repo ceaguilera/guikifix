@@ -8,7 +8,7 @@
 
     function myApp($stateProvider) {
         $stateProvider.state('home', {
-            url: '/home',
+            url: '/',
             templateUrl: './frontend/app/home/home.html',
             controller: 'home',
             controllerAs: 'vm'
