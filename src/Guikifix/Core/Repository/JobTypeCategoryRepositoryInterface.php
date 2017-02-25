@@ -15,4 +15,10 @@ interface JobTypeCategoryRepositoryInterface
 	 * @return array listado de las categorias 
 	 */
 	public function findAllJob();
+
+	/**
+	 * La función retorna el listado tipo de trabajos del sistema
+	 * @return array listado de las categorias 
+	 */
+	public function findCategoriesById($id);
 }

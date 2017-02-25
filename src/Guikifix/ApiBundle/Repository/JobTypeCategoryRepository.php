@@ -5,6 +5,7 @@ use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\EntityManager;
 use Guikifix\ApiBundle\Repository\BaseRepository;
 use Guikifix\Core\Repository\JobTypeCategoryRepositoryInterface;
+use Doctrine\ORM\Query\ResultSetMapping;
 
 /**
  * UserRepository
@@ -31,5 +32,23 @@ class JobTypeCategoryRepository extends BaseRepository implements JobTypeCategor
 	            job.lvl = 0
 	            ")
 	        ->getQuery()->getArrayResult();
+	}
+
+	/**
+	 * La función retorna el listado tipo de trabajos del sistema
+	 * @return array listado de las categorias 
+	 */
+	public function findCategoriesById($id)
+	{
+		$rsm = new ResultSetMapping();
+		$rsm->addScalarResult('res','result','json_array');
+		$query = 'select get_job_type_categories(:job_type_id) res';
+
+		$naviteQuery = $this->getEntityManager()->createNativeQuery($query,$rsm);
+
+		$naviteQuery->setParameter('job_type_id', $id);
+
+		return $naviteQuery->getResult()[0]['result'];
+
 	}
 }

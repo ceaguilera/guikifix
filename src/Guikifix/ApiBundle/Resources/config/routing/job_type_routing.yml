@@ -1,3 +1,7 @@
 guikifix_api_job_type:
     path:     /
     defaults: { _controller: GuikifixApiBundle:User\JobType:index }
+
+guikifix_api_job_type_categories:
+    path:     /{id}
+    defaults: { _controller: GuikifixApiBundle:User\JobType:typeCategories}
