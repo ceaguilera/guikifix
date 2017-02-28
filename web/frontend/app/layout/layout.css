@@ -20,7 +20,7 @@
     border-radius: 8px;
     padding-left: 20px;
     padding-right: 20px; }
-    .top header button:hover {
+    .top header button:hover, .top header button :active {
       color: #FFF !important; }
   .top header .left {
     padding-left: 25%;
@@ -28,14 +28,19 @@
   .top header .typeOne {
     background-color: #FF6600 !important;
     margin-left: 50px; }
+    .top header .typeOne:focus {
+      color: #FFF; }
   .top header .typeTwo {
     background-color: #76BE53 !important;
     float: right !important; }
+    .top header .typeTwo:focus {
+      color: #FFF; }
 
 .menuGuikifix {
   background: #094AB1 !important;
   border-color: #094AB1 !important;
-  border-radius: 0px !important; }
+  border-radius: 0px !important;
+  margin-bottom: 0px !important; }
   .menuGuikifix a {
     color: #FFF !important;
     font-family: Roboto !important;

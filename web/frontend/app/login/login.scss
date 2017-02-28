@@ -1,0 +1,106 @@
+@import '../varibles';
+@import '../fonts';
+
+.login {
+        background: $fourth-color;
+        h1 {
+            color: $secundary-color;
+            font-family: Roboto !important;
+            font-weight: 500;
+            display: inline-block;
+        }
+        .top {
+            text-align: center;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            img {
+                width: 224px;
+                height: 38px;
+                margin-top: -2.5%;
+            }
+        }
+        form {
+            label {
+                color: $secundary-color;
+                font-family: Roboto !important;
+                font-weight: 500;
+                font-size: 18px;
+            }
+        }
+        button {
+            color: #FFF;
+            font-family: Roboto;
+            font-weight: bold;
+            border-radius: 4px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: $primary-color !important;
+            margin-bottom: 6%;
+            margin-top: 5%;
+            width: 40%;
+            &:hover {
+                color: #FFF !important;
+            }
+        }
+        .space {
+            border-right: 1px solid #cccccc;
+            height: 310px
+        }
+        .rigth {
+           text-align: center;
+            h1 {
+                display: inherit !important;
+                position: relative !important;
+                top: 57px  !important;
+                font-size: 24px;
+            }
+            img {
+                width: 351px;
+                position: relative;
+                top: -40px
+            }
+        }
+        .bottom {
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+            padding-left: 0px;
+            padding-right: 0px;
+            width: 100%;
+            background: #FFF;
+            text-align: center;
+            padding-bottom: 2%;
+            h1 {
+                font-weight: bold;
+                padding-bottom: .5%;
+            }
+            h2 {
+                font-family: Roboto !important;
+                color: #FFF;
+                font-size: 28px;
+                margin-top: 5%;
+                margin-bottom: 0%;
+            }
+            h3 {
+                font-family: Roboto !important;
+                color: #FFF;
+                font-size: 15px;
+                margin-top: -2%;
+                padding-left: 15%;
+                padding-right: 15%;
+            }
+            img {
+                width: 176px;
+            }
+            .content-left {
+                background:$third-color;
+                height: 316px;
+                width: 49%;
+                margin-right: 2%;
+            }
+            .content-right {
+                background:$secundary-color;
+                height: 316px;
+                width: 49%;
+            }
+        }
+}

@@ -1,6 +1,7 @@
 angular.module('guikifixApp.home')
-.controller('home', function($scope, $log) {
+.controller('home', function($scope, $log, $http) {
     $scope.saludo = "holaaaaa";
+    console.log("caro el controlador");
     $scope.specialtiesList = [
         {
             id: 123,

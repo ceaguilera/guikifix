@@ -17,7 +17,7 @@
             border-radius: 8px;
             padding-left: 20px;
             padding-right: 20px;
-            &:hover {
+            &:hover, :active{
                 color: #FFF !important;
             }
         }
@@ -28,10 +28,16 @@
         .typeOne {
             background-color: $primary-color !important;
             margin-left: 50px;
+            &:focus {
+                color: #FFF;
+            }
         }
         .typeTwo {
             background-color: $third-color !important;
             float: right !important;
+            &:focus {
+                color: #FFF;
+            }
         }
     }
 }
@@ -39,6 +45,7 @@
     background: $secundary-color !important;
     border-color: $secundary-color !important;
     border-radius: 0px !important;
+    margin-bottom: 0px !important;
     a {
         color: #FFF !important;
         font-family: Roboto !important;
