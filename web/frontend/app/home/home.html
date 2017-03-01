@@ -9,7 +9,12 @@
                    <h2>CONTRATA LOS</h2>
                    <h2>MEJORES PORFESIONALES</h2>
                    <div class="form-group">
-                        <select class="form-control" ng-model="selected" ng-options="item.id as item.name for item in specialtiesList">
+                        <select 
+                            class="form-control" 
+                            ng-model="selected" 
+                            ng-options="item.id as item.name for item in specialtiesList"
+                            ng-change="redictCategory(selected)"
+                        >
                            <option value="">SELECCIONA ESPECIALIDAD</option>
                        </select>
                     </div>

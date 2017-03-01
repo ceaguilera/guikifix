@@ -1,0 +1,48 @@
+@import '../../varibles';
+@import '../../fonts';
+
+.category {
+    h1 {
+        color: $secundary-color;
+        font-family: Roboto !important;
+        font-weight: bold;
+    }
+    label {
+        color: $secundary-color;
+        font-family: Roboto !important;
+        font-weight: 500;
+        font-size: 15px;
+    }
+    select, textarea {
+        background: $fourth-color;
+        color: $secundary-color;
+        border-radius: 2px;
+    }
+    button {
+        color: #FFF;
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 4px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: $primary-color !important;
+        width: 25%;
+        display: inline;
+        &:hover {
+            color: #FFF !important;
+        }
+    }
+    .space {
+         margin-bottom: 3%;
+    }
+    .top {
+        text-align: center;
+        margin-bottom: 3%;
+        select {
+            display: inline !important;
+            width: 25%;
+            font-weight: bold;
+        }
+    }
+}

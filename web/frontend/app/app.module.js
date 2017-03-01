@@ -7,7 +7,8 @@
         'guikifixApp.home', 
         'guikifixApp.about', 
         'guikifixApp.login',
-        'guikifixApp.register'
+        'guikifixApp.register',
+        'guikifixApp.category'
     ]);
 })();
 

@@ -1,5 +1,5 @@
 angular.module('guikifixApp.home')
-.controller('home', function($scope, $log, $http) {
+.controller('home', function($scope, $log, $http, $window, $location) {
     $scope.saludo = "holaaaaa";
     console.log("caro el controlador");
     $scope.specialtiesList = [
@@ -17,4 +17,8 @@ angular.module('guikifixApp.home')
         }
     ]
     console.log($scope.specialtiesList);
+
+    $scope.redictCategory = (select) => {
+        $location.path("/category")
+    }
 });
