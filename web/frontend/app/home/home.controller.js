@@ -1,24 +1,16 @@
 angular.module('guikifixApp.home')
 .controller('home', function($scope, $log, $http, $window, $location) {
-    $scope.saludo = "holaaaaa";
-    console.log("caro el controlador");
-    $scope.specialtiesList = [
-        {
-            id: 123,
-            name: 'PLOMERIA'
-        },
-        {
-            id: 124,
-            name: 'CARPINTERIA'
-        },
-        {
-            id: 125,
-            name: 'ALBAÑILERIA'
-        }
-    ]
-    console.log($scope.specialtiesList);
+    $http({
+        method : "POST",
+        url : "/api/jobtype/"
+    }).then(function mySucces(response) {
+        console.log(response.data);
+        $scope.specialtiesList = response.data;
+    }, function myError(response) {
+        console.log(response.statusText);
+    });
 
     $scope.redictCategory = (select) => {
-        $location.path("/category")
+        $location.path('/category').search({categoryId: select})
     }
 });
