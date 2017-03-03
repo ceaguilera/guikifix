@@ -19,7 +19,8 @@
 .category select, .category textarea {
   background: #f2f2f2;
   color: #094AB1;
-  border-radius: 2px; }
+  border-radius: 2px;
+  margin-bottom: 16px; }
 
 .category button {
   color: #FFF;

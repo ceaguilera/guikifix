@@ -8,7 +8,7 @@
 
     function myApp($stateProvider) {
         $stateProvider.state('category', {
-            url: '/category:categoryId',
+            url: '/category/:categoryId',
             templateUrl: './frontend/app/search/category/category.html',
             controller: 'category',
             controllerAs: 'vm'
