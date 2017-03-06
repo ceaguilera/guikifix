@@ -2,6 +2,12 @@
 @import '../../fonts';
 
 .category {
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
     h1 {
         color: $secundary-color;
         font-family: Roboto !important;
@@ -33,6 +39,9 @@
         &:hover {
             color: #FFF !important;
         }
+        @media screen and (max-width: 768px) {
+            width: 44%;
+        }
     }
     .space {
          margin-bottom: 3%;
@@ -44,6 +53,9 @@
             display: inline !important;
             width: 25%;
             font-weight: bold;
+            @media screen and (max-width: 992px) {
+                width: 100%;
+            }
         }
     }
 }

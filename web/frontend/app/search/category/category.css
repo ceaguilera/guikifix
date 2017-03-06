@@ -5,6 +5,11 @@
   src: url("http://fonts.gstatic.com/s/roboto/v15/5YB-ifwqHP20Yn46l_BDhA.eot");
   src: url("http://fonts.gstatic.com/s/roboto/v15/5YB-ifwqHP20Yn46l_BDhA.eot?#iefix") format("embedded-opentype"), local("Roboto"), local("Roboto-regular"), url("http://fonts.gstatic.com/s/roboto/v15/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2") format("woff2"), url("http://fonts.gstatic.com/s/roboto/v15/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff") format("woff"), url("http://fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf") format("truetype"), url("http://fonts.gstatic.com/l/font?kit=_YZOZaQ9UBZzaxiLBLcgZg&skey=a0a0114a1dcab3ac&v=v15#Roboto") format("svg"); }
 
+.category a {
+  text-decoration: none; }
+  .category a:hover {
+    text-decoration: none; }
+
 .category h1 {
   color: #094AB1;
   font-family: Roboto !important;
@@ -35,6 +40,9 @@
   display: inline; }
   .category button:hover {
     color: #FFF !important; }
+  @media screen and (max-width: 768px) {
+    .category button {
+      width: 44%; } }
 
 .category .space {
   margin-bottom: 3%; }
@@ -46,3 +54,6 @@
     display: inline !important;
     width: 25%;
     font-weight: bold; }
+    @media screen and (max-width: 992px) {
+      .category .top select {
+        width: 100%; } }
