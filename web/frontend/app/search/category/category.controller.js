@@ -5,12 +5,14 @@ angular.module('guikifixApp.category')
     
     const init = (selected) => {
         let url = "/api/jobtype/"+selected;
-        $location.path(url);
+        let updateURL = "/category/"+selected;
+        $location.path(updateURL);
         $http({
             method : "POST",
             url : url
         }).then(function mySucces(response) {
             $scope.categories = response.data;
+            console.log($scope.categories);
         }, function myError(response) {
             console.log(response.statusText);
         });        
