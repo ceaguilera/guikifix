@@ -1,7 +1,6 @@
 @import '../../varibles';
 @import '../../fonts';
 .downList {
-    height: 124px;
     background: $secundary-color;
     text-align: center;
     h1 {
@@ -17,16 +16,24 @@
         height: 10px;
     }
     .top-one {
-        margin-top: 12%;
+        @media screen and (min-width: 992px) {
+            margin-top: 12%;
+        }
     }
     .top-two {
-        margin-top: 30%;
+         @media screen and (min-width: 992px) {
+            margin-top: 30%;
+         }
     }
     .top-tre {
-        margin-top: 48%;
+         @media screen and (min-width: 992px) {
+            margin-top: 48%;
+         }
     }
     .top-four {
-        margin-top: 8%;
+        @media screen and (min-width: 992px) {
+            margin-top: 8%;
+        }
     }
 
 }

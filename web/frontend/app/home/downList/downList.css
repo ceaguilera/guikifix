@@ -6,7 +6,6 @@
   src: url("http://fonts.gstatic.com/s/roboto/v15/5YB-ifwqHP20Yn46l_BDhA.eot?#iefix") format("embedded-opentype"), local("Roboto"), local("Roboto-regular"), url("http://fonts.gstatic.com/s/roboto/v15/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2") format("woff2"), url("http://fonts.gstatic.com/s/roboto/v15/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff") format("woff"), url("http://fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf") format("truetype"), url("http://fonts.gstatic.com/l/font?kit=_YZOZaQ9UBZzaxiLBLcgZg&skey=a0a0114a1dcab3ac&v=v15#Roboto") format("svg"); }
 
 .downList {
-  height: 124px;
   background: #094AB1;
   text-align: center; }
   .downList h1 {
@@ -18,11 +17,15 @@
     content: url("http://interceramicusa.com/images/layout/icons/ico-22.png");
     width: 10px;
     height: 10px; }
-  .downList .top-one {
-    margin-top: 12%; }
-  .downList .top-two {
-    margin-top: 30%; }
-  .downList .top-tre {
-    margin-top: 48%; }
-  .downList .top-four {
-    margin-top: 8%; }
+  @media screen and (min-width: 992px) {
+    .downList .top-one {
+      margin-top: 12%; } }
+  @media screen and (min-width: 992px) {
+    .downList .top-two {
+      margin-top: 30%; } }
+  @media screen and (min-width: 992px) {
+    .downList .top-tre {
+      margin-top: 48%; } }
+  @media screen and (min-width: 992px) {
+    .downList .top-four {
+      margin-top: 8%; } }
