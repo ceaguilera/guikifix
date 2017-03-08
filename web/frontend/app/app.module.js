@@ -8,7 +8,8 @@
         'guikifixApp.about', 
         'guikifixApp.login',
         'guikifixApp.register',
-        'guikifixApp.category'
+        'guikifixApp.category',
+        'guikifixApp.requestFilters'
     ]);
 })();
 

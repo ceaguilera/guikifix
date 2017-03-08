@@ -1,0 +1,49 @@
+<div class="container category requestFilters">
+    <div class="row top">
+        <h1>Ubicacion del trabajo</h1>
+        <div class="col-xs-3 col-xs-offset-3">
+            <select 
+                class="form-control" 
+                ng-model="selected" 
+                ng-options="item.id as item.title for item in specialtiesList"
+                ng-change="categoryChange(selected)"
+            >
+                <option value="">SELECCIONA ESPECIALIDAD</option>
+            </select>
+        </div>
+        <div class="col-xs-3">
+            <select 
+                class="form-control" 
+                ng-model="selected" 
+                ng-options="item.id as item.title for item in specialtiesList"
+                ng-change="categoryChange(selected)"
+            >
+                <option value="">SELECCIONA ESPECIALIDAD</option>
+            </select>
+        </div>        
+    </div>
+        <div class="row top">
+        <div class="col-xs-3 col-xs-offset-3">
+            <label for="">Cual es tu interes en ejecutat este trabajo?</label>
+            <select 
+                class="form-control" 
+                ng-model="selected" 
+                ng-options="item.id as item.title for item in specialtiesList"
+                ng-change="categoryChange(selected)"
+            >
+                <option value="">SELECCIONA ESPECIALIDAD</option>
+            </select>
+        </div>
+        <div class="col-xs-3">
+            <label for="">Seleccione el estado acual del trabajo</label>
+            <select 
+                class="form-control" 
+                ng-model="selected" 
+                ng-options="item.id as item.title for item in specialtiesList"
+                ng-change="categoryChange(selected)"
+            >
+                <option value="">SELECCIONA ESPECIALIDAD</option>
+            </select>
+        </div>        
+    </div>
+</div>
