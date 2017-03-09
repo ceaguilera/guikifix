@@ -1,2 +1,73 @@
-.requestFilters select {
-  width: 100% !important; }
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-style: normal;
+  src: url("http://fonts.gstatic.com/s/roboto/v15/5YB-ifwqHP20Yn46l_BDhA.eot");
+  src: url("http://fonts.gstatic.com/s/roboto/v15/5YB-ifwqHP20Yn46l_BDhA.eot?#iefix") format("embedded-opentype"), local("Roboto"), local("Roboto-regular"), url("http://fonts.gstatic.com/s/roboto/v15/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2") format("woff2"), url("http://fonts.gstatic.com/s/roboto/v15/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff") format("woff"), url("http://fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf") format("truetype"), url("http://fonts.gstatic.com/l/font?kit=_YZOZaQ9UBZzaxiLBLcgZg&skey=a0a0114a1dcab3ac&v=v15#Roboto") format("svg"); }
+
+.requestFilters .top {
+  text-align: center;
+  margin-bottom: 3%; }
+  .requestFilters .top select {
+    display: inline !important;
+    width: 100%;
+    font-weight: bold;
+    background: #f2f2f2;
+    color: #094AB1;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    text-align-last: center; }
+    @media screen and (max-width: 992px) {
+      .requestFilters .top select {
+        width: 100%; } }
+  .requestFilters .top h1 {
+    color: #094AB1;
+    font-family: Roboto !important;
+    font-weight: bold;
+    margin-bottom: 22px;
+    margin-top: 34px; }
+
+.requestFilters .content {
+  text-align: center;
+  margin-bottom: 3%; }
+  .requestFilters .content select {
+    width: 30%;
+    background: #f2f2f2;
+    color: #094AB1;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    display: inline-block;
+    text-align-last: center;
+    font-size: 17px; }
+    @media screen and (max-width: 992px) {
+      .requestFilters .content select {
+        width: 100%; } }
+  .requestFilters .content h1 {
+    color: #094AB1;
+    font-family: Roboto !important;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 22px;
+    margin-top: 16px; }
+  .requestFilters .content label {
+    color: #094AB1;
+    font-family: Roboto !important;
+    font-size: 18px;
+    margin-bottom: 22px;
+    margin-top: 16px; }
+  .requestFilters .content button {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #FF6600 !important;
+    width: 25%;
+    display: inline; }
+    .requestFilters .content button:hover {
+      color: #FFF !important; }
+    @media screen and (max-width: 768px) {
+      .requestFilters .content button {
+        width: 50%; } }
