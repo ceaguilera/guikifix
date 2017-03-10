@@ -1,6 +1,7 @@
 <?php
 namespace Guikifix\Core\Domain;
 
+use Guikifix\Core\Domain\BaseEntity;
 /**
  * UserProfile
  *
@@ -8,73 +9,78 @@ namespace Guikifix\Core\Domain;
  * 
  * @author  Freddy Contreras
  */
-class UserProfile
+class UserProfile extends BaseEntity
 {
 
     /**
      * @var integer
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
      */
-    private $first_name;
+    protected $first_name;
 
     /**
      * @var string
      */
-    private $last_name;
+    protected $last_name;
 
     /**
      * @var string
      */
-    private $cell_phone;
+    protected $cell_phone;
 
     /**
      * @var string
      */
-    private $phone;
+    protected $phone;
 
     /**
      * @var \DateTime
      */
-    private $birthdate;
+    protected $birthdate;
 
     /**
      * @var integer
      */
-    private $gender;
+    protected $gender;
 
     /**
      * @var \DateTime
      */
-    private $last_update;
+    protected $last_update;
 
     /**
      * @var \DateTime
      */
-    private $created;
+    protected $created;
+
+    /**
+     * @var string
+     */
+    protected $how_contact_us;
 
     /**
      * @var \Guikifix\ApiBundle\Entity\User
      */
-    private $user;
+    protected $user;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
      */
-    private $jobs;
+    protected $jobs;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
      */
-    private $qualifications;
+    protected $qualifications;
 
     /**
      * @var \Guikifix\Core\Domain\Location
      */
-    private $location;
+    protected $location;    
 
     /**
      * Constructor
@@ -83,6 +89,8 @@ class UserProfile
     {
         $this->jobs = new \Doctrine\Common\Collections\ArrayCollection();
         $this->qualifications = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->last_update = new \DateTime();
+        $this->created = new \DateTime();
     }
 
     /**
@@ -401,5 +409,29 @@ class UserProfile
     public function getLocation()
     {
         return $this->location;
+    }
+
+    /**
+     * Set howContactUs
+     *
+     * @param string $howContactUs
+     *
+     * @return UserProfile
+     */
+    public function setHowContactUs($howContactUs)
+    {
+        $this->how_contact_us = $howContactUs;
+
+        return $this;
+    }
+
+    /**
+     * Get howContactUs
+     *
+     * @return string
+     */
+    public function getHowContactUs()
+    {
+        return $this->how_contact_us;
     }
 }

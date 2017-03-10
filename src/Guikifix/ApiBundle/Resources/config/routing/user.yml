@@ -1,0 +1,5 @@
+# Registro de usuario en el sistema
+guikifix_api_register_user:
+  path: /register
+  defaults: { _controller: GuikifixApiBundle:User\Security:register }
+  methods: POST

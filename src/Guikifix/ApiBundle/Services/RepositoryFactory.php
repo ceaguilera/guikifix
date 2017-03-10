@@ -33,16 +33,22 @@ class RepositoryFactory implements RepositoryFactoryInterface
         'JobTypeCategory' => [
             'repository'=>'Guikifix\ApiBundle\Repository\JobTypeCategoryRepository',
             'entity'=>'Guikifix\Core\Domain\JobTypeCategory'
-        ]
+        ],
+        'UserProfile' => [
+            'repository'=>'Guikifix\ApiBundle\Repository\UserProfileRepository',
+            'entity'=>'Guikifix\Core\Domain\UserProfile'
+        ],
 	];
 
 	/**
 	 * Constructor de la clase
 	 * @param EntityManager|null $em servicio que maneja la conexión los repositorios
 	 */
-	public function __construct(EntityManager $em = null)
+	public function __construct()
 	{
-		$this->em = $em;
+		global $kernel;
+
+		$this->em = $kernel->getContainer()->get('doctrine.orm.entity_manager');;
 	}
 
 	/**

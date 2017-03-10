@@ -2,71 +2,79 @@
   <mj-body>
     <mj-container background-color="#ededed">
       <mj-section background-color="#ededed" padding="0" padding-top="30">
-      <mj-section background-color="white" padding="0" border-radius="10">
-        <mj-column>
-          <!-- HEADER -->
-          <mj-section background-color="white" padding="0" padding-top="10" border-top-radius="10px">
-            <mj-column>
-              <!-- LOGO -->
-              <mj-image width="250" src="http://guikifix.herokuapp.com/images/logo_guikifix.png"></mj-image>
-              <!-- END LOGO -->
-              <mj-divider border-color="#FF6600"></mj-divider>
-            </mj-column>
-          </mj-section>
-          <!-- END HEADER -->
-          <!-- CONTENT-->
-          <mj-section padding="0" background-color="white">
-            <mj-column>
-              <mj-text align="center">Hola Jorge Tohn</mj-text>
-              <mj-text align="left" padding-left="10%" padding-right="10%">Hola Jorge Tohn</mj-text>
-              <mj-text align="center" padding="0">Atentamente,</mj-text>
-              <mj-text align="center" padding="0" font-weight="bold">TEAM GUIKIFIX</mj-text>
-            </mj-column>
-          </mj-section>
-          <mj-section background-color="white" padding-bottom="10px">
-            <mj-column>
-              <mj-divider border-color="#FF6600"></mj-divider>
-            </mj-column>
-          </mj-section>
-          <!-- END CONTENT -->
-        </mj-column>
-      </mj-section>      
-      <!-- FOOTER -->
-      <mj-section padding="0px" padding-top="10px" background-color="#ededed"></mj-section>
-      <mj-section padding="0px" border-radius="10" padding-top="15px" padding-bottom="15px" background-color="#094AB1" >
-        <mj-group >
-        <!-- FIRST COLUMN -->
-          <mj-column paddig="0" >
-            <mj-text color="white" font-size="7" padding="0" line-height="2" padding-left="23" font-weight  ="bold">CONTRATA PROFESIONALES DESDE TU CELULAR</mj-text>
-            <mj-text color="white" font-size="7" padding="0" padding-left="23">Descarga nuestra aplicación gratis!</mj-text>
-            <mj-text color="white" font-size="7" padding="0" line-height="2" padding-left="23">INNOVACIÓN, TECNOLOGÍA Y SEGURIDAD</mj-text>
-          </mj-column>
-        <!-- END FIRST COLUMN -->
-        <!-- SECOND COLUMN -->
-          <mj-column >
-            <mj-text color="white" align="center" padding="0" font-weight="bold">Síguenos</mj-text>
-            <mj-image src="http://hacercuenta.com/wp-content/uploads/2016/01/Facebook-Twitter-Instagram.png" padding="0" width="80"></mj-image>
-          </mj-column>
-        <!-- END SECOND COLUMN -->
-        <!-- THREE COLUMN -->
+        <mj-section background-color="white" padding="0" border-radius="10" >
           <mj-column>
-            <mj-section padding="0">
-            <mj-group>
+            <!-- HEADER -->
+            <mj-section background-color="white" padding="0" padding-top="10" border-top-radius="10px">
               <mj-column>
-                <mj-image padding="0" padding-left="10" padding-right="2" src="https://smarterify.com/wp-content/uploads/2015/07/button-get-it-on-google-play-600px.png" width="80"></mj-image>
+                <!-- LOGO -->
+                <mj-image width="250" src="http://guikifix.herokuapp.com/images/logo_guikifix.png"></mj-image>
+                <!-- END LOGO -->
+                <mj-divider border-color="#FF6600"></mj-divider>
               </mj-column>
-              <mj-column  >
-                <mj-image padding="0" padding-right="10" padding-left="5" src="http://waitry.net/wp-content/uploads/2015/08/Apple-App-Store-Available-Banner-ijailbreak-830x286.png" width="80"></mj-image>
-              </mj-column>
-            </mj-group>
             </mj-section>
-            <mj-text align="center" color="white" padding="0" font-size="6">Haga click aquí para obtener mas información sobre la aplicación</mj-text>
+            <!-- END HEADER -->
+            <!-- CONTENT-->
+            <mj-section padding="0" background-color="white">
+              <mj-column>
+                <mj-text align="center">Hola {{ full_name }}</mj-text>
+                <mj-text align="left" padding-left="10%" padding-right="10%">Hola Jorge Tohn</mj-text>
+                <mj-text align="center" padding="0">Atentamente,</mj-text>
+                <mj-text align="center" padding="0" font-weight="bold">TEAM GUIKIFIX</mj-text>
+              </mj-column>
+            </mj-section>
+            <mj-section background-color="white" padding-bottom="10px">
+              <mj-column>
+                <mj-divider border-color="#FF6600"></mj-divider>
+              </mj-column>
+            </mj-section>
+            <!-- END CONTENT -->
           </mj-column>
-        <!-- END THREE COLUMN -->
-        </mj-group>
-      </mj-section>
-      <mj-section padding="0px" padding-top="30" background-color="#ededed"></mj-section>
-      <!-- END CONTENT -->
+        </mj-section>
+        <!-- PRE - FOOTER -->
+        <mj-section padding="0px" padding-top="10px" background-color="#ededed"></mj-section>
+        <mj-section padding="0px" border-radius="10" padding-top="4px" padding-bottom="4px" background-url="https://www.moooi.com/sites/default/files/styles/large/public/product-images/random_detail.jpg" width="600" height="100" >
+          <mj-image src="http://guikifix.herokuapp.com/images/logo_guikifix.png" padding="0" width="100" ></mj-image>
+          <mj-text font-size="9" align="center" font-weight="bold" color="white">Activa algunos de nuestros Planes profesionales podrás tener acceso a muchísimos trabajos de clientes listos para contratar</mj-text>
+          <mj-button background-color="#FF6600" font-weight="bold" font-size="10" color="white">ACTIVA PLAN PROFESIONAL</mj-button>
+        </mj-section>
+        <!-- END PRE - FOOTER -->
+        <!-- FOOTER -->
+        <mj-section padding="0px" padding-top="10px" background-color="#ededed"></mj-section>
+        <mj-section padding="0px" border-radius="10" padding-top="15px" padding-bottom="15px" background-color="#094AB1">
+          <mj-group>
+            <!-- FIRST COLUMN -->
+            <mj-column paddig="0">
+              <mj-text color="white" font-size="7" padding="0" line-height="2" padding-left="23" font-weight="bold">CONTRATA PROFESIONALES DESDE TU CELULAR</mj-text>
+              <mj-text color="white" font-size="7" padding="0" padding-left="23">Descarga nuestra aplicación gratis!</mj-text>
+              <mj-text color="white" font-size="7" padding="0" line-height="2" padding-left="23">INNOVACIÓN, TECNOLOGÍA Y SEGURIDAD</mj-text>
+            </mj-column>
+            <!-- END FIRST COLUMN -->
+            <!-- SECOND COLUMN -->
+            <mj-column>
+              <mj-text color="white" align="center" padding="0" font-weight="bold">Síguenos</mj-text>
+              <mj-image src="http://hacercuenta.com/wp-content/uploads/2016/01/Facebook-Twitter-Instagram.png" padding="0" width="80"></mj-image>
+            </mj-column>
+            <!-- END SECOND COLUMN -->
+            <!-- THREE COLUMN -->
+            <mj-column>
+              <mj-section padding="0">
+                <mj-group>
+                  <mj-column>
+                    <mj-image padding="0" padding-left="10" padding-right="2" src="https://smarterify.com/wp-content/uploads/2015/07/button-get-it-on-google-play-600px.png" width="80"></mj-image>
+                  </mj-column>
+                  <mj-column>
+                    <mj-image padding="0" padding-right="10" padding-left="5" src="http://waitry.net/wp-content/uploads/2015/08/Apple-App-Store-Available-Banner-ijailbreak-830x286.png" width="80"></mj-image>
+                  </mj-column>
+                </mj-group>
+              </mj-section>
+              <mj-text align="center" color="white" padding="0" font-size="6">Haga click aquí para obtener mas información sobre la aplicación</mj-text>
+            </mj-column>
+            <!-- END THREE COLUMN -->
+          </mj-group>
+        </mj-section>
+        <mj-section padding="0px" padding-top="30" background-color="#ededed"></mj-section>
+        <!-- END CONTENT -->
     </mj-container>
   </mj-body>
 </mjml>

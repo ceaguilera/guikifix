@@ -113,7 +113,7 @@ nelmio_api_doc:
         swagger_version:      '1.2'
         api_version:          '0.1'
         info:
-            title:                Symfony3
+            title:                Api Guikifix
             description:          ''
             TermsOfServiceUrl:    null
             contact:              null

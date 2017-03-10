@@ -22,6 +22,7 @@ Guikifix\ApiBundle\Entity\User:
         user_profile:
             targetEntity: Guikifix\Core\Domain\UserProfile
             mappedBy: user
+            cascade: ["persist"]
         profesional_profile:
             targetEntity: Guikifix\Core\Domain\ProfesionalProfile
             mappedBy: user
