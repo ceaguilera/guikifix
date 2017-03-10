@@ -34,6 +34,36 @@ class User extends BaseUser
      */
     private $profesional_profile;
 
+    
+
+    /**
+     * Actualiza los atributos de una clase
+     * dado un arreglo
+     * @param array $data información a actualizar
+     */
+    public function setAtributtes($data)
+    {
+        if ($data['password'])
+            $this->setPlainPassword($data['password']);
+
+        if ($data['email']) {
+            $this->setEmail($data['email']);
+            $this->setUsername($data['email']);
+        }
+    }  
+
+    function dashesToCamelCase($string, $capitalizeFirstCharacter = false) 
+        {
+
+            $str = str_replace(' ', '', ucwords(str_replace('_', ' ', $string)));
+
+            if (!$capitalizeFirstCharacter) {
+                $str[0] = strtolower($str[0]);
+            }
+
+            return $str;
+        }
+
 
     /**
      * Set typeUser

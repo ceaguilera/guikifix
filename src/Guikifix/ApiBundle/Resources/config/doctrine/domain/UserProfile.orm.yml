@@ -21,12 +21,19 @@ Guikifix\Core\Domain\UserProfile:
       # Teléfono fijo
       phone:
         type: string
+        nullable: true
       # Fecha de nacimiento
       birthdate:
         type: date
+        nullable: true
       # Género
       gender:
         type: integer
+        nullable: true
+      # Como nos contactaste
+      how_contact_us:
+        type: string
+        nullable: true
       # Ultima actualización
       last_update:
         type: datetime
