@@ -17,15 +17,14 @@ class JobTypeController extends Controller
      * los listados de los tipos de trabajo en el sistema
      * @param  Request $request 
      * @return json    data solicitada     
-     * @ApiDoc(
-     *     tags={
-     *         "stable" = "green"
-     *     },
+     * @ApiDoc(     
+     *     views={"default","job_type"},
      *     resource=true,
      *     resourceDescription="Listados de los tipos de trabajo en el sistema",
      *     description="Listados de los tipos de trabajo en el sistema (homepage)",
      *      statusCodes={
      *         200="Retorna json el listado de tipo de trabajos",
+     *         500="Error en el sistema"
      *     }
      *  )
     */
@@ -43,14 +42,7 @@ class JobTypeController extends Controller
      * @param  Request $request 
      * @return json    data solicitada     
      * @ApiDoc(
-     *     tags={
-     *         "stable" = "green"
-     *     },
-     *     input = {
-     *      "class" = "your_form_type",
-     *     "options" = {"method" = "PUT"},
-     *     },
-     *     input = {"class" = "Foo\ContentBundle\Form\SearchType", "paramType" = "query"},
+     *     views={"default","job_type"},
      *     resource=true,
      *     resourceDescription="Listado de categorias según un tipo de trabajo",
      *     description="Listado de categorias según un tipo de trabajo (Busqueda detallada)",

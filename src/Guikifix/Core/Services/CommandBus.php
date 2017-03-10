@@ -60,11 +60,8 @@ class CommandBus
         {
             //Se valida automaticamente el commando antes de ser ejecutado
             $validation = $this->cv::getValidator($command);
-            if (is_null($validation)) {
-
-                
-                    return $handler->handle($command, $this->rf);
-                
+            if (is_null($validation)) {                
+                return $handler->handle($command, $this->rf);
                 
             } else {
                 return new ResponseCommandBus(400, $validation);

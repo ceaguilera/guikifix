@@ -1,7 +1,12 @@
+# Obtener el listado de todas las categorias de Job 
+# de nivel 0 (Especialidades)
 guikifix_api_job_type:
     path:     /
     defaults: { _controller: GuikifixApiBundle:User\JobType:index }
-
+    methods: GET
+    
+# Obtener el las categorias dada el id de una especialidad
 guikifix_api_job_type_categories:
     path:     /{id}
     defaults: { _controller: GuikifixApiBundle:User\JobType:typeCategories}
+    methods: GET

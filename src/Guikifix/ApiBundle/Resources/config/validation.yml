@@ -1,0 +1,8 @@
+Guikifix\Core\UseCases\User\Security\RegisterUser\RegisterUserCommand:
+  properties:
+    first_name:
+      - Type:
+          type: string
+    last_name:
+      - Type:
+          type: string
