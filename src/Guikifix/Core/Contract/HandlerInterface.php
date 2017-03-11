@@ -2,7 +2,6 @@
 namespace Guikifix\Core\Contract;
 
 use Guikifix\Core\Contract\CommandInterface;
-use Guikifix\Core\Contract\RepositoryFactoryInterface;
 
 /**
  * Handler Interface
@@ -21,5 +20,5 @@ interface HandlerInterface
      * @param RepositoryFactoryInterface $rf
      * @return ResponseCommandBus
      */
-    public function handle(CommandInterface $command, RepositoryFactoryInterface $rf);
+    public function handle(CommandInterface $command);
 }

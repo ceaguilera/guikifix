@@ -2,7 +2,6 @@
 namespace Guikifix\Core\UseCases\User\Security\RegisterUser;
 
 use Guikifix\Core\Contract\HandlerBase;
-use Guikifix\Core\Contract\RepositoryFactoryInterface;
 use Guikifix\Core\Services\ResponseCommandBus;
 use Guikifix\Core\Contract\CommandInterface;
 use Guikifix\Core\Contract\HandlerInterface;
@@ -24,7 +23,7 @@ class RegisterUserHandler extends HandlerBase implements HandlerInterface
      * @param RepositoryFactoryInterface $rf
      * @return ResponseCommandBus
      */
-    public function handle(CommandInterface $command, RepositoryFactoryInterface $rf)
+    public function handle(CommandInterface $command)
     {
         $request = $command->getRequest();
         
@@ -37,7 +36,7 @@ class RegisterUserHandler extends HandlerBase implements HandlerInterface
         $user->setUserProfile($userProfile);
 
         $rpUserProfile = $this->get('repositoryFactory')->get('UserProfile');
-        $rpUserProfile->save($user);
+        $rpUserProfile->persistObject($user);
         return new ResponseCommandBus(200);
     }
 }

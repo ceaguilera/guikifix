@@ -3,11 +3,11 @@ Guikifix\Core\UseCases\User\Security\RegisterUser\RegisterUserCommand:
         email:
             - NotBlank: ~
             - Type:
-                type: email
+                type: string
         first_name:
             - NotBlank: ~
             - Type:
-                type: integer
+                type: string
         last_name:
             - NotBlank: ~
             - Type:

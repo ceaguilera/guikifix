@@ -2,7 +2,6 @@
 namespace Guikifix\Core\UseCases\User\GetJobTypeCategories;
 
 use Guikifix\Core\Contract\HandlerBase;
-use Guikifix\Core\Contract\RepositoryFactoryInterface;
 use Guikifix\Core\Services\ResponseCommandBus;
 use Guikifix\Core\Contract\CommandInterface;
 use Guikifix\Core\Contract\HandlerInterface;
@@ -22,10 +21,9 @@ class GetJobTypeCategoriesHandler extends HandlerBase implements HandlerInterfac
      * @param RepositoryFactoryInterface $rf
      * @return ResponseCommandBus
      */
-    public function handle(CommandInterface $command, RepositoryFactoryInterface $rf)
+    public function handle(CommandInterface $command)
     {
-        
-        $rpJobType = $rf->get('JobTypeCategory');
+        $rpJobType = $this->get('repositoryFactory')->get('JobTypeCategory');
         $response = $rpJobType->findCategoriesById($command->get('id'));
 
     	return new ResponseCommandBus(200,$response);

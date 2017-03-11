@@ -18,12 +18,6 @@ use Guikifix\Core\Contract\CoreValidatorInterface;
 class CommandBus
 {
     /**
-     * Repository Factory
-     * @var RepositoryFactoryInterface
-     */
-    private $rf;
-
-    /**
      * CoreValidator
      * @var CoreValidator
      */
@@ -32,9 +26,8 @@ class CommandBus
     /**
      * Constructor de la clase
      */
-    public function __construct($rf,$cv)
+    public function __construct($cv)
     {
-        $this->rf = $rf;
         $this->cv = $cv;
     }
 
@@ -60,8 +53,36 @@ class CommandBus
         {
             //Se valida automaticamente el commando antes de ser ejecutado
             $validation = $this->cv::getValidator($command);
-            if (is_null($validation)) {                
-                return $handler->handle($command, $this->rf);
+            if (is_null($validation)) {
+                $response = $handler->handle($command);
+                // Si el caso de uso de ejecuto sin problema
+                if ($response->getStatusCode() == 200 or $response->getStatusCode() == 201) {
+                    global $kernel;
+                    $container = $kernel->getContainer();
+                    $pedingEntities = $container->get('doctrine.orm.entity_manager')
+                        ->getUnitOfWork()->getScheduledEntityInsertions();
+                    // Buscamos persistencias de objectos en la BD
+                    if ($pedingEntities) {
+                        $errors  = [];
+                        foreach ($pedingEntities as $currentEntity) {
+                            $auxError = $this->cv::getValidator($currentEntity);
+                            if (count($auxError) > 0)
+                                $errors = array_merge($errors, $auxError);
+                        }
+
+                        if ($errors)
+                            return new ResponseCommandBus(400, $errors);
+                        else {
+                            // Ultima validación de consistencia en la BD
+                            try {
+                                $container->get('doctrine.orm.entity_manager')->flush();
+                            } catch (\Exception $e) {
+                                return new ResponseCommandBus(500,'Error perist DB');
+                            }
+                        }
+                    }
+                }
+                return $handler->handle($command);
                 
             } else {
                 return new ResponseCommandBus(400, $validation);
