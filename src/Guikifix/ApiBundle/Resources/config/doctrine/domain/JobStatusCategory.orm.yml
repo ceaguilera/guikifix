@@ -12,15 +12,12 @@ Guikifix\Core\Domain\JobStatusCategory:
       # Título del trabajo
       title:
         type: string
-      # Descripción
-      description:
+      # Pregunta que se le realiza al cliente
+      subtitle:
         type: string
-      # estado del presupuesto
-      status:
+      # Nivel en el arbol
+      lvl:
         type: integer
-      # Notificaciones de presupuestos
-      notifications:
-        type: boolean
       # Ultima actualización
       last_update:
         type: datetime
@@ -34,14 +31,15 @@ Guikifix\Core\Domain\JobStatusCategory:
           targetEntity: Guikifix\Core\Domain\JobStatusCategory
           mappedBy: parent
           orderBy:
-              title: ASC        
+              title: ASC
+          cascade: ["persist"]
     manyToOne:
       # Category padre
       parent:
           targetEntity: Guikifix\Core\Domain\JobStatusCategory
           inversedBy: children
           joinColumns:
-              job_status_category_id:
+              parent_id:
                   referencedColumnName: id
           orphanRemoval: false
 

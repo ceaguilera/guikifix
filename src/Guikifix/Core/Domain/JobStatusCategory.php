@@ -50,6 +50,16 @@ class JobStatusCategory
     private $created;
 
     /**
+     * @var string
+     */
+    private $subtitle;
+
+    /**
+     * @var integer
+     */
+    private $lvl;
+
+    /**
      * @var \Doctrine\Common\Collections\Collection
      */
     private $children;
@@ -71,6 +81,8 @@ class JobStatusCategory
     {
         $this->children = new \Doctrine\Common\Collections\ArrayCollection();
         $this->jobs_status = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->created = new \DateTime();
+        $this->last_update = new \DateTime();
     }
 
     /**
@@ -317,5 +329,53 @@ class JobStatusCategory
     public function getJobsStatus()
     {
         return $this->jobs_status;
+    }
+
+    /**
+     * Set subtitle
+     *
+     * @param string $subtitle
+     *
+     * @return JobStatusCategory
+     */
+    public function setSubtitle($subtitle)
+    {
+        $this->subtitle = $subtitle;
+
+        return $this;
+    }
+
+    /**
+     * Get subtitle
+     *
+     * @return string
+     */
+    public function getSubtitle()
+    {
+        return $this->subtitle;
+    }
+
+    /**
+     * Set lvl
+     *
+     * @param integer $lvl
+     *
+     * @return JobStatusCategory
+     */
+    public function setLvl($lvl)
+    {
+        $this->lvl = $lvl;
+
+        return $this;
+    }
+
+    /**
+     * Get lvl
+     *
+     * @return integer
+     */
+    public function getLvl()
+    {
+        return $this->lvl;
     }
 }
