@@ -55,6 +55,7 @@ class CommandBus
             $validation = $this->cv::getValidator($command);
             if (is_null($validation)) {
                 $response = $handler->handle($command);
+
                 // Si el caso de uso de ejecuto sin problema
                 if ($response->getStatusCode() == 200 or $response->getStatusCode() == 201) {
                     global $kernel;
@@ -82,7 +83,7 @@ class CommandBus
                         }
                     }
                 }
-                return $handler->handle($command);
+                return $response;
                 
             } else {
                 return new ResponseCommandBus(400, $validation);

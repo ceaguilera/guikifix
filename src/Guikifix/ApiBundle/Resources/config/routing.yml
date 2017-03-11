@@ -2,7 +2,11 @@ guikifix_api_homepage:
     path:     /
     defaults: { _controller: GuikifixApiBundle:Default:index }
 
-guikifix_api_categories:
+guikifix_api_job_status_categories:
+    resource: "@GuikifixApiBundle/Resources/config/routing/job_status_routing.yml"
+    prefix:   /jobStatus
+
+guikifix_api_job_type_categories:
     resource: "@GuikifixApiBundle/Resources/config/routing/job_type_routing.yml"
     prefix:   /jobtype
 

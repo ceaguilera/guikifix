@@ -14,4 +14,20 @@ use Doctrine\ORM\Query\ResultSetMapping;
  *
  * @author Freddy Contreras
  */
-class JobStatusCategoryRepository extends BaseRepository implements JobStatusCategoryRepositoryInterface {}
+class JobStatusCategoryRepository extends BaseRepository implements JobStatusCategoryRepositoryInterface
+{
+    /**
+     * La función retorna el listado de los tipos de
+     * trabajo en el sistama
+     * @return array listado de las categorias
+     */
+    public function findAllStatus()
+    {
+        $rsm = new ResultSetMapping();
+        $rsm->addScalarResult('res','result','json_array');
+        $query = 'select get_job_status_categories() res';
+
+        $naviteQuery = $this->getEntityManager()->createNativeQuery($query,$rsm);
+        return $naviteQuery->getResult()[0]['result'];
+    }
+}

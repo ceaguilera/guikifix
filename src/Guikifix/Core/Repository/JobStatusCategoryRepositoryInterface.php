@@ -8,4 +8,12 @@ namespace Guikifix\Core\Repository;
  *
  * @author Freddy Contreras
  */
-interface JobStatusCategoryRepositoryInterface {}
+interface JobStatusCategoryRepositoryInterface
+{
+    /**
+    * La función retorna el listado de los tipos de
+    * trabajo en el sistama
+    * @return array listado de las categorias
+    */
+    public function findAllStatus();
+}
