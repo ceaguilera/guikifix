@@ -1,5 +1,5 @@
 # Listado de todos la información de un estado actual de un Job
 guikifix_api_job_status_categories:
     path:     /
-    defaults: { _controller: GuikifixApiBundle:User\JobType:index }
+    defaults: { _controller: GuikifixApiBundle:User\JobStatus:statusCategories }
     methods: GET

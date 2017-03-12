@@ -45,13 +45,13 @@ class RegisterUserCommand extends CommandBase implements CommandInterface
      * Contraseña
      * @var string
      */
-    protected $password;
+    public $password;
 
     /**
      * Confirmación de contraseña
      * @var string
      */
-    protected $confirmation_password;
+    public $confirmation_password;
 
     /**
      * Como nos contactaste

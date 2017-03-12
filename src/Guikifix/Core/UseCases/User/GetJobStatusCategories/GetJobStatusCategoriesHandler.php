@@ -1,20 +1,20 @@
 <?php
-namespace Guikifix\Core\UseCases\User\GetJobTypeCategories;
+namespace Guikifix\Core\UseCases\User\GetJobStatusCategories;
 
 use Guikifix\Core\Contract\HandlerBase;
 use Guikifix\Core\Services\ResponseCommandBus;
 use Guikifix\Core\Contract\CommandInterface;
 use Guikifix\Core\Contract\HandlerInterface;
 /**
- * Class GetJobTypeCategoriesHandler
+ * Class GetJobStatusCategoriesHandler
  * @package Guikifix\Core\UseCases\User\GetJobTypeCategories
  *
- * Obtener las categorias de un tipo 
- * trabajo dado el id 
+ * Obtiene el listado de información referente
+ * al estado actual de los trabajo.
  *
  * @author Freddy Contreras
  */
-class GetJobTypeCategoriesHandler extends HandlerBase implements HandlerInterface
+class GetJobStatusCategoriesHandler extends HandlerBase implements HandlerInterface
 {
     /**
      * @param Command $command
@@ -23,8 +23,9 @@ class GetJobTypeCategoriesHandler extends HandlerBase implements HandlerInterfac
      */
     public function handle(CommandInterface $command)
     {
-        $rpJobType = $this->get('repositoryFactory')->get('JobTypeCategory');
-        $response = $rpJobType->findCategoriesById($command->get('id'));
+        $rpJobType = $this->get('repositoryFactory')->get('JobStatusCategory');
+        $response = $rpJobType->findAllStatus();
+
         return new ResponseCommandBus(200,$response);
     }
 }

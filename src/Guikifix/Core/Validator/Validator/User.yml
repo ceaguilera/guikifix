@@ -1,0 +1,4 @@
+# Validación de la entidad Usuario (fos_user)
+Guikifix\ApiBundle\Entity\User:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: { fields: [email, username]}

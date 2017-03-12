@@ -1,0 +1,33 @@
+Guikifix\Core\UseCases\User\Security\RegisterUser\RegisterUserCommand:
+    properties:
+        email:
+            - NotBlank: ~
+            - Type:
+                type: string
+        first_name:
+            - NotBlank: ~
+            - Type:
+                type: string
+        last_name:
+            - NotBlank: ~
+            - Type:
+                type: string
+        cell_phone:
+            - NotBlank: ~
+            - Type:
+                type: string
+        password:
+            - NotBlank: ~
+            - Type:
+                type: string
+        confirmation_password:
+            - NotBlank: ~
+            - Type:
+                type: string
+            - Expression:
+                expression: "this.password == this.confirmation_password"
+                message: "the passwords must be the same"
+        how_contact_us:
+            - NotBlank: ~
+            - Type:
+                type: string

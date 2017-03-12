@@ -2,6 +2,7 @@
 
 namespace Guikifix\ApiBundle\Controller\User;
 
+use Guikifix\Core\UseCases\User\GetJobStatusCategories\GetJobStatusCategoriesCommand;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -16,9 +17,6 @@ class JobStatusController extends Controller
      * @param  Request $request 
      * @return json    data solicitada     
      * @ApiDoc(
-     *     tags={
-     *         "stable" = "green"
-     *     },
      *     resource=true,
      *     resourceDescription="Listados de los tipos de trabajo en el sistema",
      *     description="Listados de los tipos de trabajo en el sistema (homepage)",
@@ -27,8 +25,11 @@ class JobStatusController extends Controller
      *     }
      *  )
     */
-    public function indexAction(Request $request)
-    {        
+    public function statusCategoriesAction(Request $request)
+    {
+        $command = new GetJobStatusCategoriesCommand();
+        $response = $this->get('CommandBus')->execute($command);
 
+        return new JsonResponse($response->getData(),$response->getStatusCode());
     }
 }
