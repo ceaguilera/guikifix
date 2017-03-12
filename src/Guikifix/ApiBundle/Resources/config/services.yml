@@ -17,4 +17,4 @@ services:
     # Servicio que ejecuta el Caso de uso
     CommandBus:
         class: Guikifix\Core\Services\CommandBus
-        arguments: ["@RepositoryFactory","@CoreValidator"]        
+        arguments: ["@CoreValidator"]

@@ -29,10 +29,10 @@ class CoreValidator implements CoreValidatorInterface
         if (count($error) > 0) {
             
             $response = []; 
-            foreach ($erros as $currentError) {
+            foreach ($error as $currentError) {
                 $response[] = [
                     'message' => $currentError->getMessage(),
-                    'value' => $currentError->getValue(),
+                    'value' => $currentError->getInvalidValue(),
                     'parameter' => $currentError->getPropertyPath()
                 ];
             }            

@@ -8,9 +8,10 @@ use Guikifix\Core\Repository\JobTypeCategoryRepositoryInterface;
 use Doctrine\ORM\Query\ResultSetMapping;
 
 /**
- * UserRepository
+ * JobTypeCategoryRepository
+ *
  * Implementa las operaciones de manipulacion de los datos
- * de la clase User definidas en la interfaz UserRepositoryInterface del dominio
+ * de la clase User definidas en la interfaz JobTypeCategoryRepositoryInterface del dominio
  *
  * @author Freddy Contreras
  */

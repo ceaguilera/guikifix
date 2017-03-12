@@ -26,13 +26,17 @@ class RepositoryFactory implements RepositoryFactoryInterface
 	 * @var array
 	 */
 	private $map = [
-		'User' => [
-            'repository'=>'Guikifix\ApiBundle\Repository\UserRepository',
-            'entity'=>'Guikifix\ApiBundle\Entity\User'
+        'JobStatusCategory' => [
+            'repository'=>'Guikifix\ApiBundle\Repository\JobStatusCategoryRepository',
+            'entity'=>'Guikifix\Core\Domain\JobStatusCategory'
         ],
-        'JobTypeCategory' => [
+		'JobTypeCategory' => [
             'repository'=>'Guikifix\ApiBundle\Repository\JobTypeCategoryRepository',
             'entity'=>'Guikifix\Core\Domain\JobTypeCategory'
+        ],
+        'User' => [
+            'repository'=>'Guikifix\ApiBundle\Repository\UserRepository',
+            'entity'=>'Guikifix\ApiBundle\Entity\User'
         ],
         'UserProfile' => [
             'repository'=>'Guikifix\ApiBundle\Repository\UserProfileRepository',
