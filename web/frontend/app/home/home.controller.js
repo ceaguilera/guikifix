@@ -1,9 +1,7 @@
 angular.module('guikifixApp.home')
 .controller('home', function($scope, $log, $http, $window, $location, $state, $rootScope) {
-    $http({
-        method : "POST",
-        url : "/api/jobtype/"
-    }).then(function mySucces(response) {
+    $http.get("/api/jobtype/")
+    .then(function mySucces(response) {
         console.log(response.data);
         $rootScope.specialtiesList = response.data;
     }, function myError(response) {

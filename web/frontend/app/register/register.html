@@ -5,37 +5,133 @@
         </div>
         <div class="row">
             <div class="col-xs-5">
-                <form>
+                <form name="formRegister">
                     <div class="form-group">
                         <label for="pwd">Email:</label>
-                        <input type="email" class="form-control">
+                        <input 
+                            type="email" 
+                            class="form-control"
+                            name="email" 
+                            ng-model="formRegisterUser.email"
+                            ng-class="{'errorImput':(formRegister.email.$touched && formRegister.email.$error.required) || (formRegister.email.$error.email)}"
+                            required
+                        >
+                        <span
+                            class="error"
+                            ng-show="formRegister.email.$touched && formRegister.email.$error.required">
+                            Este campo es requerido
+                        </span>
+                        <span
+                            class="error"
+                            ng-show="formRegister.email.$error.email">
+                            Formato de email invalido
+                        </span>
                     </div>
                     <div class="form-group">
                         <label for="usr">Nombre:</label>
-                        <input type="text" class="form-control">
+                        <input 
+                            type="text" 
+                            class="form-control"
+                            name="first_name" 
+                            ng-model="formRegisterUser.first_name"
+                            ng-class="{'errorImput':formRegister.first_name.$touched && formRegister.first_name.$error.required}"
+                            required
+                        >
+                        <span 
+                            class="error"
+                            ng-show="formRegister.first_name.$touched && formRegister.first_name.$error.required">
+                            Este campo es requerido
+                        </span>
                     </div>
                     <div class="form-group">
                         <label for="usr">Apellido:</label>
-                        <input type="text" class="form-control">
+                        <input 
+                            type="text" 
+                            class="form-control"
+                            name="last_name" 
+                            ng-model="formRegisterUser.last_name"
+                            ng-class="{'errorImput':formRegister.last_name.$touched && formRegister.last_name.$error.required}"
+                            required
+                        >
+                        <span 
+                            class="error"
+                            ng-show="formRegister.last_name.$touched && formRegister.last_name.$error.required">
+                            Este campo es requerido
+                        </span>                     
                     </div>
                     <div class="form-group">
                         <label for="usr">Celular:</label>
-                        <input type="text" class="form-control">
+                        <input 
+                            type="text" 
+                            class="form-control"
+                            name="cell_phone" 
+                            ng-model="formRegisterUser.cell_phone"
+                            ng-class="{'errorImput':formRegister.cell_phone.$touched && formRegister.cell_phone.$error.required}"
+                            required
+                        >
+                        <span 
+                            class="error"
+                            ng-show="formRegister.cell_phone.$touched && formRegister.cell_phone.$error.required">
+                            Este campo es requerido
+                        </span>                         
                     </div>
                     <div class="form-group">
                         <label for="pwd">Contraseña:</label>
-                        <input type="password" class="form-control">
+                        <input 
+                            type="password" 
+                            class="form-control"
+                            name="password" 
+                            ng-model="formRegisterUser.password" 
+                            ng-class="{'errorImput':formRegister.password.$touched && formRegister.password.$error.required}"
+                            required
+                        >
+                        <span
+                            class="error"
+                            ng-show="formRegister.password.$touched && formRegister.password.$error.required">
+                            Este campo es requerido
+                        </span>                         
                     </div>
                     <div class="form-group">
                         <label for="pwd">Confirmar Contraseña:</label>
-                        <input type="password" class="form-control">
+                        <input 
+                            type="password" 
+                            class="form-control"
+                            name="confirmation_password" 
+                            ng-model="formRegisterUser.confirmation_password"
+                            ng-class="{'errorImput':formRegister.confirmation_password.$touched && formRegister.confirmation_password.$error.required}"
+                            required
+                        >
+                         <span
+                            class="error"
+                            ng-show="formRegister.confirmation_password.$touched && formRegister.confirmation_password.$error.required">
+                            Este campo es requerido
+                        </span>                        
                     </div>
                     <div class="form-group">
                         <label for="usr">¿Como supiste de Guikifix?:</label>
-                        <input type="text" class="form-control">
+                        <input 
+                            type="text" 
+                            class="form-control"
+                            name="how_contact_us" 
+                            ng-model="formRegisterUser.how_contact_us"
+                            ng-class="{'errorImput':formRegister.how_contact_us.$touched && formRegister.how_contact_us.$error.required}"
+                            required
+                        >
+                        <span
+                            class="error"
+                            ng-show="formRegister.how_contact_us.$touched && formRegister.how_contact_us.$error.required">
+                            Este campo es requerido
+                        </span>                         
                     </div>
                     <div align="center">
-                        <button type="button" class="btn typeOne">Registrate</button>
+                        <button 
+                            type="button" 
+                            class="btn typeOne"
+                            ng-click="sendData(formRegisterUser)"
+                            ng-disabled="!formRegister.$valid"
+                        >
+                            Registrate
+                        </button>
                     </div>
                 </form>
             </div>

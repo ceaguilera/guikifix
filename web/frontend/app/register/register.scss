@@ -2,6 +2,12 @@
 @import '../fonts';
 
 .register {
+    .error {
+        color: red;
+    }
+    .errorImput {
+        border-color: red;
+    }
     h1 {
         color: $secundary-color;
         font-family: Roboto !important;

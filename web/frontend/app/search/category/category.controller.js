@@ -6,10 +6,8 @@ angular.module('guikifixApp.category')
         let url = "/api/jobtype/"+selected;
         let updateURL = "/category/"+selected;
         $location.path(updateURL);
-        $http({
-            method : "POST",
-            url : url
-        }).then(function mySucces(response) {
+        $http.get(url)
+        .then(function mySucces(response) {
             $scope.categories = response.data;
             $scope.arraySelection = new Array($scope.categories.length);
             console.log($scope.arraySelection);
