@@ -16,7 +16,11 @@
   .downList h1:before {
     content: url("http://interceramicusa.com/images/layout/icons/ico-22.png");
     width: 10px;
-    height: 10px; }
+    height: 10px;
+    height: 10px;
+    position: relative;
+    top: 6px;
+    right: 7px; }
   @media screen and (min-width: 992px) {
     .downList .top-one {
       margin-top: 12%; } }

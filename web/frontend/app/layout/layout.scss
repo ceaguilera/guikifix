@@ -90,8 +90,18 @@ footer {
     background: $primary-color;
     color: #FFF;
     padding-top: 1%;
+    .space {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .contact {
+        margin-left: -65px;
+        margin-right: 65px;
+    }
     ul {
         list-style:none;
+        padding-right: 0px;
+        padding-left: 0px;
         li > a {
             text-decoration: none;
             color: #FFF;
@@ -103,14 +113,20 @@ footer {
         }
     }
     img {
-        margin-top: -47px;
-        margin-bottom: -28px;
-        margin-left: -5%;
+        margin-bottom: 4%;
+        margin-left: -1%;
+        margin-top: -1%;
     }
     .top-section {
         text-align: center;
-        margin-top: 10%;
+        margin-top: 4%;
         font-weight: bold;
+        li {
+            font-size: 17px;
+        }
+        .decorationLi {
+            text-decoration: underline;
+        }
     }
 }
 .subFooter {

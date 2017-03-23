@@ -11,9 +11,12 @@
     }
     h1:before {
         content: url('http://interceramicusa.com/images/layout/icons/ico-22.png');
-
         width: 10px;
         height: 10px;
+        height: 10px;
+        position: relative;
+        top: 6px;
+        right: 7px;
     }
     .top-one {
         @media screen and (min-width: 992px) {
