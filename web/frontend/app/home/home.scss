@@ -26,13 +26,13 @@
         }
         .box {
             background: rgba(212, 212, 212, 0.6);
-            height: 260px;
+            height: 224px;
             text-align: center;
             padding: 3%;
             img {
                 width: 224px;
                 height: 38px;
-                margin-top: 0px;
+                margin-top: 5px;
             }
             h2 {
                 color: $primary-color;
@@ -40,6 +40,7 @@
                 font-weight: bold !important;
                 text-align: center;
                 font-size: 18px;
+                margin-top: 10px
             }
             h3 {
                 color: $secundary-color;
@@ -56,6 +57,15 @@
                 text-align: center;
                 font-size: 17px;
                 text-align-last: center;
+                width: 80%;
+            }
+            .img-select {
+                height: 40px;
+                width: 40px;
+                float: left;
+                position: relative;
+                top: -9px;
+                left: 12%;
             }
         }
     }

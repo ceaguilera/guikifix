@@ -40,23 +40,29 @@
   background: #094AB1 !important;
   border-color: #094AB1 !important;
   border-radius: 0px !important;
-  margin-bottom: 0px !important; }
+  margin-bottom: 0px !important;
+  border-top-width: 0px !important;
+  border-right-width: 0px !important;
+  border-left-width: 0px !important;
+  border-bottom-width: 0px !important; }
   .menuGuikifix a {
     color: #FFF !important;
     font-family: Roboto !important;
     font-weight: bold !important; }
+  .menuGuikifix .barVertical {
+    border-width: 4px;
+    height: 50px;
+    border-color: #FFF;
+    border-right-style: solid !important; }
   .menuGuikifix .container .collapse ul li:hover a, .menuGuikifix .container .collapse ul li:active a, .menuGuikifix .container .collapse ul li:focus a, .menuGuikifix .container .collapse ul li.active a {
     background: #FF6600 !important; }
   .menuGuikifix .title {
-    margin-top: 11px;
-    font-size: 23px;
-    border-right-style: solid;
-    border-width: 3px;
-    border-color: #FFF;
+    padding-top: 8px;
+    font-size: 26px;
     color: #FFF !important;
     font-family: Roboto !important;
     font-weight: bold !important;
-    padding-right: 5px; }
+    padding-right: 16px; }
 
 footer {
   background: #FF6600;
