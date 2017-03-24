@@ -17,9 +17,11 @@
     margin-top: 2%;
     margin-bottom: 2%; }
     .login .top img {
-      width: 224px;
-      height: 38px;
-      margin-top: -2.5%; }
+      width: 174px;
+      height: 30px;
+      margin-top: -1.5%;
+      margin-left: .5%;
+      margin-right: .5%; }
   .login form label {
     color: #094AB1;
     font-family: Roboto !important;

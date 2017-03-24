@@ -40,30 +40,44 @@
   background: #094AB1 !important;
   border-color: #094AB1 !important;
   border-radius: 0px !important;
-  margin-bottom: 0px !important; }
+  margin-bottom: 0px !important;
+  border-top-width: 0px !important;
+  border-right-width: 0px !important;
+  border-left-width: 0px !important;
+  border-bottom-width: 0px !important; }
   .menuGuikifix a {
     color: #FFF !important;
     font-family: Roboto !important;
     font-weight: bold !important; }
+  .menuGuikifix .barVertical {
+    border-width: 4px;
+    height: 50px;
+    border-color: #FFF;
+    border-right-style: solid !important; }
   .menuGuikifix .container .collapse ul li:hover a, .menuGuikifix .container .collapse ul li:active a, .menuGuikifix .container .collapse ul li:focus a, .menuGuikifix .container .collapse ul li.active a {
     background: #FF6600 !important; }
   .menuGuikifix .title {
-    margin-top: 11px;
-    font-size: 23px;
-    border-right-style: solid;
-    border-width: 3px;
-    border-color: #FFF;
+    padding-top: 8px;
+    font-size: 26px;
     color: #FFF !important;
     font-family: Roboto !important;
     font-weight: bold !important;
-    padding-right: 5px; }
+    padding-right: 16px; }
 
 footer {
   background: #FF6600;
   color: #FFF;
   padding-top: 1%; }
+  footer .space {
+    padding-right: 0px;
+    padding-left: 0px; }
+  footer .contact {
+    margin-left: -65px;
+    margin-right: 65px; }
   footer ul {
-    list-style: none; }
+    list-style: none;
+    padding-right: 0px;
+    padding-left: 0px; }
     footer ul li > a {
       text-decoration: none;
       color: #FFF;
@@ -72,13 +86,17 @@ footer {
         text-decoration: none;
         color: #FFF; }
   footer img {
-    margin-top: -47px;
-    margin-bottom: -28px;
-    margin-left: -5%; }
+    margin-bottom: 4%;
+    margin-left: -1%;
+    margin-top: -1%; }
   footer .top-section {
     text-align: center;
-    margin-top: 10%;
+    margin-top: 4%;
     font-weight: bold; }
+    footer .top-section li {
+      font-size: 17px; }
+    footer .top-section .decorationLi {
+      text-decoration: underline; }
 
 .subFooter {
   background: #4C4D4F;
