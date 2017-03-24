@@ -28,12 +28,11 @@
                 <mj-text align="center" font-weight="bold">Hola {{ full_name }}</mj-text>
                 <mj-text align="left" padding="0" padding-left="10%" padding-right="10%">
                   <p style="text-align: justify">
-                    Hemos recibido parte de información en nuestras páginas de reigstro de Clientes una vez que hayas completado los datos de tu perfil en nuestra plataforma, estarás operativo en nuestra aplicación.
+                    Hemos recibido parte de tu información en nuestras páginas de registro de Clientes, una vez que hayas completado los datos de tu perfil en nuestra plataforma, estarás operativo en nuestra aplicación.
                   </p>
 
                   <p style="text-align: justify">
-                    Nuestro proceso de registro es completamente gratuito para tener acceso a los datos de los Profesionales. Sin embargo, debes ser consecuente con los principios de nuestra filosofía de trabajo, procurando una relación de respeto y responsabilidad con nuestros
-                    Profesionales.
+                    Nuestro proceso de registro es completamente gratuito para tener acceso a los datos de los Profesionales. Sin embargo, debes ser consecuente con los principios de nuestra filosofía de trabajo, procurando una relación de respeto y responsabilidad con nuestros Profesionales.
                   </p>
                 </mj-text>
                 <mj-text align="center" padding="0">Cualquier duda escríbenos al soporte@guikifix.com.ve </mj-text>
@@ -53,18 +52,18 @@
         <mj-section padding="0px" padding-top="10px" background-color="#ededed"></mj-section>
         <mj-section height="auto" padding="0px" border-radius="10" padding-top="2px" padding-bottom="4px" background-url="https://guikifix.herokuapp.com/images/email/backgroundfooter.png">
           <mj-image src="http://guikifix.herokuapp.com/images/logo_guikifix.png" padding="0" width="75px"></mj-image>
-          <mj-text font-size="9" align="center" font-weight="bold" color="gray">Activa algunos de nuestros Planes profesionales podrás tener acceso a muchísimos trabajos de clientes listos para contratar</mj-text>
-          <mj-button background-color="#FF6600" inner-padding="5px 5px" font-weight="bold" color="white">ACTIVA PLAN PROFESIONAL</mj-button>
+          <mj-text font-size="8" align="center" font-weight="bold" color="gray">Activa algunos de nuestros Planes profesionales podrás tener acceso a muchísimos trabajos de clientes listos para contratar</mj-text>
+          <mj-button background-color="#FF6600" font-weight="bold" font-size="8" color="white">ACTIVA PLAN PROFESIONAL</mj-button>
         </mj-section>
         <!-- END PRE - FOOTER -->
         <!-- FOOTER -->
         <mj-section padding="0px" padding-top="10px" background-color="#ededed"></mj-section>
-        <mj-section border-radius="10" padding-top="15px" padding-bottom="15px" background-color="#094AB1">
+        <mj-section border-radius="10" padding-top="15px" padding-bottom="15px" background-color="#094AB1" padding-left="23px" padding-right="23px">
           <!-- FIRST COLUMN -->
           <mj-column paddig="0" width="40%">
-            <mj-text color="white" font-size="9" padding="0" line-height="2" font-weight="bold" align="center">CONTRATA PROFESIONALES DESDE TU CELULAR</mj-text>
-            <mj-text color="white" font-size="9" padding="0" align="center">Descarga nuestra aplicación gratis!</mj-text>
-            <mj-text color="white" font-size="9" padding="0" line-height="2" align="center">INNOVACIÓN, TECNOLOGÍA Y SEGURIDAD</mj-text>
+            <mj-text color="white" font-size="7" padding="0" line-height="2" font-weight="bold">CONTRATA PROFESIONALES DESDE TU CELULAR</mj-text>
+            <mj-text color="white" font-size="7" padding="0">Descarga nuestra aplicación gratis!</mj-text>
+            <mj-text color="white" font-size="7" padding="0" line-height="2">INNOVACIÓN, TECNOLOGÍA Y SEGURIDAD</mj-text>
           </mj-column>
           <!-- END FIRST COLUMN -->
           <!-- SECOND COLUMN -->
@@ -95,15 +94,15 @@
           <mj-column width="40%">
             <mj-section padding="0">
               <mj-group>
-                <mj-column>
-                  <mj-image padding="0" src="https://guikifix.herokuapp.com/images/email/googleplay.png" width="90px" align="right"></mj-image>
+                <mj-column width="50%">
+                  <mj-image padding="0" src="https://guikifix.herokuapp.com/images/email/googleplay.png"></mj-image>
                 </mj-column>
-                <mj-column>
-                  <mj-image padding="0" src="https://guikifix.herokuapp.com/images/email/appstore.png" width="90px" padding-left="4px" align="left"></mj-image>
+                <mj-column width="50%">
+                  <mj-image padding="0" src="https://guikifix.herokuapp.com/images/email/appstore.png"></mj-image>
                 </mj-column>
               </mj-group>
             </mj-section>
-            <mj-text color="white" padding="0" font-size="7" align="center">Haga click aquí para obtener mas información sobre la aplicación</mj-text>
+            <mj-text color="white" padding="0" font-size="6" align="center">Haga click aquí para obtener mas información sobre la aplicación</mj-text>
           </mj-column>
           <!-- END THREE COLUMN -->
         </mj-section>
