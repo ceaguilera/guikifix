@@ -112,11 +112,11 @@
           <mj-column width="40%">
             <mj-section padding="0">
               <mj-group>
-                <mj-column width="50%">
-                  <mj-image padding="0" src="https://guikifix.herokuapp.com/images/email/googleplay.png"></mj-image>
+                <mj-column>
+                  <mj-image width="100px" padding="0" src="https://guikifix.herokuapp.com/images/email/googleplay.png"></mj-image>
                 </mj-column>
-                <mj-column width="50%">
-                  <mj-image padding="0" src="https://guikifix.herokuapp.com/images/email/appstore.png"></mj-image>
+                <mj-column>
+                  <mj-image width="100px" padding="0" src="https://guikifix.herokuapp.com/images/email/appstore.png"></mj-image>
                 </mj-column>
               </mj-group>
             </mj-section>

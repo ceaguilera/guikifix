@@ -96,10 +96,10 @@
             <mj-section padding="0">
               <mj-group>
                 <mj-column>
-                  <mj-image padding="0" src="https://guikifix.herokuapp.com/images/email/googleplay.png" width="90px" align="right"></mj-image>
+                  <mj-image width="100px" padding="0" src="https://guikifix.herokuapp.com/images/email/googleplay.png"></mj-image>
                 </mj-column>
                 <mj-column>
-                  <mj-image padding="0" src="https://guikifix.herokuapp.com/images/email/appstore.png" width="90px" padding-left="4px" align="left"></mj-image>
+                  <mj-image width="100px" padding="0" src="https://guikifix.herokuapp.com/images/email/appstore.png"></mj-image>
                 </mj-column>
               </mj-group>
             </mj-section>
