@@ -17,6 +17,14 @@
   font-weight: 500;
   display: inline-block; }
 
+.register h4 {
+  color: #4C4D4F;
+  font-family: Roboto;
+  font-size: 12px;
+  margin-bottom: 12%; }
+  .register h4 a {
+    text-decoration: underline; }
+
 .register .top {
   text-align: center;
   margin-top: 2%;
@@ -44,7 +52,7 @@
   padding-left: 20px;
   padding-right: 20px;
   background-color: #FF6600 !important;
-  margin-bottom: 6%;
+  margin-bottom: 1%;
   margin-top: 5%;
   width: 50%; }
   .register button:hover {
@@ -57,10 +65,10 @@
 .register .block-rigth {
   background: #f2f2f2;
   width: 100%;
-  height: 39em;
+  height: 44em;
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 2%; }
+  padding-top: 5%; }
   .register .block-rigth h1 {
     color: #094AB1;
     font-family: Roboto !important;

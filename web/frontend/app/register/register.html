@@ -114,14 +114,16 @@
                             class="form-control"
                             name="how_contact_us" 
                             ng-model="formRegisterUser.how_contact_us"
-                            ng-class="{'errorImput':formRegister.how_contact_us.$touched && formRegister.how_contact_us.$error.required}"
-                            required
                         >
-                        <span
-                            class="error"
-                            ng-show="formRegister.how_contact_us.$touched && formRegister.how_contact_us.$error.required">
-                            Este campo es requerido
-                        </span>                         
+                    </div>
+                    <div class="form-group">
+                        <label for="usr">Código Referido:</label>
+                        <input 
+                            type="text" 
+                            class="form-control"
+                            name="referenced_code" 
+                            ng-model="formRegisterUser.referenced_code"
+                        >                   
                     </div>
                     <div align="center">
                         <button 
@@ -133,9 +135,14 @@
                             Registrate
                         </button>
                     </div>
+                    <div align="center">
+                        <h4>Registrarse implica que estás de acuerdo con los 
+                            <a href="">Términos y condiciones de servicio</a>
+                        </h4>
+                    </div>
                 </form>
             </div>
-            <div class="col-xs-6 col-xs-offset-1">
+            <div class="col-xs-5 col-xs-offset-2">
                 <div class=" container block-rigth">
                     <div class="row">
                         <img src="images/iconosPasos.png" alt="">
