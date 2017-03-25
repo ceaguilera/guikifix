@@ -25,18 +25,35 @@
             <!-- CONTENT-->
             <mj-section padding="0" background-color="white">
               <mj-column>
-                <mj-text align="center" font-weight="bold">Hola {{ full_name }}</mj-text>
+                
+                <mj-text align="center" font-weight="bold" padding="0">Hola {{ full_name </mj-text>
                 <mj-text align="left" padding="0" padding-left="10%" padding-right="10%">
-                  <p style="text-align: justify">
-                    Hemos recibido parte de información en nuestras páginas de reigstro de Clientes una vez que hayas completado los datos de tu perfil en nuestra plataforma, estarás operativo en nuestra aplicación.
-                  </p>
-
-                  <p style="text-align: justify">
-                    Nuestro proceso de registro es completamente gratuito para tener acceso a los datos de los Profesionales. Sin embargo, debes ser consecuente con los principios de nuestra filosofía de trabajo, procurando una relación de respeto y responsabilidad con nuestros
-                    Profesionales.
+                  <p>
+                  Necesitas realizar un XXXX (nombre de solicitud), los Profesionales interesados esperan por ti para poner sus manos a la obra.  
                   </p>
                 </mj-text>
-                <mj-text align="center" padding="0">Cualquier duda escríbenos al soporte@guikifix.com.ve </mj-text>
+                <mj-text align="center" >
+                  ¿Ya sabes con quien quieres trabajar?
+                </mj-text>
+                
+                <mj-text align="center" padding="0">
+                  <a href="https://mjml.io" class="link-nostyle">Si, ya sé cuál es el Profesional GUIKIFIX  y quiero asignar mi trabajo</a>
+                </mj-text>
+                
+                <mj-text align="center" padding="0">
+                  <a href="https://mjml.io" class="link-nostyle">¡No estoy seguro todavía! Quiero revisar mis presupuestos o recibir más</a>
+                </mj-text>
+                
+                <mj-text align="center" padding="0">
+                  <a href="https://mjml.io" class="link-nostyle">No, quiero cancelar este trabajo</a>
+                </mj-text>
+                <mj-text align="left" font-size="12" padding="0" padding-left="10%" padding-right="10%">
+                  <p>
+                Una vez terminado el trabajo no te olvides de calificar al Profesional para que otros usuarios puedan usar tu experiencia como referencia. Es muy importante tu opinión.
+                  </p>
+                </mj-text>
+                
+                
                 <mj-text align="center" padding="0">Atentamente,</mj-text>
                 <mj-text align="center" padding="0" font-weight="bold">TEAM GUIKIFIX</mj-text>
               </mj-column>
@@ -53,18 +70,18 @@
         <mj-section padding="0px" padding-top="10px" background-color="#ededed"></mj-section>
         <mj-section height="auto" padding="0px" border-radius="10" padding-top="2px" padding-bottom="4px" background-url="https://guikifix.herokuapp.com/images/email/backgroundfooter.png">
           <mj-image src="http://guikifix.herokuapp.com/images/logo_guikifix.png" padding="0" width="75px"></mj-image>
-          <mj-text font-size="9" align="center" font-weight="bold" color="gray">Activa algunos de nuestros Planes profesionales podrás tener acceso a muchísimos trabajos de clientes listos para contratar</mj-text>
-          <mj-button background-color="#FF6600" inner-padding="5px 5px" font-weight="bold" color="white">ACTIVA PLAN PROFESIONAL</mj-button>
+          <mj-text font-size="8" align="center" font-weight="bold" color="gray">Activa algunos de nuestros Planes profesionales podrás tener acceso a muchísimos trabajos de clientes listos para contratar</mj-text>
+          <mj-button background-color="#FF6600" font-weight="bold" font-size="8" color="white">ACTIVA PLAN PROFESIONAL</mj-button>
         </mj-section>
         <!-- END PRE - FOOTER -->
         <!-- FOOTER -->
         <mj-section padding="0px" padding-top="10px" background-color="#ededed"></mj-section>
-        <mj-section border-radius="10" padding-top="15px" padding-bottom="15px" background-color="#094AB1">
+        <mj-section border-radius="10" padding-top="15px" padding-bottom="15px" background-color="#094AB1" padding-left="23px" padding-right="23px">
           <!-- FIRST COLUMN -->
           <mj-column paddig="0" width="40%">
-            <mj-text color="white" font-size="9" padding="0" line-height="2" font-weight="bold" align="center">CONTRATA PROFESIONALES DESDE TU CELULAR</mj-text>
-            <mj-text color="white" font-size="9" padding="0" align="center">Descarga nuestra aplicación gratis!</mj-text>
-            <mj-text color="white" font-size="9" padding="0" line-height="2" align="center">INNOVACIÓN, TECNOLOGÍA Y SEGURIDAD</mj-text>
+            <mj-text color="white" font-size="7" padding="0" line-height="2" font-weight="bold">CONTRATA PROFESIONALES DESDE TU CELULAR</mj-text>
+            <mj-text color="white" font-size="7" padding="0">Descarga nuestra aplicación gratis!</mj-text>
+            <mj-text color="white" font-size="7" padding="0" line-height="2">INNOVACIÓN, TECNOLOGÍA Y SEGURIDAD</mj-text>
           </mj-column>
           <!-- END FIRST COLUMN -->
           <!-- SECOND COLUMN -->
@@ -103,7 +120,7 @@
                 </mj-column>
               </mj-group>
             </mj-section>
-            <mj-text color="white" padding="0" font-size="7" align="center">Haga click aquí para obtener mas información sobre la aplicación</mj-text>
+            <mj-text color="white" padding="0" font-size="6" align="center">Haga click aquí para obtener mas información sobre la aplicación</mj-text>
           </mj-column>
           <!-- END THREE COLUMN -->
         </mj-section>
