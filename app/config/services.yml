@@ -7,3 +7,12 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+
+    apikey_authenticator:
+        class: Guikifix\ApiBundle\Security\ApiKeyAuthenticator
+        arguments: ["@security.http_utils", "@service_container"]
+        public: false
+  
+    api_key_user_provider:
+        class: Guikifix\ApiBundle\Security\ApiKeyUserProvider
+        arguments: ["@service_container"]
