@@ -13,6 +13,9 @@
     font-family: Roboto;
     font-weight: bold;
     font-size: 15px; }
+    @media (min-width: 992px) and (max-width: 1200px) {
+      .downList h1 {
+        font-size: 10px; } }
   .downList h1:before {
     content: url("http://interceramicusa.com/images/layout/icons/ico-22.png");
     width: 10px;
