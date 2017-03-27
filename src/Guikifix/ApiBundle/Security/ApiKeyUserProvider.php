@@ -24,8 +24,8 @@ class ApiKeyUserProvider implements UserProviderInterface
         // an API call, or do something entirely different
         $rpUser = $this->container->get('repositoryFactory')->get('User');
         $user = $rpUser->findby(["api_key"=>$apiKey]);
-        //dump(getType($user));
-        $username = $user[0]->getUserName();
+        
+        $username = !empty($user) ? $user[0]->getUserName() : null;
 
         return $username;
     }
