@@ -64,17 +64,26 @@
     font-weight: bold !important;
     padding-right: 16px;
     padding-left: 5px; }
+    @media screen and (max-width: 768px) {
+      .menuGuikifix .title {
+        font-size: 25px; } }
 
 footer {
   background: #FF6600;
   color: #FFF;
   padding-top: 1%; }
+  @media screen and (max-width: 768px) {
+    footer {
+      text-align: center; } }
   footer .space {
     padding-right: 0px;
     padding-left: 0px; }
   footer .contact {
     margin-left: -65px;
     margin-right: 65px; }
+    @media screen and (max-width: 768px) {
+      footer .contact {
+        margin-left: 3px; } }
   footer ul {
     list-style: none;
     padding-right: 0px;
@@ -90,6 +99,9 @@ footer {
     margin-bottom: 4%;
     margin-left: -1%;
     margin-top: -1%; }
+    @media screen and (max-width: 768px) {
+      footer img {
+        margin-left: 15% !important; } }
   footer .top-section {
     text-align: center;
     margin-top: 4%;
