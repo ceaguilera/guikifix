@@ -170,7 +170,7 @@ class User extends BaseUser
      *
      * @return User
      */
-    public function setTypeUser($apiKey)
+    public function setApiKey($apiKey)
     {
         $this->api_key = $apiKey;
 
@@ -182,7 +182,7 @@ class User extends BaseUser
      *
      * @return integer
      */
-    public function apiKey()
+    public function getApiKey()
     {
         return $this->api_key;
     }
