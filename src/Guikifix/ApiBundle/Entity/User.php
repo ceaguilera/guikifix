@@ -16,6 +16,10 @@ use Guikifix\Core\Domain\UserProfile;
 class User extends BaseUser
 {
   
+    /**
+     * @var string
+     */
+    private $api_key;
 
     /**
      * @var integer
@@ -33,8 +37,31 @@ class User extends BaseUser
      * @var \Guikifix\Core\Domain\ProfesionalProfile
      */
     private $profesional_profile;
-
     
+    /**
+     * Función para el manejo de roles dentro del objeto usuario
+     * @param Rol $rol 
+     */
+    public function addRole( $rol )
+    {
+        switch ($rol) {
+            case 1:
+                array_push($this->roles, 'ROLE_ADMIN');
+                break;
+            case 2:
+                array_push($this->roles, 'ROLE_USER');
+                break;
+            
+            default:
+                array_push($this->roles, 'ANONYMOUS');
+                break;
+        }
+    }
+
+    public function getRoles()
+    {
+        return $this->roles;
+    }
 
     /**
      * Actualiza los atributos de una clase
@@ -63,7 +90,6 @@ class User extends BaseUser
 
             return $str;
         }
-
 
     /**
      * Set typeUser
@@ -135,5 +161,29 @@ class User extends BaseUser
     public function getProfesionalProfile()
     {
         return $this->profesional_profile;
+    }
+
+    /**
+     * Set apiKey
+     *
+     * @param string $apiKey
+     *
+     * @return User
+     */
+    public function setTypeUser($apiKey)
+    {
+        $this->api_key = $apiKey;
+
+        return $this;
+    }
+
+    /**
+     * Get apiKey
+     *
+     * @return integer
+     */
+    public function apiKey()
+    {
+        return $this->api_key;
     }
 }

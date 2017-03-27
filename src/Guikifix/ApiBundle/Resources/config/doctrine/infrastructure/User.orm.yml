@@ -18,6 +18,10 @@ Guikifix\ApiBundle\Entity\User:
         options:
           default: 1
 
+      api_key:
+        type: string
+        nullable: true
+
     manyToOne:
         user_profile:
             targetEntity: Guikifix\Core\Domain\UserProfile
