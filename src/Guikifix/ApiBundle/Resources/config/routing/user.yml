@@ -8,5 +8,6 @@ guikifix_api_register_user:
 navicu_web_api_login:
   path:   /login
   defaults: { _controller: GuikifixApiBundle:User\Security:apilogin, config : 'main'}
+  methods: POST
   options:
     xpose: true

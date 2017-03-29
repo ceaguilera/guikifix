@@ -52,9 +52,38 @@ class SecurityController extends Controller
      * @author Joel D. Requena P. <Joel.2005.2@gmail.com>
      * @author Currently Working: Joel D. Requena P.
      *
-     * @param Request $request
-     * @param String $config
-     */
+     * @param  Request $request 
+     * @return json data solicitada     
+     * @ApiDoc(
+     *     resource=true,
+     *     views={"default","user","security"},
+     *     parameters={
+     *         {
+     *              "name"="userName",
+     *              "dataType"="string",
+     *              "description"="El Username o el email",
+     *              "required"="true"
+     *         },
+     *         {
+     *              "name"="pass",
+     *              "dataType"="string",
+     *              "description"="Password del usuario",
+     *              "required"="true"
+     *         },
+     *         
+     *     },
+     *     resourceDescription="login de un usuario por
+     * medio de peticion asincrona.",
+     *     description="login de un usuario por
+     * medio de peticion asincrona.",
+     *      statusCodes={
+     *         201="true: usuario logeado",
+     *         201="false: usuario logeado",
+     *         404="Petición erronea no asyncrona",
+     *         500="Error en el servidor"
+     *     }
+     *  )
+    */
     public function apiLoginAction(Request $request, $config)
     {
         if (!$request->isXmlHttpRequest()) {
