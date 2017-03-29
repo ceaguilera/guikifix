@@ -30,7 +30,8 @@ Guikifix\Core\Domain\Location:
             targetEntity: Guikifix\Core\Domain\Location
             mappedBy: parent
             orderBy:
-                title: ASC
+              title: ASC
+            cascade: ["persist"]
         # usuario relacionados a una localidad
         users_profile:
             targetEntity: Guikifix\Core\Domain\UserProfile
@@ -44,3 +45,12 @@ Guikifix\Core\Domain\Location:
                 parent_id:
                     referencedColumnName: id
             orphanRemoval: false       
+            cascade: ["persist"]
+        # País de origen la localidad
+        root:
+            targetEntity: Location
+            joinColumns:
+                root_id:
+                    referencedColumnName: id
+            orphanRemoval: false       
+            cascade: ["persist"]
