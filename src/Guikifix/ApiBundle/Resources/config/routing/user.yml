@@ -3,3 +3,11 @@ guikifix_api_register_user:
   path: /register
   defaults: { _controller: GuikifixApiBundle:User\Security:register }
   methods: POST
+
+# Petición de login de un usuario asincronamente.
+navicu_web_api_login:
+  path:   /login
+  defaults: { _controller: GuikifixApiBundle:User\Security:apilogin, config : 'main'}
+  methods: POST
+  options:
+    xpose: true
