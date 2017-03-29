@@ -48,6 +48,11 @@ class Location
     private $parent;
 
     /**
+     * @var \Guikifix\Core\Domain\Location
+     */
+    private $root;
+
+    /**
      * Constructor
      */
     public function __construct()
@@ -228,5 +233,30 @@ class Location
     public function getParent()
     {
         return $this->parent;
+    }
+
+
+    /**
+     * Set root
+     *
+     * @param \Guikifix\Core\Domain\Location $root
+     *
+     * @return Location
+     */
+    public function setRoot(\Guikifix\Core\Domain\Location $root = null)
+    {
+        $this->root = $root;
+
+        return $this;
+    }
+
+    /**
+     * Get root
+     *
+     * @return \Guikifix\Core\Domain\Location
+     */
+    public function getRoot()
+    {
+        return $this->root;
     }
 }
