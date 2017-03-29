@@ -32,6 +32,7 @@ class LocationRepository extends BaseRepository implements LocationRepositoryInt
                 l.parent = :parent_id
                 ")
             ->setParameters(['parent_id' => $locationId])
+            ->orderBy('l.title', 'ASC')
             ->getQuery()->getArrayResult();
     }
 }

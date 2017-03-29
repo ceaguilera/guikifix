@@ -10,5 +10,5 @@ class GetLocationsCommand extends CommandBase implements CommandInterface
 	 * id de la localidad a buscar
 	 * @var integer
 	 */
-	protected $locationId;
+	protected $locationId = 1;
 }
