@@ -1,0 +1,6 @@
+# La ruta obtiene las localidades subyacentes de una localidad
+# dado su id (Buscar los children de una localidad)
+guikifix_api_get_location:
+    path:     /{locationId}
+    defaults: { _controller: GuikifixApiBundle:Location\Default:getLocation, locationId: null }
+    methods: GET
