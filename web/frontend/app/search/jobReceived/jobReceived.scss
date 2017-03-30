@@ -1,0 +1,47 @@
+@import '../../varibles';
+@import '../../fonts';
+
+.jobReceived {
+    .top {
+        text-align: center;
+        margin-bottom: 3%;
+        h1 {
+            color: $secundary-color;
+            font-family: Roboto !important;
+            margin-bottom: 22px;
+            margin-top: 34px;
+        }
+    }
+    .content {
+        h1{
+            color: $secundary-color;
+            font-family: Roboto !important;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        h2 {
+            color: $secundary-color;
+            font-family: Roboto !important;
+            font-size: 22px;
+        }
+        li {
+            color: $seventh-color;
+            font-family: Roboto !important;
+            margin-bottom: 15px;
+            font-size: 18px;
+            padding-top: 2%;
+            text-align: justify;
+        }
+        .blockText {
+            padding-left: 5%;
+        }
+        .blockTextEnd {
+            color: $seventh-color;
+            font-family: Roboto !important;
+            margin-bottom: 15px;
+            font-size: 18px;
+            padding-top: 2%;
+            text-align: justify;
+        }
+    }
+}

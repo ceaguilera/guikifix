@@ -35,6 +35,42 @@
     float: right; }
     .top header .typeTwo:focus {
       color: #FFF; }
+  .top header .menuUser {
+    padding-left: 72px;
+    margin-top: 6px; }
+    .top header .menuUser img {
+      width: 42px;
+      height: 42px;
+      margin-right: -18%;
+      margin-left: 18%; }
+    .top header .menuUser h1 {
+      display: inline-block;
+      font-size: 16px;
+      color: #094AB1;
+      font-family: Roboto; }
+    .top header .menuUser h2 {
+      display: inline-block;
+      font-size: 18px;
+      color: #4C4D4F;
+      font-family: Roboto;
+      font-weight: bold; }
+    .top header .menuUser h3 {
+      display: inline-block;
+      font-size: 16px;
+      color: #094AB1;
+      font-family: Roboto;
+      font-weight: bold;
+      padding-left: 0.7%; }
+    .top header .menuUser span {
+      font-size: 18px;
+      position: relative;
+      top: -1px;
+      color: #094AB1; }
+    .top header .menuUser .text {
+      display: inline-block;
+      position: absolute;
+      top: 18%;
+      right: 2%; }
 
 .menuGuikifix {
   background: #094AB1 !important;

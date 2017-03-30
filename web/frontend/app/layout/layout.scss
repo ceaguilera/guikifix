@@ -39,6 +39,49 @@
                 color: #FFF;
             }
         }
+        .menuUser {
+            padding-left: 72px;
+            margin-top: 6px;
+            img {
+                width: 42px;
+                height: 42px;
+                margin-right: -18%;
+                margin-left: 18%;
+            }
+            h1 {
+                display: inline-block;
+                font-size: 16px;
+                color: $secundary-color;
+                font-family: Roboto;
+            }
+            h2 {
+                display: inline-block;
+                font-size: 18px;
+                color: $seventh-color;
+                font-family: Roboto;
+                font-weight: bold;
+            }
+            h3 {
+                display: inline-block;
+                font-size: 16px;
+                color: $secundary-color;
+                font-family: Roboto;
+                font-weight: bold;
+                padding-left: 0.7%;
+            }
+            span {
+                font-size: 18px;
+                position: relative;
+                top: -1px;
+                color: $secundary-color;
+            }
+            .text {
+                display: inline-block;
+                position: absolute;
+                top: 18%;
+                right: 2%;
+            }
+        }
     }
 }
 .menuGuikifix {
