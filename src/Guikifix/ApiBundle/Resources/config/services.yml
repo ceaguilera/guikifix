@@ -18,3 +18,7 @@ services:
     CommandBus:
         class: Guikifix\Core\Services\CommandBus
         arguments: ["@CoreValidator"]
+
+    SecurityService:
+        class: Guikifix\ApiBundle\Services\SecurityService
+        arguments: ["@service_container", "@security.authentication.manager", "@security.token_storage"]

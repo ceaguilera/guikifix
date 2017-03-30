@@ -34,6 +34,10 @@ class RepositoryFactory implements RepositoryFactoryInterface
             'repository'=>'Guikifix\ApiBundle\Repository\JobTypeCategoryRepository',
             'entity'=>'Guikifix\Core\Domain\JobTypeCategory'
         ],
+        'Location' => [
+            'repository'=>'Guikifix\ApiBundle\Repository\LocationRepository',
+            'entity'=>'Guikifix\Core\Domain\Location'
+        ],
         'User' => [
             'repository'=>'Guikifix\ApiBundle\Repository\UserRepository',
             'entity'=>'Guikifix\ApiBundle\Entity\User'

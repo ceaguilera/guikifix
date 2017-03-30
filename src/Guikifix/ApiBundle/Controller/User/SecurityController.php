@@ -5,6 +5,7 @@ namespace Guikifix\ApiBundle\Controller\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 
 use Guikifix\Core\UseCases\User\Security\RegisterUser\RegisterUserCommand;
@@ -42,5 +43,65 @@ class SecurityController extends Controller
     	$response = $this->get('CommandBus')->execute($command);
     
     	return new JsonResponse($response->getData(),$response->getStatusCode());
+    }
+
+    /**
+     * Esta función es usada para login de un usuario por
+     * medio de peticion asincrona.
+     *
+     * @author Joel D. Requena P. <Joel.2005.2@gmail.com>
+     * @author Currently Working: Joel D. Requena P.
+     *
+     * @param  Request $request 
+     * @return json data solicitada     
+     * @ApiDoc(
+     *     resource=true,
+     *     views={"default","user","security"},
+     *     parameters={
+     *         {
+     *              "name"="userName",
+     *              "dataType"="string",
+     *              "description"="El Username o el email",
+     *              "required"="true"
+     *         },
+     *         {
+     *              "name"="pass",
+     *              "dataType"="string",
+     *              "description"="Password del usuario",
+     *              "required"="true"
+     *         },
+     *         
+     *     },
+     *     resourceDescription="login de un usuario por
+     * medio de peticion asincrona.",
+     *     description="login de un usuario por
+     * medio de peticion asincrona.",
+     *      statusCodes={
+     *         201="true: usuario logeado",
+     *         201="false: usuario logeado",
+     *         404="Petición erronea no asyncrona",
+     *         500="Error en el servidor"
+     *     }
+     *  )
+    */
+    public function apiLoginAction(Request $request, $config)
+    {
+        if (!$request->isXmlHttpRequest()) {
+
+            $data = json_decode($request->getContent(), true);
+
+            $response["response"] = $this->get('SecurityService')->loginByData($data, $config);
+
+            return new JsonResponse(
+                $response,
+                200
+            );
+
+        } else {
+            return new Response(
+                'Not Found',
+                404
+            );
+        }
     }
 }
