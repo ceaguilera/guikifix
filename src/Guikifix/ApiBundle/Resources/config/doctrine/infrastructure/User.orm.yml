@@ -18,11 +18,13 @@ Guikifix\ApiBundle\Entity\User:
         options:
           default: 1
 
-    manyToOne:
+    oneToOne:
         user_profile:
             targetEntity: Guikifix\Core\Domain\UserProfile
             mappedBy: user
             cascade: ["persist"]
+
+    manyToOne:
         profesional_profile:
             targetEntity: Guikifix\Core\Domain\ProfesionalProfile
             mappedBy: user
