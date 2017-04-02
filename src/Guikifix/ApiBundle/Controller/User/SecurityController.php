@@ -39,9 +39,18 @@ class SecurityController extends Controller
     */
     public function registerAction(Request $request)
     {
-        $command = new RegisterUserCommand(json_decode($request->getContent(), true));
+        $data = json_decode($request->getContent(), true);
+        $command = new RegisterUserCommand($data);
     	$response = $this->get('CommandBus')->execute($command);
     
+        if($response->getStatusCode() == 200)
+            $this->get('SecurityService')->loginByData(
+                [
+                    "userName" => $data["email"],
+                    "pass" => $data["password"],
+                ]
+            );
+
     	return new JsonResponse($response->getData(),$response->getStatusCode());
     }
 
@@ -77,11 +86,7 @@ class SecurityController extends Controller
      *     description="login de un usuario por
      * medio de peticion asincrona.",
      *      statusCodes={
-     *         201="
-     *           {
-     *               "first_name": "asdasd ",
-     *               "last_name": "qweqwe"
-     *           }",
+     *         201="{'first_name': 'asdasd','last_name': 'qweqwe'}",
      *         302="Usuario No logeado",
      *         404="Petición erronea no asyncrona",
      *         500="Error en el servidor"
