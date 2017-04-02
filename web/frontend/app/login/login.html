@@ -8,22 +8,19 @@
             <div class="col-xs-4">
                 <form>
                     <div class="form-group">
-                        <label for="usr">Nombre:</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
                         <label for="pwd">Email:</label>
-                        <input type="email" class="form-control">
+                        <input type="email" class="form-control" ng-model="email">
+                        {{error}}
                     </div>
                     <div class="form-group">
                         <label for="pwd">Contraseña:</label>
-                        <input type="password" class="form-control">
+                        <input type="password" class="form-control" ng-model="password">
                     </div>
                     <div class="checkbox">
                         <label><input type="checkbox" value="">Recordar cuenta</label>
                     </div>
                     <div align="center">
-                        <button type="button" class="btn typeOne">ENTRAR</button>
+                        <button type="button" class="btn typeOne" ng-click="login()">ENTRAR</button>
                     </div>
                 </form>
             </div>
