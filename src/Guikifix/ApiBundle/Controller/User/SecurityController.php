@@ -77,8 +77,12 @@ class SecurityController extends Controller
      *     description="login de un usuario por
      * medio de peticion asincrona.",
      *      statusCodes={
-     *         201="true: usuario logeado",
-     *         201="false: usuario logeado",
+     *         201="
+     *           {
+     *               "first_name": "asdasd ",
+     *               "last_name": "qweqwe"
+     *           }",
+     *         302="Usuario No logeado",
      *         404="Petición erronea no asyncrona",
      *         500="Error en el servidor"
      *     }
@@ -90,11 +94,18 @@ class SecurityController extends Controller
 
             $data = json_decode($request->getContent(), true);
 
-            $response["response"] = $this->get('SecurityService')->loginByData($data, $config);
+            $islogged = $this->get('SecurityService')->loginByData($data, $config);
+
+            if ($islogged) {
+
+                $user = $this->get('security.token_storage')->getToken()->getUser()->getUserProfile();
+                $response["first_name"] = $user->getFirstName();
+                $response["last_name"] = $user->getLastName();
+            }
 
             return new JsonResponse(
-                $response,
-                200
+                $islogged ? $response : null,
+                $islogged ? 201 :302
             );
 
         } else {
