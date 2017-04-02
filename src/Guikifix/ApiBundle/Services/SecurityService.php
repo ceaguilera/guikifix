@@ -56,7 +56,7 @@ class SecurityService
      * @param Array $data
      * @param String $config
      */
-    public function loginByData($data, $config)
+    public function loginByData($data, $config = "main")
     {
         $factory = $this->container->get('security.encoder_factory');
         $repositoryUser = $this->container->get('repositoryFactory')->get('User');
@@ -81,7 +81,7 @@ class SecurityService
         if ($encoder->isPasswordValid($user->getPassword(),$data["pass"],$user->getSalt())) {
 
             $authenticatedToken = $this->am
-           ->authenticate($unauthenticatedToken);
+            ->authenticate($unauthenticatedToken);
 
             $this->ts->setToken($authenticatedToken);
             return true;
