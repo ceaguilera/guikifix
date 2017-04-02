@@ -31,6 +31,7 @@ class RegisterUserHandler extends HandlerBase implements HandlerInterface
         $userProfile->setAtributtes($request);
 
         $user = new User();
+        $user->setEnabled(true);
         $user->setAtributtes($request);
         $userProfile->setUser($user);
         $user->setUserProfile($userProfile);
