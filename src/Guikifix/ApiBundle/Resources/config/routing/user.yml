@@ -5,9 +5,13 @@ guikifix_api_register_user:
   methods: POST
 
 # Petición de login de un usuario asincronamente.
-navicu_web_api_login:
+guikifix_api_login:
   path:   /login
   defaults: { _controller: GuikifixApiBundle:User\Security:apilogin, config : 'main'}
   methods: POST
-  options:
-    xpose: true
+
+# Petición de logout de un usuario asincronamente.
+guikifix_post_api_logout:
+  path:   /post/logout
+  defaults: { _controller: GuikifixApiBundle:User\Security:postLogout}
+  methods: POST
