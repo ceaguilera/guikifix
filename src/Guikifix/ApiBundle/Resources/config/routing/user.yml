@@ -14,4 +14,3 @@ guikifix_api_login:
 guikifix_post_api_logout:
   path:   /post/logout
   defaults: { _controller: GuikifixApiBundle:User\Security:postLogout}
-  methods: POST
