@@ -120,4 +120,21 @@ class SecurityController extends Controller
             );
         }
     }
+
+    /**
+     * Esta función es usada para el manejo del logout de un usuario por
+     * medio de peticion asincrona.
+     *
+     * @author Joel D. Requena P. <Joel.2005.2@gmail.com>
+     * @author Currently Working: Joel D. Requena P.
+     *
+     * @return boolean
+    */
+    public function postLogoutAction()
+    {
+        return new JsonResponse(
+            true,
+            201
+        );
+    }
 }
