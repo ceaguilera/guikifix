@@ -14,3 +14,9 @@ guikifix_api_login:
 guikifix_post_api_logout:
   path:   /post/logout
   defaults: { _controller: GuikifixApiBundle:User\Security:postLogout}
+
+# Petición de para actualizacion del password de un usuario asincronamente.
+guikifix_api_reset_password:
+  path:   /update/password
+  defaults: { _controller: GuikifixApiBundle:User\Security:updatePassword}
+  methods: POST
