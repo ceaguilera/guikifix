@@ -31,3 +31,14 @@ Guikifix\Core\UseCases\User\Security\RegisterUser\RegisterUserCommand:
             - NotBlank: ~
             - Type:
                 type: string
+
+Guikifix\Core\UseCases\User\Security\UpdatePassword\UpdatePasswordCommand:
+    properties:
+        pass:
+            - NotBlank: ~
+            - Type:
+                type: string
+        confirm_pass:
+            - NotBlank: ~
+            - Type:
+                type: string
