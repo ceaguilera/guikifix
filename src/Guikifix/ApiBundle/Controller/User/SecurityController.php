@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 
 use Guikifix\Core\UseCases\User\Security\RegisterUser\RegisterUserCommand;
+use Guikifix\Core\UseCases\User\Security\UpdatePassword\UpdatePasswordCommand;
 
 class SecurityController extends Controller
 {
@@ -119,6 +120,59 @@ class SecurityController extends Controller
                 404
             );
         }
+    }
+
+    /**
+     * Esta función es usada para cambiar el password de un usuario por
+     * medio de peticion asincrona.
+     *
+     * @author Joel D. Requena P. <Joel.2005.2@gmail.com>
+     * @author Currently Working: Joel D. Requena P.
+     *
+     * @param  Request $request 
+     * @return json data solicitada     
+     * @ApiDoc(
+     *     resource=true,
+     *     views={"default","user","security"},
+     *     parameters={
+     *         {
+     *              "name"="pass",
+     *              "dataType"="string",
+     *              "description"="Password del usuario",
+     *              "required"="true"
+     *         },
+     *         {
+     *              "name"="confirm_pass",
+     *              "dataType"="string",
+     *              "description"="Confirmacion de password del usuario",
+     *              "required"="true"
+     *         }
+     *         
+     *     },
+     *     resourceDescription="cambio del password de un usuario por
+     * medio de peticion asincrona.",
+     *     description="cambio del password de un usuario por
+     * medio de peticion asincrona.",
+     *      statusCodes={
+     *         201="true",
+     *         302="Usuario No logeado",
+     *         401="Password no coinciden",
+     *         500="Error en el servidor"
+     *     }
+     *  )
+    */
+    public function updatePasswordAction(Request $request)
+    {
+        $data = json_decode($request->getContent(), true);
+        $data["user"] = $this->get('security.token_storage')->getToken()->getUser();
+
+        if (!is_object($data["user"]))
+            return new JsonResponse(false, 302);
+
+        $command = new UpdatePasswordCommand($data);
+        $response = $this->get('CommandBus')->execute($command);
+
+        return new JsonResponse($response->getData(), $response->getStatusCode());
     }
 
     /**
