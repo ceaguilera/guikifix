@@ -1,0 +1,10 @@
+<mj-text align="center" font-weight="bold">Hola {{ full_name }}</mj-text>
+<mj-text align="left" padding="0" padding-left="10%" padding-right="10%">
+<p style="text-align: justify">
+Hemos recibido parte de tu información en nuestras páginas de registro de Clientes, una vez que hayas completado los datos de tu perfil en nuestra plataforma, estarás operativo en nuestra aplicación.
+</p>
+
+<p style="text-align: justify">
+Nuestro proceso de registro es completamente gratuito para tener acceso a los datos de los Profesionales. Sin embargo, debes ser consecuente con los principios de nuestra filosofía de trabajo, procurando una relación de respeto y responsabilidad con nuestros Profesionales.
+</p>
+</mj-text>
