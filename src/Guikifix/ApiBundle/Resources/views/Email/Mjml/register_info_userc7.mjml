@@ -1,0 +1,114 @@
+<!-- USERD1 -->
+<mjml>
+  <mj-head>
+    <mj-font name="Roboto" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
+    <mj-attributes>
+      <mj-all font-family="Roboto, Helvetica, sans-serif" />
+      <mj-section padding="0" />
+    </mj-attributes>
+  </mj-head>
+
+  <mj-body>
+    <mj-container background-color="#ededed">
+      <mj-section background-color="#ededed" padding="0" padding-top="30">
+        <mj-section background-color="white" padding="0" border-radius="10">
+          <mj-column>
+            <!-- HEADER -->
+            <mj-section background-color="white" padding="0" padding-top="10" border-top-radius="10px">
+              <mj-column>
+                <!-- LOGO -->
+                <mj-image width="250" src="http://guikifix.herokuapp.com/images/logo_guikifix.png"></mj-image>
+                <!-- END LOGO -->
+                <mj-image width="500" align="center" src="https://guikifix.herokuapp.com/images/email/line01.png"></mj-image>
+              </mj-column>
+            </mj-section>
+            <!-- END HEADER -->
+            <!-- CONTENT-->
+            <mj-section padding="0" background-color="white">
+              <mj-column>
+                <mj-text align="center" font-weight="bold">Hola {{ full_name }}</mj-text>
+                <mj-text align="left" padding="0px" padding-left="10%" padding-right="10%">
+                <p style="text-align:justify;">
+                  Hemos recibido tu información personal en nuestras páginas de registro de Clientes, una vez que esta sea verificada, estarás operativo en nuestra aplicación. 
+                </p>
+                <p style="text-align:justify;">
+                  Nuestro proceso de registro es completamente gratuito para tener acceso a los datos de los Profesionales. Sin embargo, debes ser consecuente con los principios de nuestra filosofía de trabajo, procurando una relación de respeto y responsabilidad con nuestros Profesionales.
+                </p>
+                </mj-text>
+                <mj-text align="center" padding="0">Cualquier duda escríbenos al soporte@guikifix.com.ve </mj-text>
+                <mj-text align="center" padding="0">Atentamente,</mj-text>
+                <mj-text align="center" padding="0" font-weight="bold">TEAM GUIKIFIX</mj-text>
+              </mj-column>
+            </mj-section>
+            <mj-section background-color="white" padding-bottom="10px">
+              <mj-column>
+                <mj-image width="500" align="center" src="https://guikifix.herokuapp.com/images/email/line02.png"></mj-image>
+              </mj-column>
+            </mj-section>
+            <!-- END CONTENT -->
+          </mj-column>
+        </mj-section>
+        <!-- PRE - FOOTER -->
+        <mj-section padding="0px" padding-top="10px" background-color="#ededed"></mj-section>
+        <mj-section height="auto" padding="0px" border-radius="10" padding-top="2px" padding-bottom="4px" background-url="https://guikifix.herokuapp.com/images/email/backgroundfooter.png">
+          <mj-image src="http://guikifix.herokuapp.com/images/logo_guikifix.png" padding="0" width="75px"></mj-image>
+          <mj-text font-size="8" align="center" font-weight="bold" color="gray">Activa algunos de nuestros Planes profesionales podrás tener acceso a muchísimos trabajos de clientes listos para contratar</mj-text>
+          <mj-button background-color="#FF6600" font-weight="bold" font-size="8" color="white">ACTIVA PLAN PROFESIONAL</mj-button>
+        </mj-section>
+        <!-- END PRE - FOOTER -->
+        <!-- FOOTER -->
+        <mj-section padding="0px" padding-top="10px" background-color="#ededed"></mj-section>
+        <mj-section border-radius="10" padding-top="15px" padding-bottom="15px" background-color="#094AB1" padding-left="23px" padding-right="23px">
+          <!-- FIRST COLUMN -->
+          <mj-column paddig="0" width="40%">
+            <mj-text color="white" font-size="7" padding="0" line-height="2" font-weight="bold">CONTRATA PROFESIONALES DESDE TU CELULAR</mj-text>
+            <mj-text color="white" font-size="7" padding="0">Descarga nuestra aplicación gratis!</mj-text>
+            <mj-text color="white" font-size="7" padding="0" line-height="2">INNOVACIÓN, TECNOLOGÍA Y SEGURIDAD</mj-text>
+          </mj-column>
+          <!-- END FIRST COLUMN -->
+          <!-- SECOND COLUMN -->
+          <mj-column width="20%">
+            <mj-text color="white" align="center" font-weight="bold" padding="0">Síguenos</mj-text>
+            <mj-table padding-left="23px">
+              <tr style="list-style: none;">
+                <td style="padding:0 !important;text-align:center;">
+                  <a href="https://twitter.com/RecastAI" style="align:center;">
+                    <img width="20px" src="https://guikifix.herokuapp.com/images/email/instagram.png" style="align:center;" />
+                  </a>
+                </td>
+                <td style="padding:0 !important;text-align:center;">
+                  <a href="https://twitter.com/RecastAI">
+                    <img width="20px" src="https://guikifix.herokuapp.com/images/email/facebook.png" style="align:center !important;" />
+                  </a>
+                </td>
+                <td style="padding:0 !important;text-align:center;">
+                  <a href="https://twitter.com/RecastAI">
+                    <img width="20px" src="https://guikifix.herokuapp.com/images/email/twitter.png" style="align:center;" />
+                  </a>
+                </td>
+              </tr>
+            </mj-table>
+          </mj-column>
+          <!-- END SECOND COLUMN -->
+          <!-- THREE COLUMN -->
+          <mj-column width="40%">
+            <mj-section padding="0">
+              <mj-group>
+                <mj-column>
+                  <mj-image width="100px" padding="0" src="https://guikifix.herokuapp.com/images/email/googleplay.png"></mj-image>
+                </mj-column>
+                <mj-column>
+                  <mj-image width="100px" padding="0" src="https://guikifix.herokuapp.com/images/email/appstore.png"></mj-image>
+                </mj-column>
+              </mj-group>
+            </mj-section>
+            <mj-text color="white" padding="0" font-size="6" align="center">Haga click aquí para obtener mas información sobre la aplicación</mj-text>
+          </mj-column>
+          <!-- END THREE COLUMN -->
+        </mj-section>
+        <mj-section padding="0px" padding-top="30" background-color="#ededed"></mj-section>
+        <!-- END CONTENT -->
+      </mj-section>
+    </mj-container>
+  </mj-body>
+</mjml>
