@@ -23,11 +23,21 @@ angular.module('guikifixApp')
       });
 }]);
 
+angular.module('guikifixApp')
+      .run(function($window, $rootScope, $cookies ) {
+          let authShow = $window.localStorage.getItem("authShow");
+          let nameUser =  $cookies.get('name');
+          $rootScope.authShow = authShow != 'undefined' ? authShow : false;
+          $rootScope.nameUser = nameUser != 'undefined' ? nameUser : null;
+
+});
+
+
 //factoria que controla la autentificación, devuelve un objeto
 //$cookies para crear cookies
 //$cookieStore para actualizar o eliminar
 //$location para cargar otras rutas
-angular.module('guikifixApp').factory("auth", function($cookies,$cookieStore,$location, $http)
+angular.module('guikifixApp').factory("auth", function($window,$rootScope ,$cookies,$cookieStore,$location, $http)
 {
     return{
         login : function(email, password)
@@ -42,25 +52,48 @@ angular.module('guikifixApp').factory("auth", function($cookies,$cookieStore,$lo
                 data : data,
             }).then(function mySucces(response) {
                 console.log(response);
+                $window.localStorage.setItem("authShow", true);
+                //creamos la cookie con el nombre que nos han pasado
+                $cookies.put('name', response.data.first_name + ' ' + response.data.last_name);
+                //mandamos a la home
+                $window.location = "/";
             }, function myError(response) {
-                console.log(response);
+                console.log("error",response);
+                $rootScope.errorLogin = true;
             })
-            //console.log(email, password);
-            //var error = "error en el email";
-            //return error;
+        },
+        loginRegister : function(first_name, last_name) {
+            $window.localStorage.setItem("authShow", true);
             //creamos la cookie con el nombre que nos han pasado
-            //$cookies.username = username,
-            //$cookies.password = password;
-            //mandamos a la home
-            //$location.path("/home");
+            $cookies.put('name', first_name + ' ' + last_name);
         },
         logout : function()
         {
             //al hacer logout eliminamos la cookie con $cookieStore.remove
-            $cookieStore.remove("username"),
-            $cookieStore.remove("password");
+            $http({
+                method : "GET",
+                url : "/logout",
+            }).then(function mySucces(response) {
+                $cookieStore.remove("name");
+                $window.localStorage.removeItem("authShow");
+                $window.location = "/";
+            }, function myError(response) {
+                console.log(response);
+                $cookies.errorLogin = true;
+            })
+            //$cookieStore.remove("password");
             //mandamos al login
-            $location.path("/login");
+            //$location.path("/login");
+        },
+        saveUser : function (userName, password, saveUser){
+             $cookies.put('userName', userName);
+             $cookies.put('password', password);
+             $cookies.put('saveUser', saveUser);
+        },
+        deleteUser: function () {
+            $cookieStore.remove('userName');
+            $cookieStore.remove('password');
+            $cookieStore.remove('saveUser');
         },
         checkStatus : function()
         {
@@ -88,6 +121,16 @@ angular.module('guikifixApp').factory("auth", function($cookies,$cookieStore,$lo
             }
             return false;
         }
+    }
+});
+
+angular.module('guikifixApp')
+.controller('logoutController', function($scope, $log, $http, auth) {
+    //la función login que llamamos en la vista llama a la función
+    //login de la factoria auth pasando lo que contiene el campo
+    //de texto del formulario
+    $scope.logout = () =>  {
+        auth.logout();
     }
 });
         

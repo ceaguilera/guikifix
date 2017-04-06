@@ -36,7 +36,7 @@
     .top header .typeTwo:focus {
       color: #FFF; }
   .top header .menuUser {
-    padding-left: 72px;
+    padding-left: 40px;
     margin-top: 6px; }
     .top header .menuUser img {
       width: 42px;
@@ -61,16 +61,12 @@
       font-family: Roboto;
       font-weight: bold;
       padding-left: 0.7%; }
-    .top header .menuUser span {
-      font-size: 18px;
-      position: relative;
-      top: -1px;
-      color: #094AB1; }
     .top header .menuUser .text {
       display: inline-block;
       position: absolute;
       top: 18%;
-      right: 2%; }
+      right: 3%;
+      width: 58%; }
 
 .menuGuikifix {
   background: #094AB1 !important;

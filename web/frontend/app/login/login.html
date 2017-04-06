@@ -2,25 +2,27 @@
     <div class="container">
         <div class="col-xs-12 top">
             <h1>¡Bienvenido a </h1>
-            <img src="images/nombre.png" alt=""><h1>!</h1>
+            <img src="images/nombre.png" alt=""><h1>! {{logeado}}</h1>
         </div>
         <div class="row">
             <div class="col-xs-4">
                 <form>
                     <div class="form-group">
-                        <label for="pwd">Email:</label>
-                        <input type="email" class="form-control" ng-model="email">
-                        {{error}}
+                        <label>Email:</label>
+                        <input type="text" class="form-control" ng-model="email">
                     </div>
                     <div class="form-group">
-                        <label for="pwd">Contraseña:</label>
+                        <label>Contraseña:</label>
                         <input type="password" class="form-control" ng-model="password">
                     </div>
-                    <div class="checkbox">
-                        <label><input type="checkbox" value="">Recordar cuenta</label>
+                    <div class="checkbox" >
+                        <label><input type="checkbox" ng-model="saveUser" ng-click="saveOrDelete()" value="">Recordar cuenta</label>
+                    </div>
+                    <div ng-if="errorLogin" class="error">
+                        Hubo un error en el usuario o contraseña, intente de nuevo
                     </div>
                     <div align="center">
-                        <button type="button" class="btn typeOne" ng-click="login()">ENTRAR</button>
+                        <button type="submit" class="btn typeOne" ng-click="login()">ENTRAR</button>
                     </div>
                 </form>
             </div>

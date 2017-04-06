@@ -12,6 +12,9 @@
     font-family: Roboto !important;
     font-weight: 500;
     display: inline-block; }
+  .login .error {
+    color: red;
+    font-family: Roboto !important; }
   .login .top {
     text-align: center;
     margin-top: 2%;
