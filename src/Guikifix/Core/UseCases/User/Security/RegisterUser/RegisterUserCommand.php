@@ -58,4 +58,10 @@ class RegisterUserCommand extends CommandBase implements CommandInterface
      * @var string
      */
     protected $how_contact_us;
+
+    /**
+     * Codigo Referido
+     * @var string
+     */
+    protected $core_refered;
 }
