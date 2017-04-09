@@ -1,0 +1,36 @@
+<mj-section padding="0" background-color="white">
+  <mj-column>
+    <mj-text align="center" font-weight="bold">Hola {{ full_name }}</mj-text>
+    <mj-text align="left" padding="0" padding-left="10%" padding-right="10%">
+      <p style="text-align: justify;padding:0px;">
+        Hace unos días solicitaste presupuesto para “NOMBRE TRABAJO” a través de nuestra plataforma. Hay una Empresa que quiere trabajar para ti, contacta lo antes posible al Profesional para ponerte de acuerdo con él.
+      </p>
+      <p style="text-align: justify;padding:0px;color:">
+        Recuerda que tu solicitud estará publicada durante 14 días y si no tomas una decisión antes de los 30 días desde que se publicó, esta solicitud será eliminada.
+      </p>
+      <p style="text-align: justify;padding:0px;">
+        Esta es tú solicitud:
+      </p>
+    </mj-text>
+    <mj-section padding-top="2%" padding-bottom="2%" border-radius="10px" background-color="gray" padding-left="10%" padding-right="10%">
+      <mj-column>
+        <mj-section padding="0">
+          <mj-column> 
+            <mj-text align="center" padding="0" color="#ffffff">XXXXXXXX</mj-text>
+          </mj-column>  
+        </mj-section>
+        <mj-section padding="0">
+          <mj-column>
+            <mj-text align="center" padding="0" color="#FF6600" font-weight="bold">Consultar tu solicitud</mj-text>
+          </mj-column>  
+        </mj-section>
+      </mj-column>
+    </mj-section>
+      <mj-text align="left" padding="0" padding-left="10%" padding-right="10%">
+      Nombre del Profesional
+      </mj-text>
+      <mj-text align="left" padding="0" padding-left="10%" padding-bottom="4%" padding-right="10%">
+        <a href="https://mjml.io" class="link-nostyle">Haz click aquí</a> para ver sus datos y reputación.
+    </mj-text>    
+  </mj-column>
+</mj-section>

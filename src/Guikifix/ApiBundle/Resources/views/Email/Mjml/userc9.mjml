@@ -1,0 +1,16 @@
+<mj-section padding="0" background-color="white">
+  <mj-column>
+    <mj-text align="center" font-weight="bold">Hola {{ full_name }}</mj-text>
+    <mj-text align="left" padding="0" padding-left="10%" padding-right="10%">
+      <p style="text-align: justify;padding:0px;">
+        Iniciaste tu proceso de registro hace 14 días pero no completaste todos los pasos. Tu perfil Personal aún no se encuentra activo en nuestra plataforma.
+      </p>
+        <p style="text-align: justify;padding:0px;">
+        Para activar tu cuenta y comenzar a disfrutar de los beneficios de GUIKIFIX, has <a href="https://twitter.com/RecastAI" style="align:center;">click aquí</a>.
+      </p>
+      <p style="text-align: justify;padding:0px;">
+        Una vez verificados tus datos, podrás colocar solicitudes de trabajo en nuestra plataforma y contactar Profesionales confiables.
+      </p>
+    </mj-text>    
+  </mj-column>
+</mj-section>

@@ -1,0 +1,34 @@
+<mj-section padding="0" background-color="white">
+  <mj-column>
+    <mj-text align="center" padding="0">GUIKIFIX tiene al mejor Profesional para ti</mj-text>
+    <mj-text align="center" padding="0">Solicitaste un XXXXXX. ¿Necesitas otro Profesional?</mj-text>
+    <mj-text align="left" padding="0" padding-left="10%" padding-right="10%">
+        <p style="text-align: justify;padding:0px;">
+          Jorge, estamos agradecidos que nos hayas dado la oportunidad de ofrecerte los mejores XXXXX. Queríamos recordarte que tenemos una amplia lista con los mejores Profesionales de la zona esperando para poner sus manos a la obra en cualquier solicitud de trabajo.
+        </p>
+    </mj-text>
+    <mj-section padding="0" padding-left="15%" padding-right="15%">
+      
+        <mj-column >
+          <mj-button padding="0" background-color="white" color="black" width="130px" border="1px solid gray" border-radius="5px" href="https://guikfix.com" >Pintores</mj-button>
+        </mj-column>
+        <mj-column >
+          <mj-button padding="0" background-color="white" color="black" width="130px" border="1px solid gray" border-radius="5px" href="https://guikfix.com" >Albañiles</mj-button>
+        </mj-column>
+      
+    </mj-section>
+    <mj-section padding="0" padding-left="15%" padding-right="15%" padding-top="6px">
+      
+      <mj-column >
+        <mj-button padding="0" background-color="white" color="black" width="130px" border="1px solid gray" border-radius="5px" href="https://guikfix.com" >Electricistas</mj-button>
+      </mj-column>
+      <mj-column >
+        <mj-button padding="0" background-color="white" color="black" width="130px" border="1px solid gray" border-radius="5px" href="https://guikfix.com" >Plomeros</mj-button>
+      </mj-column>
+      
+    </mj-section>
+    <mj-text align="left" padding="0" padding-left="10%" padding-right="10%">
+      <p style="text-align: justify;padding:0px;">
+      Tenemos una amplia lista de especialidades, solo cuéntanos que necesitas ejecutar, en GUIKIFIX te hacemos la vida mas facil.                  </p>
+    </mj-text>    
+</mj-section>

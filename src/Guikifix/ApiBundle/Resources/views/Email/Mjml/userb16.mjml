@@ -1,0 +1,25 @@
+<mj-section padding="0" background-color="white">
+  <mj-column>
+    <mj-text align="center" font-weight="bold">Hola {{ full_name }}</mj-text>
+    <mj-text align="center" padding="0px" padding-left="10%" padding-right="10%">
+  GUIKIFIX recibió recientemente una solicitud para cambiar tu contraseña de acceso
+    </mj-text>
+    
+    <mj-text align="center" padding="0px" padding-left="10%" padding-right="10%">
+  Haz click aquí para <a href="https://twitter.com/RecastAI" style="align:center;">validar tu cambio de contraseña</a>.
+    </mj-text>
+    
+    <mj-text align="center" padding="0px" padding-left="10%" padding-right="10%">
+  Si ignoras este mensaje, tu contraseña no se cambiará.
+    </mj-text>
+    
+    
+    <mj-text align="center" padding="0px" padding-left="10%" padding-right="10%">
+  Si no has solicitado el cambio de contraseña, <a href="https://twitter.com/RecastAI" style="align:center;">infórmanos</a>.
+    </mj-text>
+    
+    <mj-text align="center" padding="0px" padding-left="10%" padding-right="10%" padding-bottom="4%">
+  Se envió este mensaje Jorge_toth@hotmail según tu solicitud.
+    </mj-text>
+  </mj-column>
+</mj-section>

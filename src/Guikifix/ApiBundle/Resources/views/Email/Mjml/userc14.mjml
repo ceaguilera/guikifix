@@ -1,0 +1,14 @@
+<mj-section padding="0" background-color="white">
+  <mj-column>
+    <mj-text align="center" font-weight="bold">Hola {{ full_name }}</mj-text>
+    <mj-text align="center"  font-weight="bold">¡Listo, ya tenemos tu solicitud!</mj-text>
+    <mj-text align="center" padding="0" padding-right="10%" padding-left="10%">
+En GUIKIFIX ya estamos procesando tu solicitud de trabajo en breve recibirás propuestas de los mejores Profesionales para:</mj-text>
+    
+    <mj-text align="center" >XXXXXXX (Nombre trabajo y ubicación)</mj-text>
+    
+    <mj-text align="center" padding="0" padding-right="10%" padding-left="10%">
+Recuerda que tu solicitud estará activa por 14 días continuos y/o hasta la fecha que decidas desactivarla. <a href="https://mjml.io" class="link-nostyle">REVISA AQUI </a></mj-text>
+    
+  </mj-column>
+</mj-section>
