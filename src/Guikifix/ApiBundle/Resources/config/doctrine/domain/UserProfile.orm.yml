@@ -34,6 +34,10 @@ Guikifix\Core\Domain\UserProfile:
       how_contact_us:
         type: string
         nullable: true
+      # Codigo Referido
+      core_refered:
+        type: string
+        nullable: true
       # Ultima actualización
       last_update:
         type: datetime

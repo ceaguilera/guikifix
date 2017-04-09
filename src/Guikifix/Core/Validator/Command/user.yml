@@ -27,8 +27,10 @@ Guikifix\Core\UseCases\User\Security\RegisterUser\RegisterUserCommand:
             - Expression:
                 expression: "this.password == this.confirmation_password"
                 message: "the passwords must be the same"
+        core_refered:
+            - Type:
+                type: string            
         how_contact_us:
-            - NotBlank: ~
             - Type:
                 type: string
 
