@@ -1,0 +1,17 @@
+<mj-section padding="0" background-color="white">
+  <mj-column>
+    <mj-text align="center" font-weight="bold">Hola {{ full_name }}</mj-text>
+    <mj-text align="center" padding="0px" padding-left="10%" padding-right="10%">
+  Desde ya perteneces a la exclusiva comunidad GUIKIFIX
+    </mj-text>
+    <mj-text align="center" padding="0" padding-left="10%" padding-right="10%">
+      <p style="text-align: justify;padding:0px;">
+        Encuentra, compara y escoge a los mejores profesionales para los arreglos del hogar. Mediante un proceso sencillo podrás obtener varios presupuestos, elaborados por Profesionales confiables, que cuentan con la calificación de otros Usuarios de la comunidad GUIKIFIX. Ellos están a un CLICK esperando para atenderte. 
+      </p>
+      
+      <p style="text-align: justify;padding:0px;">
+        Revisa y mantén actualizados tus datos en tu Perfil. Busca los mejores profesionales para los arreglos de tu hogar. Cualquier duda escríbenos al información@GUIKIFIX.com o llena nuestro formulario de contacto.
+      </p>
+    </mj-text>                
+  </mj-column>
+</mj-section>

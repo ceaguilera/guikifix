@@ -1,0 +1,42 @@
+<mj-section padding="0" background-color="white">
+  <mj-column>
+    <mj-text align="center" font-weight="bold">Hola {{ full_name }}</mj-text>
+    <mj-text align="left" padding="0" padding-left="10%" padding-right="10%">
+      <p style="text-align: justify;padding:0px;line-height:14px">
+        En GUIKIFIX te damos a la bienvenida a nuestra plataforma.
+      </p>
+      <p style="text-align: justify;padding:0px;line-height:14px">
+        Tu usuario GUIKIFIX es tu email: jorge@hotmail.com
+      </p>
+      <p style="text-align: justify;padding:0px;line-height:14px">
+        Tu clave de acceso a GUIKIFIX: {{ password }}
+      </p>
+      <p style="text-align: justify;padding:0px;line-height:14px">
+        Sí quieres cambiarla haz click aquí <a href="https://mjml.io" class="link-nostyle">Actualización de datos/Cambio de clave</a>
+      </p>
+      <p style="text-align: justify;line-height:0px;padding-top:10px">
+        ¡Ya tenemos tu cuenta está activa!
+      </p>
+      <p style="text-align: justify;line-height:0px;padding-top:14px">
+        ¡Listo, ya tenemos tu solicitud!
+      </p>
+      <p style="text-align: justify;line-height:0px;padding-top:14px">
+        ¡Manos a la obra!
+      </p>
+      <p style="text-align: justify;padding:0px;line-height:13px">
+        <ul>
+          <li style="font-size:11px;font-family:Roboto;text-align: justify;">Enviáremos a los Profesionales que se ajusten a tu requerimiento.</li>
+          <li style="font-size:11px;font-family:Roboto;text-align: justify;">Recibirás un correo con los datos de Empresas y Profesionales que están dispuestos a prestarte el servicio.</li>
+          <li style="font-size:11px;font-family:Roboto;text-align: justify;">Correo para ponerse en contacto. Tú decides contactarlos o ellos lo harán primero.  </li>
+          <li style="font-size:11px;font-family:Roboto;text-align: justify;">Enviaremos a los Profesionales que se ajusten a tu requerimiento.</li>
+          <li style="font-size:11px;font-family:Roboto;text-align: justify;">Tanto los Profesionales como tú recibirán los datos de teléfono  /o Estar pendiente de tu teléfono y/o correo, es importante para coordinar con los Profesionales y seleccionar al mejor candidato con quien quieras trabajar.</li>
+          <li style="font-size:11px;font-family:Roboto;text-align: justify;">Los Profesionales en GUIKIFIX invierten dinero y tiempo para atenderte como te mereces por favor ten en cuenta esto para darle la información necesaria y así ofrecerte un presupuesto lo más acorde con tus necesidades. Para así cumplir con tus expectativas.</li>
+          <li style="font-size:11px;font-family:Roboto;text-align: justify;">GUIKIFIX no interviene en las condiciones de contratación, presupuesto, ni ejecución del trabajo. </li>
+          <li style="font-size:11px;font-family:Roboto;text-align: justify;">Durante 14 días tu trabajo estará publicado, si no deseas continuar tú búsqueda porque ya acordaste con uno de los profesionales o simplemente no vas a realizar el trabajo antes de ese tiempo, indícalo asignando o rechazando el trabajo en la ficha de la solicitud, la cual conseguirás en tu panel de usuario y damos de baja la publicación.</li>
+        </ul>
+      </p>
+      <p style="text-align: justify;padding:0px;">
+Desde ya puedes revisar tu opción de PRESUPUESTOS RECIBIDOS para empezar a negociar con los profesionales. Revisa tu bandeja entrada y/o elementos no deseados en caso de no recibir nuestros correos.
+      </p>
+    </mj-text>                
+</mj-section>
