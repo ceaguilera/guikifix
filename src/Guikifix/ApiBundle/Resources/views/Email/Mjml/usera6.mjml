@@ -1,0 +1,34 @@
+<mj-section padding="0" background-color="white">
+  <mj-column>
+    <mj-text align="center" padding="0" padding-top="4">Te hacemos la vida más fácil</mj-text>
+    <mj-text align="center" font-weight="bold" padding="0">Hola {{ full_name }}</mj-text>
+    <mj-text align="center" padding="0">
+      Hemos recibido tu solicitud de registro, la completaremos una vez
+    </mj-text>
+    <mj-text align="center" padding="0">
+      confirmes que tus datos son correctos.
+    </mj-text>
+    <mj-text align="center" padding="0">
+      Valida tus datos de contacto
+    </mj-text>
+      
+    <mj-text align="center" padding-bottom="0">
+      TELEFONO {{ phone }}
+    </mj-text>
+    <mj-text align="center" padding="0">
+      CORREO {{ email }}
+    </mj-text>
+    
+    <mj-text align="center" padding="0">
+      <a href="https://mjml.io" class="link-nostyle">Si, mis datos están correctos</a>
+    </mj-text>
+    
+    <mj-text align="center" padding="0">
+      <a href="https://mjml.io" class="link-nostyle">No son correctos, deseo modificarlos</a>
+    </mj-text>
+    
+    <mj-text align="center">
+      <a href="https://mjml.io" class="link-nostyle">Si quieres cancelar esta solicitud, haz click aquí</a>
+    </mj-text>                                
+  </mj-column>
+</mj-section>

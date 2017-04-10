@@ -63,6 +63,11 @@ class UserProfile extends BaseEntity
     protected $how_contact_us;
 
     /**
+     * @var string
+     */
+    protected $core_refered;
+
+    /**
      * @var \Guikifix\ApiBundle\Entity\User
      */
     protected $user;
@@ -433,5 +438,29 @@ class UserProfile extends BaseEntity
     public function getHowContactUs()
     {
         return $this->how_contact_us;
+    }
+
+    /**
+     * Set coreRefered
+     *
+     * @param string $coreRefered
+     *
+     * @return UserProfile
+     */
+    public function setCoreRefered($coreRefered)
+    {
+        $this->core_refered = $coreRefered;
+
+        return $this;
+    }
+
+    /**
+     * Get coreRefered
+     *
+     * @return string
+     */
+    public function getCoreRefered()
+    {
+        return $this->core_refered;
     }
 }

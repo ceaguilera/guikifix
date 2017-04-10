@@ -1,0 +1,28 @@
+<mj-section>
+  <mj-column>
+    
+    <mj-text align="center" font-weight="bold" padding="0">Hola {{ full_name </mj-text>
+    <mj-text align="left" padding="0" padding-left="10%" padding-right="10%">
+      <p>
+      Necesitas realizar un XXXX (nombre de solicitud), los Profesionales interesados esperan por ti para poner sus manos a la obra.  
+      </p>
+    </mj-text>
+    <mj-text align="center" >
+      ¿Ya sabes con quien quieres trabajar?
+    </mj-text>    
+    <mj-text align="center" padding="0">
+      <a href="https://mjml.io" class="link-nostyle">Si, ya sé cuál es el Profesional GUIKIFIX  y quiero asignar mi trabajo</a>
+    </mj-text>    
+    <mj-text align="center" padding="0">
+      <a href="https://mjml.io" class="link-nostyle">¡No estoy seguro todavía! Quiero revisar mis presupuestos o recibir más</a>
+    </mj-text>    
+    <mj-text align="center" padding="0">
+      <a href="https://mjml.io" class="link-nostyle">No, quiero cancelar este trabajo</a>
+    </mj-text>
+    <mj-text align="left" font-size="12" padding="0" padding-left="10%" padding-right="10%">
+      <p style="text-align:justify">
+    Una vez terminado el trabajo no te olvides de calificar al Profesional para que otros usuarios puedan usar tu experiencia como referencia. Es muy importante tu opinión.
+      </p>
+    </mj-text>    
+  </mj-column>
+</mj-section>

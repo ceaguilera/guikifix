@@ -28,6 +28,7 @@ class SecurityController extends Controller
      *         {"name"="password","dataType"="string","description"="Contraseña","required"="true"},
      *         {"name"="confirmation_password","dataType"="string","description"="Confirmación de contraseña","required"="true"},
      *         {"name"="how_contact_us","dataType"="string","description"="¿Como supiste de Guikifix?","required"="true"},
+     *         {"name"="core_refered","dataType"="string","description"="Codigo de referido","required"="true"},
      *     },
      *     resourceDescription="Registrar un usuario en el sistema",
      *     description="Registro de un usuario en el sistema",
