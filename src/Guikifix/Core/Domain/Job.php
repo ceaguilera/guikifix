@@ -59,6 +59,11 @@ class Job
     private $user;
 
     /**
+     * @var \Guikifix\Core\Domain\Location
+     */
+    private $location;
+
+    /**
      * @var \Guikifix\Core\Domain\Budget
      */
     private $assigned_budget;
@@ -86,6 +91,11 @@ class Job
         $this->budgets = new \Doctrine\Common\Collections\ArrayCollection();
         $this->jobs_status_category = new \Doctrine\Common\Collections\ArrayCollection();
         $this->jobs_types_category = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->last_update = new \DateTime();
+        $this->created = new \DateTime();
+        $this->title = "Default";
+        $this->status = 0;
+        $this->notifications = false;
     }
 
     /**
@@ -414,5 +424,29 @@ class Job
     public function getJobsTypesCategory()
     {
         return $this->jobs_types_category;
+    }
+
+    /**
+     * Set location
+     *
+     * @param \Guikifix\Core\Domain\Location $location
+     *
+     * @return Job
+     */
+    public function setLocation(\Guikifix\Core\Domain\Location $location = null)
+    {
+        $this->location = $location;
+
+        return $this;
+    }
+
+    /**
+     * Get location
+     *
+     * @return \Guikifix\Core\Domain\Location
+     */
+    public function getLocation()
+    {
+        return $this->location;
     }
 }

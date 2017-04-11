@@ -25,6 +25,7 @@ Guikifix\Core\Domain\Job:
       # telefono de contacto alternativo
       phone_contact:
         type: string
+        nullable: true
       # Notificaciones de presupuestos
       notifications:
         type: boolean
@@ -92,3 +93,13 @@ Guikifix\Core\Domain\Job:
                     -
                         name: job_types_category_id
                         referencedColumnName: id
+
+    manyToOne:
+      # ubicación del trabajo
+      location:
+            targetEntity: Guikifix\Core\Domain\Location
+            inversedBy: job
+            joinColumn:
+              name: location_id
+              referencedColumnName: id
+            orphanRemoval: false

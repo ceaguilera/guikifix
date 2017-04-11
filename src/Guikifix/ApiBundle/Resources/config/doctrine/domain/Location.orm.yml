@@ -35,7 +35,11 @@ Guikifix\Core\Domain\Location:
         # usuario relacionados a una localidad
         users_profile:
             targetEntity: Guikifix\Core\Domain\UserProfile
-            mappedBy: jobs            
+            mappedBy: jobs
+        # trabajos relacionados a una localidad
+        jobs:
+            targetEntity: Guikifix\Core\Domain\Job
+            mappedBy: location   
     manyToOne:
         # Localidad de nivel superior
         parent:
