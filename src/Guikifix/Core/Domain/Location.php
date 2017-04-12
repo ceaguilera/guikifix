@@ -53,6 +53,11 @@ class Location
     private $root;
 
     /**
+     * @var \Guikifix\Core\Domain\jobs
+     */
+    private $jobs;
+
+    /**
      * Constructor
      */
     public function __construct()
@@ -258,5 +263,39 @@ class Location
     public function getRoot()
     {
         return $this->root;
+    }
+
+    /**
+     * Add job
+     *
+     * @param \Guikifix\Core\Domain\Job $job
+     *
+     * @return Location
+     */
+    public function addJob(\Guikifix\Core\Domain\Job $job)
+    {
+        $this->jobs[] = $job;
+
+        return $this;
+    }
+
+    /**
+     * Remove job
+     *
+     * @param \Guikifix\Core\Domain\Job $job
+     */
+    public function removeJob(\Guikifix\Core\Domain\Job $job)
+    {
+        $this->jobs->removeElement($job);
+    }
+
+    /**
+     * Get jobs
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getJobs()
+    {
+        return $this->jobs;
     }
 }

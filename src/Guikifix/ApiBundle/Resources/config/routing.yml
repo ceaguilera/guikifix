@@ -10,6 +10,10 @@ guikifix_api_job_type_categories:
     resource: "@GuikifixApiBundle/Resources/config/routing/job_type_routing.yml"
     prefix:   /jobtype
 
+guikifix_api_job:
+    resource: "@GuikifixApiBundle/Resources/config/routing/job.yml"
+    prefix:   /job
+
 guikifix_api_user:
     resource: "@GuikifixApiBundle/Resources/config/routing/user.yml"
     prefix:   /user
