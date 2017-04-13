@@ -8,6 +8,7 @@
         'guikifixApp.home', 
         'guikifixApp.about', 
         'guikifixApp.login',
+        'guikifixApp.panel',
         'guikifixApp.register',
         'guikifixApp.category',
         'guikifixApp.requestFilters',
