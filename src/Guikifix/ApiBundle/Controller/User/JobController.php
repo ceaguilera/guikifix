@@ -57,6 +57,11 @@ class JobController extends Controller
     {
         
         $data = json_decode($request->getContent(), true);
+        $data["user"] = $this->get('security.token_storage')->getToken()->getUser();
+
+        if (!is_object($data["user"]))
+            return new JsonResponse(false, 302);
+            
         $command = new SetJobCommand($data);
         $response = $this->get('CommandBus')->execute($command);
 

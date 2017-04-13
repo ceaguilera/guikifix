@@ -29,6 +29,7 @@ class SetJobHandler extends HandlerBase implements HandlerInterface
 
         $job = new Job();          
         $job->setDescription($request["job_description"]);
+        $job->setUser($request["user"]);
 
         $rpJobType = $this->get('repositoryFactory')->get('JobTypeCategory');   
         $rpJobStatus = $this->get('repositoryFactory')->get('JobStatusCategory'); 
@@ -47,6 +48,8 @@ class SetJobHandler extends HandlerBase implements HandlerInterface
             } else {
 
                 foreach ($jobType as $subJobType) {
+                    if (!$subJobType)
+                        continue;
                     $objJobType = $rpJobType->find($subJobType);
                     $job->addJobsTypesCategory($objJobType);
                     $objJobType->addJobsType($job);
@@ -69,6 +72,8 @@ class SetJobHandler extends HandlerBase implements HandlerInterface
             } else {
 
                 foreach ($jobStatus as $subJobStatus) {
+                    if (!$subJobStatus)
+                        continue;
                     $objJobStatus = $rpJobStatus->find($subJobStatus);
                     $job->addJobsStatusCategory($objJobStatus);
                     $objJobStatus->addJobsStatus($job);

@@ -37,4 +37,10 @@ class SetJobCommand extends CommandBase implements CommandInterface
      */
     protected $location;
 
+    /**
+     * Objeto User
+     * @var string
+     */
+    public $user;
+
  }
