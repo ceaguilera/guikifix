@@ -23,12 +23,15 @@ angular.module('guikifixApp')
       });
 }]);
 
+
 angular.module('guikifixApp')
-      .run(function($window, $rootScope, $cookies ) {
+      .run(function($window, $rootScope, $cookies, $http, locations) {
           let authShow = $window.localStorage.getItem("authShow");
           let nameUser =  $cookies.get('name');
           $rootScope.authShow = authShow != 'undefined' ? authShow : false;
           $rootScope.nameUser = nameUser != 'undefined' ? nameUser : null;
+          /* Se llama a piden las localidades para ser usadas en todo el sistema */
+          locations.getMainLocations();
 
 });
 
@@ -122,6 +125,29 @@ angular.module('guikifixApp').factory("auth", function($window,$rootScope ,$cook
             return false;
         }
     }
+});
+
+angular.module('guikifixApp').service("locations", function ($http, $window) {
+
+        this.getMainLocations = () => {
+            let url = "/api/location/1";
+            console.log(url);
+            $http.get(url)
+                .then(function mySucces(response) {
+                   $window.localStorage.setItem('LOCATIONS', JSON.stringify(response.data));
+                }, function myError(response) {
+                   console.log(response);
+            });
+        }
+        this.getLocations = (id) => {
+            let url = "/api/location/"+id;
+            console.log(url);
+            $http.get(url)
+                .then(function mySucces(response) {
+                }, function myError(response) {
+                   console.log(response);
+            });
+        }
 });
 
 angular.module('guikifixApp')

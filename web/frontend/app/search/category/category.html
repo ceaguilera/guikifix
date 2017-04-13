@@ -45,7 +45,7 @@
         </div>
         <div class="col-xs-12">
             <div class="form-group">
-                <textarea class="form-control" rows="5" id="comment"></textarea>
+                <textarea ng-model="workDescription" class="form-control" rows="5" id="comment"></textarea>
             </div>
         </div>
     </div>
@@ -54,8 +54,8 @@
             <a ui-sref="home">
                 <button type="button" class="btn typeOne">ANTERIOR</button>
             </a>
-            <a ui-sref="requestFilters">
-                <button type="button" class="btn typeOne">SIGUIENTE</button>
+            <a>
+                <button type="button" class="btn typeOne" ng-click="structureStart()">SIGUIENTE</button>
             </a>
         </div>
     </div>

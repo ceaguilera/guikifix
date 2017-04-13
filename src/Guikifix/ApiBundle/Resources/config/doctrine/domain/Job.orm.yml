@@ -37,14 +37,6 @@ Guikifix\Core\Domain\Job:
         type: datetime
 
     oneToOne:
-        # Usuario quien creo el trabajo
-        user:
-            targetEntity: Guikifix\ApiBundle\Entity\User
-            inversedBy: user_profile
-            joinColumn:
-              user_id:
-                referencedColumnName: id
-            cascade: ["persist"]
         # presupuesto asignado al trabajo
         assigned_budget:
             targetEntity: Guikifix\Core\Domain\Budget
@@ -96,10 +88,18 @@ Guikifix\Core\Domain\Job:
 
     manyToOne:
       # ubicación del trabajo
-      location:
+        location:
             targetEntity: Guikifix\Core\Domain\Location
             inversedBy: job
             joinColumn:
-              name: location_id
-              referencedColumnName: id
+                name: location_id
+                referencedColumnName: id
             orphanRemoval: false
+        # Usuario quien creo el trabajo
+        user:
+            targetEntity: Guikifix\ApiBundle\Entity\User
+            inversedBy: user_profile
+            joinColumn:
+                user_id:
+                referencedColumnName: id
+            cascade: ["persist"]
