@@ -1,0 +1,32 @@
+.panel-user {
+  min-height: 52vh;
+  margin-top: 2%; }
+  .panel-user h3 {
+    font-size: 32px;
+    color: #094AB1;
+    text-align: center; }
+  .panel-user .col-xs-6 {
+    padding-bottom: 2%; }
+  .panel-user span {
+    font-weight: 600; }
+  .panel-user hr {
+    border-top: 1px solid #094AB1; }
+  .panel-user .btn-default, .panel-user select {
+    width: 100%;
+    text-align-last: center;
+    background: #f2f2f2;
+    border-radius: 2px;
+    color: #094AB1; }
+  .panel-user .new-search {
+    margin-top: 10%;
+    margin-bottom: 4%; }
+    .panel-user .new-search p {
+      font-size: 14px;
+      font-weight: 600;
+      color: gray; }
+    .panel-user .new-search .btn {
+      background: #FF6600;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+      width: 60%; }

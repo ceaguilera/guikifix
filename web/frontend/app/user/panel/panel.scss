@@ -1,0 +1,38 @@
+@import '../../varibles';
+
+.panel-user {
+    min-height: 52vh;
+    margin-top: 2%;
+    h3 { 
+        font-size:32px;
+        color: $secundary-color; 
+        text-align:center; 
+    }   
+    .col-xs-6 { padding-bottom: 2% }
+    span { font-weight:600;}
+    hr  { border-top: 1px solid $secundary-color;}
+    .btn-default, select {
+        width: 100%;
+        text-align-last: center;
+        background: $fourth-color;
+        border-radius: 2px;
+        color: $secundary-color;
+    }
+    .new-search {
+        margin-top:10%;
+        margin-bottom: 4%;
+        p {
+            font-size: 14px;
+            font-weight: 600;
+            color:gray;
+        }
+
+        .btn {            
+            background: #FF6600;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 400;
+            width: 60%;
+        }
+    }
+}
