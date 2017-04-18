@@ -1,6 +1,6 @@
 <mj-section padding="0" background-color="white">
   <mj-column>
-    <mj-text align="center" font-weight="bold">Hola {{ full_name }}</mj-text>
+    <mj-text align="center" font-weight="bold">Hola {{ userProfile.getFirstName() }} {{ userProfile.getLastName() }}</mj-text>
     <mj-text align="left" padding="0px" padding-left="10%" padding-right="10%">
     <p style="text-align:justify;">
       Hemos recibido tu información personal en nuestras páginas de registro de Clientes, una vez que esta sea verificada, estarás operativo en nuestra aplicación. 

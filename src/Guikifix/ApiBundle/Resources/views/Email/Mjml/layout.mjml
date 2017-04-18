@@ -25,7 +25,7 @@
         </mj-section>
         <!-- END HEADER -->
         <!-- BODY -->
-        <mj-include path="userc3.mjml" />
+        <mj-include path="userc7.mjml" />
         <!-- END BODY -->  
         <!-- BODY TEAM GUIKI -->
         <mj-section padding-bottom="4%">
