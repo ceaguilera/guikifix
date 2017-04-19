@@ -8,7 +8,7 @@
 
     function myApp($stateProvider) {
         $stateProvider.state('panel', {
-            url: '/user/panel',
+            url: '/usuario/panel',
             templateUrl: './frontend/app/user/panel/panel.html',
             controller: 'panel',
             controllerAs: 'vm'
