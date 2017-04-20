@@ -1,0 +1,32 @@
+.panel-job {
+  min-height: 52vh;
+  margin-top: 2%; }
+  .panel-job h3 {
+    font-size: 32px;
+    color: #094AB1;
+    text-align: center; }
+  .panel-job .panel .panel-heading {
+    background: #094AB1;
+    color: #ffffff;
+    font-size: 112%;
+    font-weight: bold;
+    text-align: center; }
+  .panel-job .panel .panel-body {
+    min-height: 120px; }
+  .panel-job .panel .panel-footer {
+    font-size: 90%;
+    text-align: center; }
+  .panel-job span {
+    font-weight: 600; }
+  .panel-job .box-panel {
+    padding-right: 0px; }
+    .panel-job .box-panel .panel-body {
+      display: table;
+      width: 100%;
+      text-align: center; }
+      .panel-job .box-panel .panel-body span {
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle; }
+  .panel-job .row-panel:last-child {
+    padding-right: inherit; }

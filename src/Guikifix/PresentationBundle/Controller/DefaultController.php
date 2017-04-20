@@ -10,4 +10,10 @@ class DefaultController extends Controller
     {
         return $this->render('@Guikifix/index.html');
     }
+
+    
+    public function redirectAction()
+    {
+            return $this->redirect($this->generateUrl('guikifix_presentation_homepage'));
+    }
 }
