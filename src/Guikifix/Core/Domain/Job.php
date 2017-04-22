@@ -54,11 +54,6 @@ class Job
     private $created;
 
     /**
-     * @var \Guikifix\ApiBundle\Entity\User
-     */
-    private $user;
-
-    /**
      * @var \Guikifix\Core\Domain\Location
      */
     private $location;
@@ -67,6 +62,11 @@ class Job
      * @var \Guikifix\Core\Domain\Budget
      */
     private $assigned_budget;
+
+    /**
+     * @var \Guikifix\Core\Domain\UserProfile
+     */
+    private $user_profile;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -277,30 +277,6 @@ class Job
     }
 
     /**
-     * Set user
-     *
-     * @param \Guikifix\ApiBundle\Entity\User $user
-     *
-     * @return Job
-     */
-    public function setUser(\Guikifix\ApiBundle\Entity\User $user = null)
-    {
-        $this->user = $user;
-
-        return $this;
-    }
-
-    /**
-     * Get user
-     *
-     * @return \Guikifix\ApiBundle\Entity\User
-     */
-    public function getUser()
-    {
-        return $this->user;
-    }
-
-    /**
      * Set assignedBudget
      *
      * @param \Guikifix\Core\Domain\Budget $assignedBudget
@@ -448,5 +424,29 @@ class Job
     public function getLocation()
     {
         return $this->location;
+    }
+
+    /**
+     * Set userProfile
+     *
+     * @param \Guikifix\Core\Domain\UserProfile $userProfile
+     *
+     * @return Job
+     */
+    public function setUserProfile(\Guikifix\Core\Domain\UserProfile $userProfile = null)
+    {
+        $this->user_profile = $userProfile;
+
+        return $this;
+    }
+
+    /**
+     * Get userProfile
+     *
+     * @return \Guikifix\Core\Domain\UserProfile
+     */
+    public function getUserProfile()
+    {
+        return $this->user_profile;
     }
 }
