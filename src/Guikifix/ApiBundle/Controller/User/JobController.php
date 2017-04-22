@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
+use Guikifix\Core\UseCases\User\Job\GetListJobs\GetListJobsCommand;
 
 
 class JobController extends Controller
@@ -49,6 +50,7 @@ class JobController extends Controller
      *     description="Url para el manejo del persistir un presupuesto.",
      *      statusCodes={
      *         201="True",
+     *         302="No Logged",
      *         500="Error en el servidor"
      *     }
      *  )
@@ -63,6 +65,37 @@ class JobController extends Controller
             return new JsonResponse(false, 302);
             
         $command = new SetJobCommand($data);
+        $response = $this->get('CommandBus')->execute($command);
+
+        return new JsonResponse($response->getData(),$response->getStatusCode());
+    }
+
+    /**
+     * Esta función es usada para el manejo del listado de presupuestos.
+     *
+     * @param  Request $request 
+     * @return json    data solicitada
+     * @ApiDoc(
+     *     resource=true,
+     *     views={"default","job"},
+     *     resourceDescription="Url para el manejo del listado de presupuestos.",
+     *     description="Url para el manejo del listado de presupuestos.",
+     *      statusCodes={
+     *         201="True",
+     *         302="No Logged",
+     *         500="Error en el servidor"
+     *     }
+     *  )
+     */
+    public function getListJobsAction(Request $request)
+    {
+        $data = json_decode($request->getContent(), true);
+        $data["user"] = $this->get('security.token_storage')->getToken()->getUser();
+
+        if (!is_object($data["user"]))
+            return new JsonResponse(false, 302);
+            
+        $command = new GetListJobsCommand($data);
         $response = $this->get('CommandBus')->execute($command);
 
         return new JsonResponse($response->getData(),$response->getStatusCode());
