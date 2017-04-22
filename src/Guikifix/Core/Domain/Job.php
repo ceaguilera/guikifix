@@ -59,6 +59,11 @@ class Job
     private $location;
 
     /**
+     * @var \Guikifix\Core\Domain\Document
+     */
+    private $document;
+
+    /**
      * @var \Guikifix\Core\Domain\Budget
      */
     private $assigned_budget;
@@ -89,6 +94,7 @@ class Job
     public function __construct()
     {
         $this->budgets = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->document = new \Doctrine\Common\Collections\ArrayCollection();
         $this->jobs_status_category = new \Doctrine\Common\Collections\ArrayCollection();
         $this->jobs_types_category = new \Doctrine\Common\Collections\ArrayCollection();
         $this->last_update = new \DateTime();
@@ -448,5 +454,44 @@ class Job
     public function getUserProfile()
     {
         return $this->user_profile;
+    }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $documents;
+
+
+    /**
+     * Add document
+     *
+     * @param \Guikifix\Core\Domain\Document $document
+     *
+     * @return Job
+     */
+    public function addDocument(\Guikifix\Core\Domain\Document $document)
+    {
+        $this->documents[] = $document;
+
+        return $this;
+    }
+
+    /**
+     * Remove document
+     *
+     * @param \Guikifix\Core\Domain\Document $document
+     */
+    public function removeDocument(\Guikifix\Core\Domain\Document $document)
+    {
+        $this->documents->removeElement($document);
+    }
+
+    /**
+     * Get documents
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getDocuments()
+    {
+        return $this->documents;
     }
 }

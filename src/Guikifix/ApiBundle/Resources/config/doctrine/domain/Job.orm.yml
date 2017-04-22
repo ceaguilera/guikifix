@@ -50,6 +50,11 @@ Guikifix\Core\Domain\Job:
             targetEntity: Guikifix\Core\Domain\Budget
             mappedBy: job
             cascade: ["persist"]
+        # Trabajos relacionado al perfil
+        documents:
+            targetEntity: Guikifix\Core\Domain\Document
+            mappedBy: job
+            cascade: ["persist"]
     manyToMany:
       # Estados posible del trabajo
         jobs_status_category:
