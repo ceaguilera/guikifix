@@ -20,6 +20,11 @@ class UserProfile extends BaseEntity
     /**
      * @var string
      */
+    protected $photo_profile;
+
+    /**
+     * @var string
+     */
     protected $first_name;
 
     /**
@@ -31,6 +36,11 @@ class UserProfile extends BaseEntity
      * @var string
      */
     protected $cell_phone;
+
+    /**
+     * @var string
+     */
+    protected $identity_card;
 
     /**
      * @var string
@@ -462,5 +472,53 @@ class UserProfile extends BaseEntity
     public function getCoreRefered()
     {
         return $this->core_refered;
+    }
+
+    /**
+     * Set identityCard
+     *
+     * @param string $identityCard
+     *
+     * @return UserProfile
+     */
+    public function setIdentityCard($identityCard)
+    {
+        $this->identity_card = $identityCard;
+
+        return $this;
+    }
+
+    /**
+     * Get identityCard
+     *
+     * @return string
+     */
+    public function getIdentityCard()
+    {
+        return $this->identity_card;
+    }
+
+    /**
+     * Set photoProfile
+     *
+     * @param string $photoProfile
+     *
+     * @return UserProfile
+     */
+    public function setPhotoProfile($photoProfile)
+    {
+        $this->photo_profile = $photoProfile;
+
+        return $this;
+    }
+
+    /**
+     * Get photoProfile
+     *
+     * @return string
+     */
+    public function getPhotoProfile()
+    {
+        return $this->photo_profile;
     }
 }

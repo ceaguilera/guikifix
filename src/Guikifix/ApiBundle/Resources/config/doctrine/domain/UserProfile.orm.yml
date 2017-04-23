@@ -22,6 +22,10 @@ Guikifix\Core\Domain\UserProfile:
       phone:
         type: string
         nullable: true
+      # Path de la foto de perfil
+      photo_profile:
+        type: string
+        nullable: true
       # Fecha de nacimiento
       birthdate:
         type: date
@@ -44,6 +48,11 @@ Guikifix\Core\Domain\UserProfile:
       # Fecha de creación
       created:
         type: datetime
+      # Cedula de identidad
+      identity_card:
+        type: string
+        nullable: true
+
 
     oneToOne:
       # Usuario relacionado al perfil  
