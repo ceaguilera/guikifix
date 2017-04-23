@@ -18,6 +18,10 @@ guikifix_api_user:
     resource: "@GuikifixApiBundle/Resources/config/routing/user.yml"
     prefix:   /user
 
+guikifix_api_user_profile:
+    resource: "@GuikifixApiBundle/Resources/config/routing/user_profile.yml"
+    prefix:   /userprofile
+
 guikifix_api_location:
     resource: "@GuikifixApiBundle/Resources/config/routing/location.yml"
     prefix:   /location
