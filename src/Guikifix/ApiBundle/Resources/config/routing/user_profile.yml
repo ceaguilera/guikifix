@@ -4,3 +4,9 @@ guikifix_api_get_info:
   path:   /get/info
   defaults: { _controller: GuikifixApiBundle:User\UserProfile:getInfo}
   methods: POST
+
+# Petición para guardar la informacion del perfil del usuario
+guikifix_api_set_info:
+  path:   /set/info
+  defaults: { _controller: GuikifixApiBundle:User\UserProfile:setInfo}
+  methods: POST
