@@ -3,13 +3,13 @@
   <mj-head>
     <mj-font name="Roboto" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
     <mj-attributes>
-      <mj-all font-family="Roboto, Helvetica, sans-serif" />
+      <mj-all font-family="Roboto, Helvetica, sans-serif" color="#4C4D4F"/>
       <mj-section padding="0" />
     </mj-attributes>
   </mj-head>
 
   <mj-body>
-    <mj-container background-color="#ededed" >
+    <mj-container background-color="#ededed">
       <mj-section padding-top="4%"></mj-section>
       <mj-wrapper border="1px" background-color="white" padding="0" padding-left="5%" padding-right="5%"  border-radius="10px">
         <!-- HEADER -->
@@ -25,13 +25,13 @@
         </mj-section>
         <!-- END HEADER -->
         <!-- BODY -->
-        <mj-include path="userc3.mjml" />
+        <mj-include path="userc15.mjml" />
         <!-- END BODY -->  
         <!-- BODY TEAM GUIKI -->
         <mj-section padding-bottom="4%">
             <mj-column>
                 <mj-text align="center" padding="0">Cualquier duda escríbenos al soporte@guikifix.com.ve </mj-text>
-                <mj-text align="center" padding="0">Atentamente,</mj-text>
+                <mj-text align="center" padding="0" padding-bottom="10px" padding-top="5px">Atentamente,</mj-text>
                 <mj-text align="center" padding="0" font-weight="bold">TEAM GUIKIFIX</mj-text>
                 <mj-image width="500" align="center" src="https://guikifix.herokuapp.com/images/email/line02.png"></mj-image>
               </mj-column>
@@ -43,25 +43,25 @@
       <mj-section padding-top="4%"></mj-section>
       <mj-wrapper border="1px" padding="0" background-url="https://guikifix.herokuapp.com/images/email/backgroundfooter.png" padding-left="5%" padding-right="5%"  border-radius="10px" padding-top="6px" padding-bottom="6px">
         <mj-section>
-          <mj-image src="http://guikifix.herokuapp.com/images/logo_guikifix.png" padding="0" width="75px"></mj-image>
-          <mj-text font-size="9" align="center" font-weight="bold" color="gray">Activa algunos de nuestros Planes profesionales podrás tener acceso a muchísimos trabajos de clientes listos para contratar</mj-text>
-          <mj-button background-color="#FF6600" font-weight="bold" font-size="8" color="white">ACTIVA PLAN PROFESIONAL</mj-button>
+          <mj-image src="http://guikifix.herokuapp.com/images/logo_guikifix.png" padding="0" width="100px"></mj-image>
+          <mj-text font-size="9" align="center" font-weight="bold" color="#4C4D4F">Activando alguno de nuestros Planes profesionales podrás tener acceso a muchísimos trabajos de clientes listos para contratar.</mj-text>
+          <mj-button background-color="#FF6600" inner-padding="3px 3px" font-weight="bold" font-size="10" color="white">ACTIVA PLAN PROFESIONAL</mj-button>
         </mj-section>  
       </mj-wrapper>
       <!-- END PRE - FOOTER -->
         <!-- FOOTER -->
         <mj-section padding-top="3%" ></mj-section>
-        <mj-wrapper border="1px" padding="0" background-color="#094AB1" padding-left="5%" padding-right="5%"  border-radius="10px" padding-top="6px" padding-bottom="6px" >
-          <mj-section text-align="center">
+        <mj-wrapper border="1px" padding="0" background-color="#094AB1" padding-left="5%" padding-right="5%"  border-radius="10px" vertical-align="middle">
+          <mj-section text-align="center" vertical-align="middle">
             <!--- FIRST FOOTER -->
-            <mj-column width="40%">
+            <mj-column width="40%" vertical-align="middle">
               <mj-text color="white" font-size="9" align="center" padding="0" font-weight="bold">CONTRATA PROFESIONALES DESDE TU CELULAR</mj-text>
-            <mj-text color="white" font-size="9" padding="0" align="center">Descarga nuestra aplicación gratis!</mj-text>
-            <mj-text color="white" font-size="9" padding="0" align="center">INNOVACIÓN, TECNOLOGÍA Y SEGURIDAD</mj-text>  
+              <mj-text color="white" font-size="9" padding="0" align="center">Descarga nuestra aplicación gratis!</mj-text>
+              <mj-text color="white" font-size="9" padding="0" align="center">INNOVACIÓN, TECNOLOGÍA Y SEGURIDAD</mj-text>  
             </mj-column>
             <!---END FIRST FOOTER -->
             <!--- SECOND FOOTER -->
-            <mj-column width="20%">
+            <mj-column width="20%" vertical-align="middle">
             <mj-text color="white" align="center" font-weight="bold" padding="0">Síguenos</mj-text>
               <mj-table padding-left="23px">
                 <tr style="list-style: none;">
@@ -85,14 +85,14 @@
             </mj-column>
             <!--- END SECOND FOOTER -->
             <!--- THIRD FOOTER -->
-            <mj-column width="40%">
-              <mj-section >
+            <mj-column width="40%" vertical-align="middle">
+              <mj-section vertical-align="middle">
                 <mj-group>
-                  <mj-column>
-                    <mj-image width="100px" padding="0" padding-top="4%" src="https://guikifix.herokuapp.com/images/email/googleplay.png"></mj-image>
+                  <mj-column vertical-align="middle">
+                    <mj-image width="90px" padding="0" padding-top="4%" src="https://guikifix.herokuapp.com/images/email/googleplay.png"></mj-image>
                   </mj-column>
-                  <mj-column>
-                    <mj-image width="100px" padding="0" padding-top="4%" src="https://guikifix.herokuapp.com/images/email/appstore.png"></mj-image>
+                  <mj-column vertical-align="middle">
+                    <mj-image width="90px" padding="0" padding-top="4%" src="https://guikifix.herokuapp.com/images/email/appstore.png"></mj-image>
                   </mj-column>
                 </mj-group>
               </mj-section>
