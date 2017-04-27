@@ -1,0 +1,127 @@
+@import '../../../varibles';
+
+.panel-job {
+    background: $fourth-color;
+    color:#4C4D4F;
+    min-height: 52vh;
+    h3 { 
+        font-size:32px;
+        color: $secundary-color; 
+        text-align:center; 
+        span { font-weight:600;}
+    } 
+    h4 {
+        color: $secundary-color;
+    }  
+
+    .row-panel {
+
+        .panel-heading {
+            background: $secundary-color;
+            color: #ffffff;
+            font-size:112%;
+            font-weight:bold;
+            text-align: center;
+        }
+        .panel-body {
+            min-height:120px;
+            background:$fifth-color;
+            span { font-weight:600;font-size:16px;}
+        }
+        .panel-footer {
+            font-size:90%;
+            text-align:center;
+            background: $sixth-color;            
+        }
+
+    }
+    
+    
+    .box-panel{
+        padding-right:0px;
+        .panel-body {
+            display: table;   
+            width:100%;
+            text-align: center;
+            span {
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }            
+    }
+
+    .box-panel-job {
+        text-align:letf !important;
+        .panel-body {
+            display: table;   
+            width:100%;
+            text-align: center;
+            span {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+        .title {            
+            font-size:112%;
+            color:$secundary-color;
+            text-align: left;
+            margin: 0 0 0px !important;
+        }    
+        .detail {
+            font-size:110%;
+            text-align: left;
+            font-weight:bold;
+            margin: 0 0 0px !important;
+        }
+        .request-date {
+            font-size:105%;
+            text-align: left;
+            font-weight:400;
+            margin: 0 0 0px !important;
+        }                                
+    }        
+
+    .panel-info {
+        font-size:15px;
+        background: $eighth-color;
+        border-radius: 20px;
+        color:#ffffff;
+        span { font-weight:600;}
+
+        p {
+            padding-left:8%;
+            padding-right:8%;
+        }
+        .panel {
+            border-right: 1px solid #ffffff;
+        }
+
+        @media screen and (min-width: 992px) {
+            .box-info {
+                border-right: 1px solid #ffffff;
+                min-height:310px;
+            }
+        }
+
+        @media screen and (min-width: 992px)  and (max-width: 1199px) {
+                .box-info {
+                border-right: 1px solid #ffffff;
+                min-height:360px;
+            }
+        }
+
+
+        
+    }
+
+    .info {
+        span, h4 { font-weight:600;}
+        p {font-size:15px; text-align: justify; }
+        a {font-size:17px;}
+    }   
+
+    .row-panel:last-child {
+        padding-right:inherit;
+    }
+}

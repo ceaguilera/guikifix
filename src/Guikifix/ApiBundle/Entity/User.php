@@ -34,6 +34,16 @@ class User extends BaseUser
      */
     private $profesional_profile;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $msg_transmiter;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $msg_receiver;
+
     
 
     /**
@@ -135,5 +145,73 @@ class User extends BaseUser
     public function getProfesionalProfile()
     {
         return $this->profesional_profile;
+    }
+
+    /**
+     * Add msgTransmiter
+     *
+     * @param \Guikifix\Core\Domain\Message $msgTransmiter
+     *
+     * @return User
+     */
+    public function addMsgTransmiter(\Guikifix\Core\Domain\Message $msgTransmiter)
+    {
+        $this->msg_transmiter[] = $msgTransmiter;
+
+        return $this;
+    }
+
+    /**
+     * Remove msgTransmiter
+     *
+     * @param \Guikifix\Core\Domain\Message $msgTransmiter
+     */
+    public function removeMsgTransmiter(\Guikifix\Core\Domain\Message $msgTransmiter)
+    {
+        $this->msg_transmiter->removeElement($msgTransmiter);
+    }
+
+    /**
+     * Get msgTransmiter
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getMsgTransmiter()
+    {
+        return $this->msg_transmiter;
+    }
+
+    /**
+     * Add msgReceiver
+     *
+     * @param \Guikifix\Core\Domain\Message $msgReceiver
+     *
+     * @return User
+     */
+    public function addMsgReceiver(\Guikifix\Core\Domain\Message $msgReceiver)
+    {
+        $this->msg_receiver[] = $msgReceiver;
+
+        return $this;
+    }
+
+    /**
+     * Remove msgReceiver
+     *
+     * @param \Guikifix\Core\Domain\Message $msgReceiver
+     */
+    public function removeMsgReceiver(\Guikifix\Core\Domain\Message $msgReceiver)
+    {
+        $this->msg_receiver->removeElement($msgReceiver);
+    }
+
+    /**
+     * Get msgReceiver
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getMsgReceiver()
+    {
+        return $this->msg_receiver;
     }
 }

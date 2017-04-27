@@ -1,0 +1,91 @@
+.panel-job {
+  background: #f2f2f2;
+  color: #4C4D4F;
+  min-height: 52vh; }
+  .panel-job h3 {
+    font-size: 32px;
+    color: #094AB1;
+    text-align: center; }
+    .panel-job h3 span {
+      font-weight: 600; }
+  .panel-job h4 {
+    color: #094AB1; }
+  .panel-job .row-panel .panel-heading {
+    background: #094AB1;
+    color: #ffffff;
+    font-size: 112%;
+    font-weight: bold;
+    text-align: center; }
+  .panel-job .row-panel .panel-body {
+    min-height: 120px;
+    background: #DFDFDF; }
+    .panel-job .row-panel .panel-body span {
+      font-weight: 600;
+      font-size: 16px; }
+  .panel-job .row-panel .panel-footer {
+    font-size: 90%;
+    text-align: center;
+    background: #D4D4D4; }
+  .panel-job .box-panel {
+    padding-right: 0px; }
+    .panel-job .box-panel .panel-body {
+      display: table;
+      width: 100%;
+      text-align: center; }
+      .panel-job .box-panel .panel-body span {
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle; }
+  .panel-job .box-panel-job {
+    text-align: letf !important; }
+    .panel-job .box-panel-job .panel-body {
+      display: table;
+      width: 100%;
+      text-align: center; }
+      .panel-job .box-panel-job .panel-body span {
+        display: table-cell;
+        vertical-align: middle; }
+    .panel-job .box-panel-job .title {
+      font-size: 112%;
+      color: #094AB1;
+      text-align: left;
+      margin: 0 0 0px !important; }
+    .panel-job .box-panel-job .detail {
+      font-size: 110%;
+      text-align: left;
+      font-weight: bold;
+      margin: 0 0 0px !important; }
+    .panel-job .box-panel-job .request-date {
+      font-size: 105%;
+      text-align: left;
+      font-weight: 400;
+      margin: 0 0 0px !important; }
+  .panel-job .panel-info {
+    font-size: 15px;
+    background: #FFA366;
+    border-radius: 20px;
+    color: #ffffff; }
+    .panel-job .panel-info span {
+      font-weight: 600; }
+    .panel-job .panel-info p {
+      padding-left: 8%;
+      padding-right: 8%; }
+    .panel-job .panel-info .panel {
+      border-right: 1px solid #ffffff; }
+    @media screen and (min-width: 992px) {
+      .panel-job .panel-info .box-info {
+        border-right: 1px solid #ffffff;
+        min-height: 310px; } }
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      .panel-job .panel-info .box-info {
+        border-right: 1px solid #ffffff;
+        min-height: 360px; } }
+  .panel-job .info span, .panel-job .info h4 {
+    font-weight: 600; }
+  .panel-job .info p {
+    font-size: 15px;
+    text-align: justify; }
+  .panel-job .info a {
+    font-size: 17px; }
+  .panel-job .row-panel:last-child {
+    padding-right: inherit; }

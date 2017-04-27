@@ -11,7 +11,12 @@ Guikifix\Core\Domain\Message:
     fields:
       # Comentario o mensaje enviado
       comment:
-        type: datetime
+        type: string
+      # status del mensaje
+      # 0 : No leido
+      # 1 : Leido
+      status:
+        type: integer
       # Ultima actualización
       last_update:
         type: datetime
@@ -21,11 +26,19 @@ Guikifix\Core\Domain\Message:
     
     manyToOne:
         # Usuario que crea un mensaje
-        user:
+        transmitter:
           targetEntity: Guikifix\ApiBundle\Entity\User
-          inversedBy: user
+          inversedBy: msg_transmiter
           joinColumn:
-            user_id:
+              name: transmitter_user_id
+              referencedColumnName: id
+          cascade: ["persist"]
+        # Usuario que crea un mensaje
+        receiver:
+          targetEntity: Guikifix\ApiBundle\Entity\User
+          inversedBy: msg_receiver
+          joinColumn:
+              name: receiver_user_id
               referencedColumnName: id
           cascade: ["persist"]
         # Presupuesto 

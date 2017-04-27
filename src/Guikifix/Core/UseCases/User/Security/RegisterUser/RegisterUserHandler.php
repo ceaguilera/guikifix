@@ -37,7 +37,29 @@ class RegisterUserHandler extends HandlerBase implements HandlerInterface
         $user->setUserProfile($userProfile);
 
         $rpUserProfile = $this->get('repositoryFactory')->get('UserProfile');
-        $rpUserProfile->persistObject($user);
+        try {
+            $rpUserProfile->persistObject($user);
+            $this->sendEmail($userProfile);
+        } catch (\Exception $e) {
+            return new ResponseCommandBus(500, $e->getMessage());
+        }
+
         return new ResponseCommandBus(200);
+    }
+
+    /**
+     * En la siguiente función de procesan los correos que se enviarán
+     * cuando un usuario se registra al sisstema
+     * @param  UserProfile $userProfile el perfil del usuario que sse registrará
+     */
+    private function sendEmail($userProfile)
+    {
+        
+        $emailService = $this->container->get('EmailService');
+
+        $emailService->setViewRender('GuikifixApiBundle:Email:userc7.html.twig');
+        $emailService->setViewParameters(['userProfile' => $userProfile]);
+        $emailService->setRecipients([$userProfile->getUser()->getEmail()]);
+        $emailService->sendEmail();
     }
 }

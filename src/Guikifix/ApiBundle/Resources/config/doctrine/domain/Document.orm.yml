@@ -15,3 +15,17 @@ Guikifix\Core\Domain\Document:
       # Nombre adicional del archivo
       name:
         type: string
+      # Tipo de archivo, fichero imagenes
+      type:
+        type: integer
+
+
+    manyToOne:
+      # ubicación del trabajo
+        job:
+            targetEntity: Guikifix\Core\Domain\Job
+            inversedBy: documents
+            joinColumn:
+                name: job_id
+                referencedColumnName: id
+            orphanRemoval: false

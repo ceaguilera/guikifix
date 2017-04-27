@@ -1,8 +1,8 @@
 <?php
 
-namespace Guikifix\ApiBundle\Resources\Services;
+namespace Guikifix\ApiBundle\Services;
 
-use Guikifix\Core\Contract\EmailInterface;
+use Guikifix\Core\Contract\EmailServiceInterface;
 /**
  *  EmailService
  * 
@@ -10,7 +10,7 @@ use Guikifix\Core\Contract\EmailInterface;
  *
  *	@author Freddy Contreras <freddycontreras3@gmail.com>
  */
-class EmailService implements EmailInterface
+class EmailService implements EmailServiceInterface
 {
     /**
      * @var La variable representa el container que permite hacer uso de los demás servicios
@@ -75,7 +75,7 @@ class EmailService implements EmailInterface
         //Chequea si se encuentra en producción se enviara los correos
         global $kernel;
 
-        if ($kernel->getEnvironment() == 'prod' or $kernel->getEnvironment() == 'stg') {
+        if ($kernel->getEnvironment() == 'prod' or $kernel->getEnvironment() == 'dev') {
             if (!empty($parameters))
                 $this->setParameters($parameters);
 
@@ -91,37 +91,11 @@ class EmailService implements EmailInterface
                     )
                 );
 
-            if ($kernel->getEnvironment() == 'prod')
+            if ($kernel->getEnvironment() == 'dev')
                 $message->setTo($this->recipients);
 
             $email->send($message);
         }
-    }
-
-    /**
-     * La función verifica si los ultimos correos enviados llegaron correctamente
-     * a su destinatario
-     *
-     * @author Freddy Contreras <freddycontreras3@gmail.com>
-     */
-    public function checkFailures()
-    {
-        $client = new Client();
-        $mg = new Mailgun("key-babcc663a53d4bab61353ba7da23b566", $client);
-        $domain = "navicu.com";
-
-
-        $result = $mg->get("$domain/bounces",[
-            'event' => 'failed',
-            'begin'        => date(DATE_RFC2822, strtotime('-10 min')),
-            'ascending'    => 'yes'
-        ]);
-
-        $httpResponseCode = $result->http_response_code;
-        $httpResponseBody = $result->http_response_body;
-
-        $logItems = $result->http_response_body->items;
-        return json_encode($logItems);
     }
 
     /**

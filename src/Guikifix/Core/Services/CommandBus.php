@@ -23,12 +23,15 @@ class CommandBus
      */
     private $cv;
 
+    private $container;
+
     /**
      * Constructor de la clase
      */
-    public function __construct($cv)
+    public function __construct($cv, $container)
     {
         $this->cv = $cv;
+        $this->container = $container;
     }
 
     /**
@@ -102,7 +105,7 @@ class CommandBus
     {
         $class = $this->inflect($command);
         if(\class_exists($class)){
-            return new $class();
+            return new $class($this->container);
         }else{
             return null;
         }

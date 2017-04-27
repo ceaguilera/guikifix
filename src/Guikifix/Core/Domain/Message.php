@@ -21,6 +21,11 @@ class Message
      * @var \DateTime
      */
     private $comment;
+    
+    /**
+     * @var integer
+     */
+    private $status;
 
     /**
      * @var \DateTime
@@ -41,6 +46,16 @@ class Message
      * @var \Guikifix\Core\Domain\Budget
      */
     private $budget;
+
+    /**
+     * @var \Guikifix\ApiBundle\Entity\User
+     */
+    private $transmitter;
+
+    /**
+     * @var \Guikifix\ApiBundle\Entity\User
+     */
+    private $receiver;
 
 
     /**
@@ -171,5 +186,77 @@ class Message
     public function getBudget()
     {
         return $this->budget;
+    }
+
+    /**
+     * Set transmitter
+     *
+     * @param \Guikifix\ApiBundle\Entity\User $transmitter
+     *
+     * @return Message
+     */
+    public function setTransmitter(\Guikifix\ApiBundle\Entity\User $transmitter = null)
+    {
+        $this->transmitter = $transmitter;
+
+        return $this;
+    }
+
+    /**
+     * Get transmitter
+     *
+     * @return \Guikifix\ApiBundle\Entity\User
+     */
+    public function getTransmitter()
+    {
+        return $this->transmitter;
+    }
+
+    /**
+     * Set receiver
+     *
+     * @param \Guikifix\ApiBundle\Entity\User $receiver
+     *
+     * @return Message
+     */
+    public function setReceiver(\Guikifix\ApiBundle\Entity\User $receiver = null)
+    {
+        $this->receiver = $receiver;
+
+        return $this;
+    }
+
+    /**
+     * Get receiver
+     *
+     * @return \Guikifix\ApiBundle\Entity\User
+     */
+    public function getReceiver()
+    {
+        return $this->receiver;
+    }
+
+    /**
+     * Set status
+     *
+     * @param integer $status
+     *
+     * @return Message
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return integer
+     */
+    public function getStatus()
+    {
+        return $this->status;
     }
 }

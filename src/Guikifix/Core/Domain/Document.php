@@ -28,6 +28,16 @@ class Document
      */
     private $name;
 
+    /**
+     * @var string
+     */
+    private $type;
+
+    /**
+     * @var \Guikifix\Core\Domain\Job
+     */
+    private $job;
+
 
     /**
      * Get id
@@ -85,5 +95,53 @@ class Document
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Set type
+     *
+     * @param integer $type
+     *
+     * @return Document
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return integer
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Set job
+     *
+     * @param \Guikifix\Core\Domain\Job $job
+     *
+     * @return Document
+     */
+    public function setJob(\Guikifix\Core\Domain\Job $job = null)
+    {
+        $this->job = $job;
+
+        return $this;
+    }
+
+    /**
+     * Get job
+     *
+     * @return \Guikifix\Core\Domain\Job
+     */
+    public function getJob()
+    {
+        return $this->job;
     }
 }

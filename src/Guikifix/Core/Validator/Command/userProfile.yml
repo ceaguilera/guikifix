@@ -1,0 +1,31 @@
+Guikifix\Core\UseCases\User\Security\UserProfile\SetInfo\SetInfoCommand:
+    properties:
+        first_name:
+            - NotBlank: ~
+            - Type:
+                type: string
+        last_name:
+            - NotBlank: ~
+            - Type:
+                type: string
+        identity_card:
+            - Type:
+                type: string
+        cell_phone:
+            - NotBlank: ~
+            - Type:
+                type: string
+        phone:
+            - Type:
+                type: string
+        gender:
+            - NotBlank: ~
+            - Type:
+                type: integer
+        birthdate:
+            - NotBlank: ~
+            - Type:
+                type: date
+        city:
+            - Type:
+                type: integer

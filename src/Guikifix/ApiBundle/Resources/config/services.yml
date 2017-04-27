@@ -17,7 +17,7 @@ services:
     # Servicio que ejecuta el Caso de uso
     CommandBus:
         class: Guikifix\Core\Services\CommandBus
-        arguments: ["@CoreValidator"]
+        arguments: ["@CoreValidator","@service_container"]
 
     SecurityService:
         class: Guikifix\ApiBundle\Services\SecurityService

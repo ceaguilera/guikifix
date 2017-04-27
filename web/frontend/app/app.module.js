@@ -8,6 +8,7 @@
         'guikifixApp.home', 
         'guikifixApp.about', 
         'guikifixApp.login',
+        'guikifixApp.myjobs',
         'guikifixApp.panel',
         'guikifixApp.register',
         'guikifixApp.category',

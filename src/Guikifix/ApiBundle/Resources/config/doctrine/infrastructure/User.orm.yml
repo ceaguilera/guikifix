@@ -18,6 +18,18 @@ Guikifix\ApiBundle\Entity\User:
         options:
           default: 1
 
+    oneToMany:
+        # Trabajos relacionado al perfil
+        msg_transmiter:
+            targetEntity: Guikifix\Core\Domain\Message
+            mappedBy: transmitter
+            cascade: ["persist"]
+        # Trabajos relacionado al perfil
+        msg_receiver:
+            targetEntity: Guikifix\Core\Domain\Message
+            mappedBy: receiver
+            cascade: ["persist"]
+
     oneToOne:
         user_profile:
             targetEntity: Guikifix\Core\Domain\UserProfile

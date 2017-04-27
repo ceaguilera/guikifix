@@ -26,10 +26,12 @@ class SetJobHandler extends HandlerBase implements HandlerInterface
     public function handle(CommandInterface $command)
     {
         $request = $command->getRequest();
+        $userProfile = $request["user"]->getUserProfile();
 
         $job = new Job();          
         $job->setDescription($request["job_description"]);
-        $job->setUser($request["user"]);
+        $job->setUserProfile($userProfile);
+        $userProfile->addJob($job);
 
         $rpJobType = $this->get('repositoryFactory')->get('JobTypeCategory');   
         $rpJobStatus = $this->get('repositoryFactory')->get('JobStatusCategory'); 

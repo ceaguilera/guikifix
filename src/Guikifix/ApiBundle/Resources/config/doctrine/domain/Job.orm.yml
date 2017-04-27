@@ -50,6 +50,11 @@ Guikifix\Core\Domain\Job:
             targetEntity: Guikifix\Core\Domain\Budget
             mappedBy: job
             cascade: ["persist"]
+        # Trabajos relacionado al perfil
+        documents:
+            targetEntity: Guikifix\Core\Domain\Document
+            mappedBy: job
+            cascade: ["persist"]
     manyToMany:
       # Estados posible del trabajo
         jobs_status_category:
@@ -96,10 +101,10 @@ Guikifix\Core\Domain\Job:
                 referencedColumnName: id
             orphanRemoval: false
         # Usuario quien creo el trabajo
-        user:
-            targetEntity: Guikifix\ApiBundle\Entity\User
-            inversedBy: user_profile
+        user_profile:
+            targetEntity: Guikifix\Core\Domain\UserProfile
+            inversedBy: jobs
             joinColumn:
-                user_id:
+                user_profile_id:
                 referencedColumnName: id
             cascade: ["persist"]
