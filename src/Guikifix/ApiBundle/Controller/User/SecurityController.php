@@ -45,14 +45,6 @@ class SecurityController extends Controller
         $command = new RegisterUserCommand($data);
     	$response = $this->get('CommandBus')->execute($command);
     
-        if($response->getStatusCode() == 200)
-            $this->get('SecurityService')->loginByData(
-                [
-                    "userName" => $data["email"],
-                    "pass" => $data["password"],
-                ]
-            );
-
     	return new JsonResponse($response->getData(),$response->getStatusCode());
     }
 
