@@ -20,3 +20,9 @@ guikifix_api_reset_password:
   path:   /update/password
   defaults: { _controller: GuikifixApiBundle:User\Security:updatePassword}
   methods: POST
+
+# Petición de para saber si el usuario esta logeado.
+guikifix_api_is_logged:
+  path:   /is/logged
+  defaults: { _controller: GuikifixApiBundle:User\Security:isLogged}
+  methods: POST

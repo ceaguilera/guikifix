@@ -45,14 +45,6 @@ class SecurityController extends Controller
         $command = new RegisterUserCommand($data);
     	$response = $this->get('CommandBus')->execute($command);
     
-        if($response->getStatusCode() == 200)
-            $this->get('SecurityService')->loginByData(
-                [
-                    "userName" => $data["email"],
-                    "pass" => $data["password"],
-                ]
-            );
-
     	return new JsonResponse($response->getData(),$response->getStatusCode());
     }
 
@@ -187,6 +179,39 @@ class SecurityController extends Controller
     */
     public function postLogoutAction()
     {
+        return new JsonResponse(
+            true,
+            201
+        );
+    }
+
+    /**
+     * Esta función es usada para saber si el usuario esta logeado
+     *
+     * @author Joel D. Requena P. <Joel.2005.2@gmail.com>
+     * @author Currently Working: Joel D. Requena P.
+     *
+     * @return json data solicitada     
+     * @ApiDoc(
+     *     resource=true,
+     *     views={"default","user","security"},
+     *     resourceDescription="Esta función es usada para saber si el usuario esta logeado",
+     *     description="Esta función es usada para saber si el usuario esta logeado",
+     *      statusCodes={
+     *         201="true",
+     *         302="Usuario No logeado",
+     *         500="Error en el servidor"
+     *     }
+     *  )
+    */
+    public function isLoggedAction()
+    {
+
+        $user = $this->get('security.token_storage')->getToken()->getUser();
+
+        if (!is_object($user))
+            return new JsonResponse(false, 302);
+
         return new JsonResponse(
             true,
             201
