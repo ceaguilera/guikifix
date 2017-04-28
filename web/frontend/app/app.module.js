@@ -13,7 +13,8 @@
         'guikifixApp.register',
         'guikifixApp.category',
         'guikifixApp.requestFilters',
-        'guikifixApp.jobReceived'
+        'guikifixApp.jobReceived',
+        'guikifixApp.updateData'
     ]);
 })();
 
