@@ -1,41 +1,53 @@
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-style: normal;
+  src: url("http://fonts.gstatic.com/s/roboto/v15/5YB-ifwqHP20Yn46l_BDhA.eot");
+  src: url("http://fonts.gstatic.com/s/roboto/v15/5YB-ifwqHP20Yn46l_BDhA.eot?#iefix") format("embedded-opentype"), local("Roboto"), local("Roboto-regular"), url("http://fonts.gstatic.com/s/roboto/v15/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2") format("woff2"), url("http://fonts.gstatic.com/s/roboto/v15/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff") format("woff"), url("http://fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf") format("truetype"), url("http://fonts.gstatic.com/l/font?kit=_YZOZaQ9UBZzaxiLBLcgZg&skey=a0a0114a1dcab3ac&v=v15#Roboto") format("svg"); }
+
 .panel-job {
   background: #f2f2f2;
   color: #4C4D4F;
   min-height: 52vh; }
   .panel-job h3 {
+    font-family: Roboto;
     font-size: 32px;
     color: #094AB1;
     text-align: center; }
     .panel-job h3 span {
       font-weight: 600; }
   .panel-job h4 {
+    font-family: Roboto;
     color: #094AB1; }
-  .panel-job .row-panel .panel-heading {
-    background: #094AB1;
-    color: #ffffff;
-    font-size: 112%;
-    font-weight: bold;
-    text-align: center; }
-  .panel-job .row-panel .panel-body {
-    min-height: 120px;
-    background: #DFDFDF; }
-    .panel-job .row-panel .panel-body span {
-      font-weight: 600;
-      font-size: 16px; }
-  .panel-job .row-panel .panel-footer {
-    font-size: 90%;
-    text-align: center;
-    background: #D4D4D4; }
-  .panel-job .box-panel {
-    padding-right: 0px; }
-    .panel-job .box-panel .panel-body {
-      display: table;
-      width: 100%;
+  .panel-job .row-panel {
+    font-family: Roboto;
+    border: none !important;
+    background: none !important; }
+    .panel-job .row-panel .panel-heading {
+      background: #094AB1;
+      color: #ffffff;
+      font-weight: bold;
       text-align: center; }
-      .panel-job .box-panel .panel-body span {
-        text-align: center;
-        display: table-cell;
-        vertical-align: middle; }
+    .panel-job .row-panel .panel-body {
+      font-family: Roboto;
+      min-height: 120px;
+      background: #DFDFDF; }
+      .panel-job .row-panel .panel-body span {
+        font-weight: 600;
+        font-size: 16px; }
+    .panel-job .row-panel .panel-footer {
+      font-family: Roboto;
+      font-size: 90%;
+      text-align: center;
+      background: #D4D4D4; }
+  .panel-job .box-panel .panel-body {
+    display: table;
+    width: 100%;
+    text-align: center; }
+    .panel-job .box-panel .panel-body span {
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle; }
   .panel-job .box-panel-job {
     text-align: letf !important; }
     .panel-job .box-panel-job .panel-body {
@@ -87,5 +99,3 @@
     text-align: justify; }
   .panel-job .info a {
     font-size: 17px; }
-  .panel-job .row-panel:last-child {
-    padding-right: inherit; }

@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-style: normal;
+  src: url("http://fonts.gstatic.com/s/roboto/v15/5YB-ifwqHP20Yn46l_BDhA.eot");
+  src: url("http://fonts.gstatic.com/s/roboto/v15/5YB-ifwqHP20Yn46l_BDhA.eot?#iefix") format("embedded-opentype"), local("Roboto"), local("Roboto-regular"), url("http://fonts.gstatic.com/s/roboto/v15/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2") format("woff2"), url("http://fonts.gstatic.com/s/roboto/v15/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff") format("woff"), url("http://fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf") format("truetype"), url("http://fonts.gstatic.com/l/font?kit=_YZOZaQ9UBZzaxiLBLcgZg&skey=a0a0114a1dcab3ac&v=v15#Roboto") format("svg"); }
+
+.container-job {
+  font-family: Roboto;
+  padding-bottom: 8%; }
+  .container-job .job-title {
+    font-size: 40px;
+    color: #094AB1;
+    padding-top: 2%;
+    padding-bottom: 1%; }
+    .container-job .job-title span {
+      font-weight: bold; }
+  .container-job hr {
+    border: 1px solid #4C4D4F; }
+  .container-job .job-title-resumen {
+    color: #4C4D4F;
+    font-size: 18px; }
+    .container-job .job-title-resumen p {
+      margin: 0; }
+      .container-job .job-title-resumen p span {
+        font-weight: bold;
+        color: #094AB1; }
+  .container-job .panel-menu button {
+    padding: 4px;
+    border-radius: 12px;
+    width: 19.5%;
+    background: #094AB1;
+    color: #ffffff;
+    font-weight: bold; }
+    @media screen and (max-width: 772px) {
+      .container-job .panel-menu button {
+        width: 33.3%; } }
+  .container-job .box-resumen h3, .container-job .box-edit h3 {
+    color: #094AB1;
+    font-size: 20px;
+    font-weight: bold; }
+  .container-job .box-resumen p, .container-job .box-edit p {
+    color: #4C4D4F;
+    font-size: 17px; }
+  .container-job .box-resumen .row-divider, .container-job .box-edit .row-divider {
+    margin-bottom: 3%; }
+  .container-job .box-resumen span, .container-job .box-edit span {
+    font-weight: bold; }
+  .container-job .box-edit h3 {
+    font-size: 18px; }
+  .container-job .box-edit button {
+    margin-top: 4%;
+    background: #094AB1;
+    color: #ffffff;
+    font-weight: bold;
+    width: 50%; }
+  .container-job .box-edit textarea {
+    min-height: 157px !important; }
