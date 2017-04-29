@@ -10,6 +10,7 @@
         'guikifixApp.about', 
         'guikifixApp.login',
         'guikifixApp.myjobs',
+        'guikifixApp.myjob',
         'guikifixApp.panel',
         'guikifixApp.register',
         'guikifixApp.category',
@@ -30,13 +31,23 @@ angular.module('guikifixApp')
 
 angular.module('guikifixApp')
       .run(function($window, $rootScope, $cookies, $http, locations) {
-          let authShow = $window.localStorage.getItem("authShow");
-          let nameUser =  $cookies.get('name');
-          $rootScope.authShow = authShow != 'undefined' ? authShow : false;
-          $rootScope.nameUser = nameUser != 'undefined' ? nameUser : null;
-          /* Se llama a piden las localidades para ser usadas en todo el sistema */
-          locations.getMainLocations();
-
+        var hours = 24; // Reset when storage is more than 24hours
+        var now = new Date().getTime();
+        var setupTime = localStorage.getItem('setupTime');
+        if (setupTime == null) {1
+            localStorage.setItem('setupTime', now)
+        } else {
+            if(now-setupTime > hours*60*60*1000) {
+                localStorage.clear()
+                localStorage.setItem('setupTime', now);
+            }
+        }
+        let authShow = $window.localStorage.getItem("authShow");
+        let nameUser =  $cookies.get('name');
+        $rootScope.authShow = authShow  ? authShow : false;
+        $rootScope.nameUser = (nameUser != 'undefined' && authShow) ? nameUser : null;
+        /* Se llama a piden las localidades para ser usadas en todo el sistema */
+        locations.getMainLocations();
 });
 
 
@@ -82,6 +93,7 @@ angular.module('guikifixApp').factory("auth", function($window,$rootScope ,$cook
                 url : "/logout",
             }).then(function mySucces(response) {
                 $cookieStore.remove("name");
+                $window.localStorage.setItem("authShow", true);
                 $window.localStorage.removeItem("authShow");
                 $window.location = "/";
             }, function myError(response) {

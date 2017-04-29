@@ -1,0 +1,62 @@
+@import '../../../varibles';
+@import '../../../fonts';
+.container-job {
+    font-family: Roboto;
+    padding-bottom:8%;
+    .job-title {
+        font-size:40px;
+        color:$secundary-color;
+        padding-top:2%;
+        padding-bottom:1%;
+        span { font-weight: bold;}
+    }
+    
+    hr { border: 1px solid $seventh-color;}
+
+    .job-title-resumen {
+        color:$seventh-color;
+        font-size:18px;
+        p {
+            margin:0;
+            span { font-weight: bold; color: $secundary-color;}
+        }
+    }
+
+    .panel-menu {
+        button { 
+            padding:4px;border-radius:12px; width:19.5%;
+            background:$secundary-color; color:#ffffff;font-weight:bold;
+            @media screen and (max-width: 772px) {
+                width:33.3%;
+            }
+        }
+    }
+
+    .box-resumen, .box-edit {
+        h3 {
+            color:$secundary-color; 
+            font-size:20px;
+            font-weight:bold;
+        }
+        p { color: $seventh-color; font-size:17px;}
+
+        .row-divider {
+            margin-bottom:3%;
+        }
+        span {font-weight:bold;}
+    }
+
+    .box-edit {
+         h3 {
+         font-size:18px;
+         }
+        button {
+            margin-top:4%;
+            background:$secundary-color; color:#ffffff;font-weight:bold;
+            width:50%;
+        }
+        textarea {
+            min-height:157px !important;
+        }
+    }    
+}

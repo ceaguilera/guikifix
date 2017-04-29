@@ -1,0 +1,75 @@
+<div style="padding:0;background:#f2f2f2">
+    <div class="container container-job">
+        <!-- Titulo del Trabajo -->
+        <div class="row">
+            <div class="col-xs-12">
+
+                <h2 class="job-title"> Trabajos de <span>Promería</span></h2>
+                <div class="job-title-resumen">
+                    <p><span>Ubicación</span>: Macaracuay, Caracas</p>
+                    <p><span>Fecha de solicitud</span>: 25/03/2017</p>
+                    <p><a>Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            <!-- END Título del Trabajo -->
+            <hr>
+            <!-- Menú -->
+            <div class="row">
+
+                
+                <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 panel-menu" style="
+                margin-top: 2%;margin-bottom: 2%;">
+                <center>
+                    <a ui-sref="resumen"><button type="button" class="btn btn-default">RESUMEN</button></a>
+                    <a ui-sref="edit"><button type="button" class="btn btn-default">EDITAR</button></a>
+                    <button type="button" class="btn btn-default">PRESUPUESTOS</button>
+                    <button type="button" class="btn btn-default">MENSAJES</button>
+                    <button type="button" class="btn btn-default">CALIFICACIÓN</button>
+                </center>
+        <!--<div class="row">
+            <div class="col-xs-8">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <button type="button" class="btn btn-default"><a ui-sref="myjob">RESUMEN</button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button type="button" class="btn btn-default" ><a ui-sref="edit">EDITAR</a></button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button type="button" class="btn btn-default" <a ui-sref="job">PRESUPUESTO</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <button type="button" class="btn btn-default" ui-sref="message">MENSAJES</button>
+                    </div>
+                    <div class="col-xs-6">
+                        <button type="button" class="btn btn-default" ui-sref="califications">CALIFICACIÓN</button>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+    
+    <!-- END Menú -->
+    
+    <!-- Vista de selección del Menú -->
+    <div ui-view="resumen"></div>
+    <!-- FIN Vista de selección del Menú -->    
+    <!-- Editar-->
+    <div ui-view="edit"></div>      
+    <!-- END Editar -->
+    <!-- Presupuesto -->
+    <div ui-view="job"></div>      
+    <!-- END Presupuesto -->
+    <!-- Mensajes -->
+    <div ui-view="message"></div>      
+    <!-- END Mensajes -->
+    <!-- Califaciones -->
+    <div ui-view="califications"></div>      
+    <!-- END Calificaciones -->
+</div>
+</div>

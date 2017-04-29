@@ -1,34 +1,40 @@
 @import '../../../varibles';
-
+@import '../../../fonts';
 .panel-job {
+
     background: $fourth-color;
     color:#4C4D4F;
     min-height: 52vh;
     h3 { 
+        font-family: Roboto;
         font-size:32px;
         color: $secundary-color; 
         text-align:center; 
         span { font-weight:600;}
     } 
     h4 {
+        font-family: Roboto;
         color: $secundary-color;
     }  
 
     .row-panel {
-
+        font-family: Roboto;
+        border:none !important;
+        background: none !important;
         .panel-heading {
             background: $secundary-color;
             color: #ffffff;
-            font-size:112%;
             font-weight:bold;
             text-align: center;
         }
         .panel-body {
+            font-family: Roboto;
             min-height:120px;
             background:$fifth-color;
             span { font-weight:600;font-size:16px;}
         }
         .panel-footer {
+            font-family: Roboto;
             font-size:90%;
             text-align:center;
             background: $sixth-color;            
@@ -38,7 +44,6 @@
     
     
     .box-panel{
-        padding-right:0px;
         .panel-body {
             display: table;   
             width:100%;
@@ -120,8 +125,4 @@
         p {font-size:15px; text-align: justify; }
         a {font-size:17px;}
     }   
-
-    .row-panel:last-child {
-        padding-right:inherit;
-    }
 }
