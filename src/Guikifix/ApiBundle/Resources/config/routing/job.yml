@@ -8,4 +8,4 @@ guikifix_api_set_job:
 guikifix_api_get_job_list:
     path:     /get/list
     defaults: { _controller: GuikifixApiBundle:User\Job:getListJobs }
-    methods: POST
+    methods: GET
