@@ -21,6 +21,12 @@ guikifix_api_reset_password:
   defaults: { _controller: GuikifixApiBundle:User\Security:updatePassword}
   methods: POST
 
+# Petición de para actualizacion del email de un usuario asincronamente.
+guikifix_api_reset_email:
+  path:   /update/email
+  defaults: { _controller: GuikifixApiBundle:User\Security:updateEmail}
+  methods: POST
+
 # Petición de para saber si el usuario esta logeado.
 guikifix_api_is_logged:
   path:   /is/logged

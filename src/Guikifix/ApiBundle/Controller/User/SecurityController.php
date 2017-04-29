@@ -10,6 +10,7 @@ use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 
 use Guikifix\Core\UseCases\User\Security\RegisterUser\RegisterUserCommand;
 use Guikifix\Core\UseCases\User\Security\UpdatePassword\UpdatePasswordCommand;
+use Guikifix\Core\UseCases\User\Security\UpdateEmail\UpdateEmailCommand;
 
 class SecurityController extends Controller
 {
@@ -89,7 +90,6 @@ class SecurityController extends Controller
     */
     public function apiLoginAction(Request $request, $config)
     {
-        if (!$request->isXmlHttpRequest()) {
 
             $data = json_decode($request->getContent(), true);
 
@@ -106,13 +106,6 @@ class SecurityController extends Controller
                 $islogged ? $response : null,
                 $islogged ? 201 :302
             );
-
-        } else {
-            return new Response(
-                'Not Found',
-                404
-            );
-        }
     }
 
     /**
@@ -216,5 +209,51 @@ class SecurityController extends Controller
             true,
             201
         );
+    }
+
+    /**
+     * Esta función es usada para cambiar el email de un usuario por
+     * medio de peticion asincrona.
+     *
+     * @author Joel D. Requena P. <Joel.2005.2@gmail.com>
+     * @author Currently Working: Joel D. Requena P.
+     *
+     * @param  Request $request 
+     * @return json data solicitada     
+     * @ApiDoc(
+     *     resource=true,
+     *     views={"default","user","security"},
+     *     parameters={
+     *         {
+     *              "name"="email",
+     *              "dataType"="string",
+     *              "description"="Email del usuario",
+     *              "required"="true"
+     *         }
+     *     },
+     *     resourceDescription="cambio del email de un usuario por
+     * medio de peticion asincrona.",
+     *     description="cambio del email de un usuario por
+     * medio de peticion asincrona.",
+     *      statusCodes={
+     *         201="true",
+     *         302="Usuario No logeado",
+     *         500="Error en el servidor"
+     *     }
+     *  )
+    */
+    public function updateEmailAction(Request $request)
+    {
+        $data = json_decode($request->getContent(), true);
+
+        $data["user"] = $this->get('security.token_storage')->getToken()->getUser();
+
+        if (!is_object($data["user"]))
+            return new JsonResponse(false, 302);
+
+        $command = new UpdateEmailCommand($data);
+        $response = $this->get('CommandBus')->execute($command);
+
+        return new JsonResponse($response->getData(), $response->getStatusCode());
     }
 }
