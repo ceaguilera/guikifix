@@ -131,7 +131,7 @@ class UserProfileController extends Controller
             $email = isset($data["email"]) ? $data["email"] : null;
             if (is_null($email)) 
                 return new JsonResponse(false, 302);
-            $user = $this->get('repositoryFactory')->get('User')->findBy(["email"=>$email]);
+            $user = $this->get('repositoryFactory')->get('User')->findOneBy(["email"=>$email]);
             if (!$user) 
                 return new JsonResponse(false, 302);
             $data["user"] = $user;
