@@ -55,7 +55,7 @@ class JobController extends Controller
      *     }
      *  )
      */
-    public function statusCategoriesAction(Request $request)
+    public function setJobAction(Request $request)
     {
         
         $data = json_decode($request->getContent(), true);
