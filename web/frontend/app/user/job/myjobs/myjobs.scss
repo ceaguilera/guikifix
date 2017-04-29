@@ -21,6 +21,7 @@
         font-family: Roboto;
         border:none !important;
         background: none !important;
+        .panel {background: $fifth-color}
         .panel-heading {
             background: $secundary-color;
             color: #ffffff;
@@ -57,6 +58,16 @@
     }
 
     .box-panel-job {
+        .panel-heading {
+            border-top-left-radius:0px;
+            border-top-right-radius:0px;
+        }
+
+        .panel-footer {
+            border-bottom-left-radius:0px;
+            border-bottom-right-radius:0px;
+        }
+        border-radius: 0px;
         text-align:letf !important;
         .panel-body {
             display: table;   

@@ -35,16 +35,16 @@
     @media screen and (max-width: 772px) {
       .container-job .panel-menu button {
         width: 33.3%; } }
-  .container-job .box-resumen h3, .container-job .box-edit h3 {
+  .container-job .box-resumen h3, .container-job .box-edit h3, .container-job .box-job h3 {
     color: #094AB1;
     font-size: 20px;
     font-weight: bold; }
-  .container-job .box-resumen p, .container-job .box-edit p {
+  .container-job .box-resumen p, .container-job .box-edit p, .container-job .box-job p {
     color: #4C4D4F;
     font-size: 17px; }
-  .container-job .box-resumen .row-divider, .container-job .box-edit .row-divider {
+  .container-job .box-resumen .row-divider, .container-job .box-edit .row-divider, .container-job .box-job .row-divider {
     margin-bottom: 3%; }
-  .container-job .box-resumen span, .container-job .box-edit span {
+  .container-job .box-resumen span, .container-job .box-edit span, .container-job .box-job span {
     font-weight: bold; }
   .container-job .box-edit h3 {
     font-size: 18px; }
@@ -56,3 +56,122 @@
     width: 50%; }
   .container-job .box-edit textarea {
     min-height: 157px !important; }
+  .container-job .box-job .row-panel .panel {
+    box-shadow: none;
+    border: none; }
+  .container-job .box-job .row-panel .panel-heading {
+    font-size: 17px;
+    font-weight: bold;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background: #094AB1;
+    color: #ffffff;
+    text-align: center; }
+  .container-job .box-job .row-panel .panel-body {
+    min-height: 120px;
+    background: #DFDFDF;
+    display: table;
+    width: 100%;
+    text-align: center; }
+    .container-job .box-job .row-panel .panel-body span {
+      text-align: center;
+      display: table-cell;
+      vertical-align: top; }
+    .container-job .box-job .row-panel .panel-body .title {
+      color: #094AB1;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: left; }
+    .container-job .box-job .row-panel .panel-body .description {
+      font-weigh: bold;
+      font-size: 14px;
+      text-align: left; }
+  .container-job .box-job .row-panel .panel-footer {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-size: 90%;
+    color: #4C4D4F;
+    font-weight: bold;
+    text-align: center;
+    background: #D4D4D4;
+    padding: 4px 10px 4px 10px; }
+    .container-job .box-job .row-panel .panel-footer button {
+      font-weight: bold;
+      background: #FF6600;
+      padding: 0 19px;
+      color: #ffffff; }
+  .container-job .box-job .panel-info {
+    font-size: 15px;
+    background: #FFA366;
+    border-radius: 20px;
+    color: #ffffff !important;
+    font-size: 15px !important; }
+    .container-job .box-job .panel-info span {
+      font-weight: 600;
+      font-size: 15px; }
+    .container-job .box-job .panel-info p {
+      font-size: 15px;
+      padding-left: 4%;
+      padding-right: 4%;
+      text-align: justify;
+      color: #ffffff !important;
+      font-size: 15px; }
+    .container-job .box-job .panel-info .panel {
+      border-right: 1px solid #ffffff; }
+    @media screen and (min-width: 992px) {
+      .container-job .box-job .panel-info .box-info {
+        border-right: 1px solid #ffffff;
+        min-height: 310px; } }
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      .container-job .box-job .panel-info .box-info {
+        border-right: 1px solid #ffffff;
+        min-height: 360px; } }
+  .container-job .box-message {
+    margin-top: 3%;
+    text-align: center; }
+    .container-job .box-message h4 {
+      color: #4C4D4F;
+      font-size: 17px;
+      font-weight: bold; }
+    .container-job .box-message button {
+      background: #FF6600;
+      color: #ffffff;
+      border-radius: 10px;
+      font-weight: bold; }
+    .container-job .box-message .box-info {
+      width: 100%;
+      display: table;
+      margin-top: 20%;
+      margin-bottom: 20%; }
+      .container-job .box-message .box-info span {
+        color: #4C4D4F;
+        font-size: 16px;
+        font-weight: bold;
+        display: table-cell;
+        vertical-align: middle; }
+    @media screen and (max-width: 772px) {
+      .container-job .box-message .new-message {
+        margin-bottom: 10%; } }
+  .container-job .box-califications h2, .container-job .box-califications h3 {
+    color: #094AB1;
+    font-weight: bold;
+    font-size: 18px; }
+  .container-job .box-califications h3 {
+    font-weight: 400;
+    font-size: 17px;
+    margin: 0px;
+    padding-top: 2%; }
+  .container-job .box-califications img {
+    width: 17px !important; }
+  .container-job .box-califications .question {
+    color: #FF6600; }
+  .container-job .box-califications textarea {
+    height: 300px; }
+  .container-job .box-califications button {
+    background: #FF6600;
+    color: #ffffff;
+    margin-top: 6%;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 10px 10px 10px 9px;
+    font-size: 16px; }

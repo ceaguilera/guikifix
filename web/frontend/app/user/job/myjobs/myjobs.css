@@ -23,6 +23,8 @@
     font-family: Roboto;
     border: none !important;
     background: none !important; }
+    .panel-job .row-panel .panel {
+      background: #DFDFDF; }
     .panel-job .row-panel .panel-heading {
       background: #094AB1;
       color: #ffffff;
@@ -49,7 +51,14 @@
       display: table-cell;
       vertical-align: middle; }
   .panel-job .box-panel-job {
+    border-radius: 0px;
     text-align: letf !important; }
+    .panel-job .box-panel-job .panel-heading {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px; }
+    .panel-job .box-panel-job .panel-footer {
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px; }
     .panel-job .box-panel-job .panel-body {
       display: table;
       width: 100%;

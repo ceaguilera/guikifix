@@ -1,0 +1,31 @@
+@import '../../../varibles';
+@import '../../../fonts';
+.row-panel {
+    font-family: Roboto;
+    .panel-heading {
+        background: $secundary-color;
+        font-family: Roboto;        
+    }
+
+    .panel-body {
+        display: table;   
+        width:100%;
+        text-align: center;
+        
+        min-height:120px;
+        background:$fifth-color;
+        span {
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+
+    .panel-footer {
+        font-family: Roboto;
+        font-size:90%;
+        text-align:center;
+        background: $sixth-color;            
+    }    
+
+}
