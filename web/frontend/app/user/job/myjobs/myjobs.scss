@@ -27,10 +27,13 @@
             color: #ffffff;
             font-weight:bold;
             text-align: center;
+            font-size:17px;
+            border-top-left-radius:0px;
+            border-top-right-radius:0px;
         }
         .panel-body {
             font-family: Roboto;
-            min-height:120px;
+            min-height:100px;
             background:$fifth-color;
             span { font-weight:600;font-size:16px;}
         }
@@ -39,6 +42,9 @@
             font-size:90%;
             text-align:center;
             background: $sixth-color;            
+            border-bottom-left-radius:0px !important;
+            border-bottom-right-radius:0px !important;
+            padding:5px 10px 5px 10px;
         }
 
     }
@@ -64,8 +70,8 @@
         }
 
         .panel-footer {
-            border-bottom-left-radius:0px;
-            border-bottom-right-radius:0px;
+            border-bottom-left-radius:0px !important;
+            border-bottom-right-radius:0px !important !important;
         }
         border-radius: 0px;
         text-align:letf !important;
@@ -79,19 +85,19 @@
             }
         }
         .title {            
-            font-size:112%;
+            font-size:18px;
             color:$secundary-color;
             text-align: left;
             margin: 0 0 0px !important;
         }    
         .detail {
-            font-size:110%;
+            font-size:16px;
             text-align: left;
             font-weight:bold;
             margin: 0 0 0px !important;
         }
         .request-date {
-            font-size:105%;
+            font-size:14px;
             text-align: left;
             font-weight:400;
             margin: 0 0 0px !important;

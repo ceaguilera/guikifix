@@ -29,10 +29,13 @@
       background: #094AB1;
       color: #ffffff;
       font-weight: bold;
-      text-align: center; }
+      text-align: center;
+      font-size: 17px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px; }
     .panel-job .row-panel .panel-body {
       font-family: Roboto;
-      min-height: 120px;
+      min-height: 100px;
       background: #DFDFDF; }
       .panel-job .row-panel .panel-body span {
         font-weight: 600;
@@ -41,7 +44,10 @@
       font-family: Roboto;
       font-size: 90%;
       text-align: center;
-      background: #D4D4D4; }
+      background: #D4D4D4;
+      border-bottom-left-radius: 0px !important;
+      border-bottom-right-radius: 0px !important;
+      padding: 5px 10px 5px 10px; }
   .panel-job .box-panel .panel-body {
     display: table;
     width: 100%;
@@ -57,8 +63,8 @@
       border-top-left-radius: 0px;
       border-top-right-radius: 0px; }
     .panel-job .box-panel-job .panel-footer {
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px; }
+      border-bottom-left-radius: 0px !important;
+      border-bottom-right-radius: 0px !important !important; }
     .panel-job .box-panel-job .panel-body {
       display: table;
       width: 100%;
@@ -67,17 +73,17 @@
         display: table-cell;
         vertical-align: middle; }
     .panel-job .box-panel-job .title {
-      font-size: 112%;
+      font-size: 18px;
       color: #094AB1;
       text-align: left;
       margin: 0 0 0px !important; }
     .panel-job .box-panel-job .detail {
-      font-size: 110%;
+      font-size: 16px;
       text-align: left;
       font-weight: bold;
       margin: 0 0 0px !important; }
     .panel-job .box-panel-job .request-date {
-      font-size: 105%;
+      font-size: 14px;
       text-align: left;
       font-weight: 400;
       margin: 0 0 0px !important; }
