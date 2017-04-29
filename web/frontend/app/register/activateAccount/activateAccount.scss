@@ -1,0 +1,26 @@
+@import '../../varibles';
+@import '../../fonts';
+
+.activate {
+        background: $fourth-color;
+        h1 {
+            color: $secundary-color;
+            font-family: Roboto !important;
+            font-weight: 500;
+            display: inline-block;
+        }
+        p {
+            font-family: Roboto !important;
+            font-size: 17px;
+            color: $seventh-color;
+        }
+
+        .top {
+            text-align: center;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+        .content {
+            margin-bottom: 15%;
+        }
+}
