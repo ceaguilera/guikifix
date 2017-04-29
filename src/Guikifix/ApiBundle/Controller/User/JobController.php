@@ -44,6 +44,12 @@ class JobController extends Controller
      *              "dataType"="integer",
      *              "description"="El id del município",
      *              "required"="true"
+     *         },
+     *         {
+     *              "name"="email",
+     *              "dataType"="string",
+     *              "description"="Correo del usuario",
+     *              "required"="false"
      *         }
      *     },
      *     resourceDescription="Url para el manejo del persistir un presupuesto.",

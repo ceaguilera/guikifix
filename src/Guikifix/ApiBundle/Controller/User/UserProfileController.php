@@ -104,6 +104,12 @@ class UserProfileController extends Controller
      *              "dataType"="string",
      *              "description"="Id de la parroquia del usuario",
      *              "required"="true"
+     *         },
+     *         {
+     *              "name"="email",
+     *              "dataType"="string",
+     *              "description"="Correo del usuario",
+     *              "required"="false"
      *         }
      *         
      *     },
