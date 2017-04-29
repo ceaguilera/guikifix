@@ -1,4 +1,4 @@
-<div class="register">
+<div class="updateData">
     <div class="container">
         <div class="col-xs-12 top">
             <h1> Registro gratis para <strong>Usuarios</strong> </h1>
@@ -59,14 +59,14 @@
                         <input 
                             type="text" 
                             class="form-control"
-                            name="cell_phone" 
-                            ng-model="formRegisterUser.cell_phone"
-                            ng-class="{'errorImput':formRegister.cell_phone.$touched && formRegister.cell_phone.$error.required}"
+                            name="phone" 
+                            ng-model="formRegisterUser.phone"
+                            ng-class="{'errorImput':formRegister.phone.$touched && formRegister.phone.$error.required}"
                             required
                         >
                         <span 
                             class="error"
-                            ng-show="formRegister.cell_phone.$touched && formRegister.cell_phone.$error.required">
+                            ng-show="formRegister.phone.$touched && formRegister.phone.$error.required">
                             Este campo es requerido
                         </span>                         
                     </div>
@@ -76,31 +76,28 @@
                         <div class="col-md-4">
                             <select 
                                 class="form-control" 
-                                ng-model="locationMainSelect" 
-                                ng-options="item.id as item.title for item in locations"
-                                ng-change="locationsChange(locationMainSelect)"
+                                ng-model="day" 
                             >
                                 <option value="">Día</option>
+                                <option ng-repeat="n in [1, 31] | range" value="{{n}}">{{n}}</option>
                             </select>
                         </div>
                         <div class="col-md-4">
                             <select 
                                 class="form-control" 
-                                ng-model="locationMainSelect" 
-                                ng-options="item.id as item.title for item in locations"
-                                ng-change="locationsChange(locationMainSelect)"
+                                ng-model="month" 
                             >
                                 <option value="">Mes</option>
+                                <option ng-repeat="n in [1, 12] | range" value="{{n}}">{{n}}</option>
                             </select>
                         </div>
                         <div class="col-md-4">
                             <select 
                                 class="form-control" 
-                                ng-model="locationMainSelect" 
-                                ng-options="item.id as item.title for item in locations"
-                                ng-change="locationsChange(locationMainSelect)"
+                                ng-model="year" 
                             >
                                 <option value="">Año</option>
+                                <option ng-repeat="n in [1900, 2017] | range" value="{{n}}">{{n}}</option>
                             </select>
                         </div>
                         </div>
@@ -114,63 +111,70 @@
                         <label for="pwd">Sexo:</label>
                         <select 
                             class="form-control" 
-                            ng-model="locationMainSelect" 
-                            ng-options="item.id as item.title for item in locations"
-                            ng-change="locationsChange(locationMainSelect)"
+                            name="gender" 
+                            ng-model="formRegisterUser.gender"
+                            required
                         >
                             <option value="">Seleccione</option>
+                            <option value="0">Femenino</option>
+                            <option value="1">Masculino</option>
                         </select>
                         <span
                             class="error"
-                            ng-show="formRegister.password.$touched && formRegister.password.$error.required">
+                            ng-show="formRegister.gender.$touched && formRegister.gender.$error.required">
                             Este campo es requerido
                         </span>                         
                     </div>
                     <div class="form-group">
                         <label for="pwd">Estado:</label>
                         <select 
-                            class="form-control" 
+                            class="form-control"
+                            name="state"
                             ng-model="locationMainSelect" 
                             ng-options="item.id as item.title for item in locations"
                             ng-change="locationsChange(locationMainSelect)"
+                            required
                         >
                             <option value="">Seleccione</option>
                         </select>
                          <span
                             class="error"
-                            ng-show="formRegister.confirmation_password.$touched && formRegister.confirmation_password.$error.required">
+                            ng-show="formRegister.state.$touched && formRegister.state.$error.required">
                             Este campo es requerido
                         </span>                        
                     </div>
                     <div class="form-group">
                         <label for="pwd">Municipio:</label>
                         <select 
-                            class="form-control" 
-                            ng-model="locationMainSelect" 
-                            ng-options="item.id as item.title for item in locations"
-                            ng-change="locationsChange(locationMainSelect)"
+                            class="form-control"
+                            name = "municipaly"
+                            ng-model="municipalynSelect" 
+                            ng-options="item.id as item.title for item in municipalities"
+                            ng-change="municipalyChange(municipalynSelect)"
+                            required
                         >
                             <option value="">Seleccione</option>
                         </select>
                          <span
                             class="error"
-                            ng-show="formRegister.confirmation_password.$touched && formRegister.confirmation_password.$error.required">
+                            ng-show="formRegister.municipaly.$touched && formRegister.municipaly.$error.required">
                             Este campo es requerido
                         </span>                        
                     </div>
                     <div class="form-group">
                         <label for="pwd">Ciudad:</label>
                         <select 
-                            class="form-control" 
-                            ng-model="locationMainSelect" 
-                            ng-options="item.id as item.title for item in locations"
-                            ng-change="locationsChange(locationMainSelect)"
+                            class="form-control"
+                            name="city"
+                            ng-model="formRegisterUser.city" 
+                            ng-options="item.id as item.title for item in cities"
+                            required
                         >
                             <option value="">Seleccione</option>
                         </select>
                          <span
                             class="error"
-                            ng-show="formRegister.confirmation_password.$touched && formRegister.confirmation_password.$error.required">
+                            ng-show="formRegister.city.$touched && formRegister.city.$error.required">
                             Este campo es requerido
                         </span>                        
                     </div>
@@ -183,6 +187,7 @@
                             ng-model="formRegisterUser.email"
                             ng-class="{'errorImput':(formRegister.email.$touched && formRegister.email.$error.required) || (formRegister.email.$error.email)}"
                             required
+                            disabled
                         >
                         <span
                             class="error"
@@ -204,6 +209,7 @@
                             ng-model="formRegisterUser.password" 
                             ng-class="{'errorImput':formRegister.password.$touched && formRegister.password.$error.required}"
                             required
+                            disabled
                         >
                         <span
                             class="error"
@@ -216,9 +222,15 @@
                         <input 
                             type="text" 
                             class="form-control"
-                            name="how_contact_us" 
-                            ng-model="formRegisterUser.how_contact_us"
+                            name="nickname" 
+                            ng-model="formRegisterUser.nickname"
+                            required
                         >
+                        <span
+                            class="error"
+                            ng-show="formRegister.nickname.$touched && formRegister.nickname.$error.required">
+                            Este campo es requerido
+                        </span>  
                     </div>
                     <div align="center">
                         <button 
@@ -234,6 +246,9 @@
             </div>
             <div class="col-xs-5 col-xs-offset-2">
                 <div class=" container block-rigth">
+                    <div align="center">
+                         <h2> Pide <strong>Presupuesto</strong> </h2>
+                    </div>
                     <div class="row">
                         <img src="images/iconos-02.png" alt="">
                         <h1>¿Qué necesitas, dejános saber que quieres hacer?</h1>
@@ -246,32 +261,39 @@
                         <img src="images/iconos-04.png" alt="">
                         <h1>Compara y elige al Profesional más indicado.</h1>
                     </div>
-                    <div class="row item-right">
-                        <h1>Seguro y Confiable</h1>
-                        <img src="images/iconos-03.png" alt="">
-                        <p>
-                            Todos los Profesionales que ofrecen sus servicios 
-                            están validados por nuestro sistema y personal calificado. 
-                            Solo trabajamos con Profesionales legalmente verificables y 
-                            que se ajusten a nuestros criterios de seguridad.
-                        </p>
-                    </div>
                     <div class="row">
-                        <img src="images/iconos-04.png" alt="">
-                        <h1>Los mejores Profesionales al mejor precio</h1>
-                        <p>
-                            Nuestra herramienta te permite comparar 
-                            entre las mejores opciones de calidad y precios para trabajos del hogar.
-                        </p>
-                    </div>
-                    <div class="row item-right">
-                        <h1>Sencillo y Rápido</h1>
-                        <img src="images/iconos-05.png" alt="">
-                        <p> 
-                            En muy pocos pasos busca, revisa la valoración y escoge. Todo sin perder tiempo. 
-                            Sólo debes hacer 
-                            tu solicitud y esperar a ser contactado por nuestros Profesionales.
-                        </p>
+                        <div class="col-md-4">
+                            <img class="img-working" src="images/working.png" alt="">
+                        </div>
+                        <div class="col-md-8">
+                        <div class="row">
+                            <h3>Seguro y Confiable</h3>
+                            <p>
+                               Validados por nuestra platadorma y sistema de reputación, sólo personal calificado.
+                            </p>
+                        </div>
+                        <div class="row">
+                            <h3>Gratis, Sencillo y Rápido</h3>
+                            <p>
+                                 En muy pocos pasos busca, revisa la calificación del Profesional y escoge. 
+                                 Sin perder tiempo sólo debes hacer tu solicitud y recibir sin costo tus presupuestos.
+                            </p>
+                        </div>
+                        <div class="row">
+                            <h3>Los mejores Profesionales al mejor precio</h3>
+                            <p>
+                                Nuestra herramienta te permite comparar 
+                                entre las mejores opciones de calidad y precios para trabajos del hogar.
+                            </p>
+                        </div>
+                        <div class="row">
+                            <h3>Amplia gama de Profesionales</h3>
+                            <p>
+                                Tenemos una extensa lista para cada uno de tus requerimientos 
+                                sólo indícanos qué buscas y aquí lo encontrarás.
+                            </p>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>

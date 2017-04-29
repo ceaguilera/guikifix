@@ -10,7 +10,7 @@
         $stateProvider.state('updateData', {
             url: '/actualizar',
             templateUrl: './frontend/app/user/updateData/updateData.html',
-            controller: 'register',
+            controller: 'updateData',
             controllerAs: 'vm'
         });
     }

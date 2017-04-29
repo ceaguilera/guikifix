@@ -9,9 +9,12 @@ angular.module('guikifixApp.register')
         })
         .then(function mySucces(response) {
             console.log(response);
-            auth.loginRegister($scope.formRegisterUser.first_name, 
-            $scope.formRegisterUser.last_name);
-            if($window.localStorage.getItem('dataJob') === null) {
+            //auth.loginRegister($scope.formRegisterUser.first_name, 
+            //$scope.formRegisterUser.last_name);
+            $window.localStorage.setItem('formRegisterUser', JSON.stringify($scope.formRegisterUser));
+            $state.go("updateData");
+
+           /* if($window.localStorage.getItem('dataJob') === null) {
                 $window.location = "/";
             } else {
                 let structure = $window.localStorage.getItem('dataJob');
@@ -29,7 +32,7 @@ angular.module('guikifixApp.register')
                     console.log(response.data);
                 });
             }
-
+            */
         }, function myError(response) {
             console.log(response.statusText);
         });

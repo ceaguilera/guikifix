@@ -5,6 +5,7 @@
     [
         'ui.router',
         'ngCookies',
+        'ngRangeFilter',
         'guikifixApp.home', 
         'guikifixApp.about', 
         'guikifixApp.login',
