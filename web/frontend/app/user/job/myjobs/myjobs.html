@@ -7,23 +7,23 @@
     </div>
     <br>
     <!-- Listados de Trabajos -->
-    <div class="row row-panel">
-        <div class="col-xs-12 col-md-6 col-lg-3 box-panel box-panel-job">
-            <div class="panel panel-default">
-                <div class="panel-heading" style="text-align:left;">
+    <div class="row row-panel" ng-repeat="current_job in myjobs">
+        <div class="col-xs-12 col-md-6 col-lg-3 box-panel box-panel-job" >
+            <div class="panel panel-default" >
+                <div class="panel-heading" style="text-align:left;" ng-show="!$index">
                     SOLICITUDES DE TRABAJO
                 </div>
                 <div class="panel-body" style="padding:0px;padding-left: 10px;padding-top:10px;padding-right:10px;">
                     <span>
                         <p class="title">TRABAJO DE PLOMERÍA</p>
-                        <p class="detail">el agua de la ducha sale  con poca presión....</p>
-                        <p class="request-date">Solicitado el 10-10-2016  1:40 PM</p>
+                        <p class="detail">{{current_job.description | cut:true:90:' ...'}}</p>
+                        <p class="request-date">Solicitado el {{current_job.date_created}}</p>
                     </span>
                 </div>
                 <div class="panel-footer"> 
                     <div class="row">
                         <div class="col-xs-12">
-                            <div class="pull-left"><a  ui-sref="myjob">EDITAR</a></div>
+                            <div class="pull-left"><a ui-sref="myjob({job_id: current_job.id})">EDITAR</a></div>
                             <div class="pull-right">FINALIZAR</div>
                         </div>                    
                     </div>
@@ -32,11 +32,11 @@
         </div>
         <div class="col-xs-6 col-md-3 col-lg-1 box-panel" style="padding:0px;">
             <div class="panel panel-default" >
-                <div class="panel-heading">
+                <div class="panel-heading" ng-show="!$index">
                     FOTOS
                 </div>
                 <div class="panel-body">
-                    <span>0</span>
+                    <span>{{current_job.images}}</span>
                 </div>
                 <div class="panel-footer">
                     <div class="row">
@@ -48,11 +48,11 @@
         </div>
         <div class="col-xs-6 col-md-3 col-lg-2 box-panel">
             <div class="panel panel-default">
-                <div class="panel-heading">
+                <div class="panel-heading" ng-show="!$index">
                     DOCUMENTOS
                 </div>
                 <div class="panel-body">
-                    <span>0</span>
+                    <span>{{current_job.images}}</span>
                 </div>
                 <div class="panel-footer">
                     <div class="row">
@@ -65,11 +65,12 @@
         </div>
         <div class="col-xs-12 col-md-6 col-lg-3 box-panel" style="padding:0px">
         <div class="panel panel-default">
-                <div class="panel-heading">
+                <div class="panel-heading" ng-show="!$index">
                     PROFESIONALES SUGERIDOS
                 </div>
                 <div class="panel-body">
-                    <span>Plomería ABH</span>
+                    <span ng-if="current_job.suggested_professional">Plomería ABH</span>
+                    <span ng-if="!current_job.suggested_professional">Ninguno</span>
                 </div>
                 <div class="panel-footer">
                     <div class="row">
@@ -84,11 +85,11 @@
             <div class="row">
                 <div class="col-xs-6" style="padding-right:5px;">
                     <div class="panel panel-default">
-                        <div class="panel-heading">
+                        <div class="panel-heading" ng-show="!$index">
                             MENSAJES
                         </div>
                         <div class="panel-body">
-                            <span>0</span>
+                            <span>{{current_job.images}}</span>
                         </div>
                         <div class="panel-footer">
                             <div class="row">
@@ -101,11 +102,11 @@
                 </div>
                 <div class="col-xs-6" style="padding-right:5px;">
                     <div class="panel panel-default">
-                        <div class="panel-heading">
+                        <div class="panel-heading" ng-show="!$index">
                             STATUS
                         </div>
                         <div class="panel-body">
-                            <span>Asignado</span>
+                            <span>{{current_job.status}}</span>
                         </div>
                         <div class="panel-footer">
                             <div class="row">

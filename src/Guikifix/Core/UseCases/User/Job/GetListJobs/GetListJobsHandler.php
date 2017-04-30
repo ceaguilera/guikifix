@@ -87,7 +87,7 @@ class GetListJobsHandler extends HandlerBase implements HandlerInterface
     public function getStatus($status){
         switch ($status) {
             case '0':
-                $resp = "Temporal";
+                $resp = "En espera";
                 break;
             case '1':
                 $resp = "Publicado";
