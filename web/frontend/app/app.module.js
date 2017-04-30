@@ -16,7 +16,8 @@
         'guikifixApp.category',
         'guikifixApp.requestFilters',
         'guikifixApp.jobReceived',
-        'guikifixApp.updateData'
+        'guikifixApp.updateData',
+        'guikifixApp.activateAccount'
     ]);
 })();
 

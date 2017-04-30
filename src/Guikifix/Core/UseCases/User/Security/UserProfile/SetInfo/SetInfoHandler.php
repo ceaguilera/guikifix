@@ -45,7 +45,7 @@ class SetInfoHandler extends HandlerBase implements HandlerInterface
         $container->get('doctrine.orm.entity_manager')->flush();
         //city
 
-        return new ResponseCommandBus(200, 1);
+        return new ResponseCommandBus(200, true);
     
     }
 

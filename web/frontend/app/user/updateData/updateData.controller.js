@@ -26,7 +26,7 @@ angular.module('guikifixApp.updateData')
     };
 
      $scope.sendData = () => {
-        $scope.formRegisterUser.birthdate = new Date($scope.day + '-' + $scope.month + '-' + $scope.year);
+        $scope.formRegisterUser.birthdate = $scope.year + '-' + $scope.month + '-' + $scope.day;
         $scope.formRegisterUser.gender = parseInt($scope.formRegisterUser.gender);
         console.log($scope.formRegisterUser);
         $http({
@@ -40,10 +40,12 @@ angular.module('guikifixApp.updateData')
             //$scope.formRegisterUser.last_name);
             $window.localStorage.removeItem('formRegisterUser');
            if($window.localStorage.getItem('dataJob') === null) {
-                $window.location = "/";
+                $state.go('activateAccount');
                 //tengo que mandar a la vista de recepcion de datos
             } else {
-                let structure = $window.localStorage.getItem('dataJob');
+                let structure = JSON.parse($window.localStorage.getItem('dataJob'));
+                structure.email = $scope.formRegisterUser;
+                console.log(structure);
                 let url = "/api/job/set";
                 $http({
                 method : "POST",

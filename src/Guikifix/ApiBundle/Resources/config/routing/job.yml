@@ -1,7 +1,7 @@
 # Manejo para el persisttir presupuesto.
 guikifix_api_set_job:
     path:     /set
-    defaults: { _controller: GuikifixApiBundle:User\Job:statusCategories }
+    defaults: { _controller: GuikifixApiBundle:User\Job:setJob }
     methods: POST
 
 # Manejo del listado de presupuesto.

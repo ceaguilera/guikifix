@@ -22,10 +22,6 @@ Guikifix\Core\UseCases\User\Security\UserProfile\SetInfo\SetInfoCommand:
             - NotBlank: ~
             - Type:
                 type: integer
-        birthdate:
-            - NotBlank: ~
-            - Type:
-                type: date
         city:
             - Type:
                 type: integer
